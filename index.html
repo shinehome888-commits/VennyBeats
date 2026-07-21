@@ -26,7 +26,7 @@
   <meta name="twitter:description" content="Liberian music producer & sound engineer based in Ottawa, Canada." />
   <meta name="twitter:image" content="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=1200" />
 
-  <!-- Favicon (SVG + fallback prevention) -->
+  <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23050505'/%3E%3Ctext x='50' y='68' font-family='Arial' font-size='55' font-weight='bold' text-anchor='middle' fill='%2300C8FF'%3EN%3C/text%3E%3C/svg%3E" />
   <link rel="alternate icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAgBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA......" />
   <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23050505'/%3E%3Ctext x='50' y='68' font-family='Arial' font-size='55' font-weight='bold' text-anchor='middle' fill='%2300C8FF'%3EN%3C/text%3E%3C/svg%3E" />
@@ -89,31 +89,61 @@
     <div class="orb orb-3"></div>
   </div>
 
+  <!-- ============ SHARE BUTTON (fixed) ============ -->
+  <button class="share-btn" id="shareBtn" aria-label="Share this site" data-magnetic>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+  </button>
+  <div class="share-popup" id="sharePopup">
+    <div class="share-popup-inner">
+      <h5>Share NOISEMAKERS</h5>
+      <div class="share-links">
+        <a href="#" id="shareWhatsApp" target="_blank" rel="noopener" class="share-link" data-magnetic>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span>WhatsApp</span>
+        </a>
+        <a href="#" id="shareTwitter" target="_blank" rel="noopener" class="share-link" data-magnetic>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          <span>X / Twitter</span>
+        </a>
+        <a href="#" id="shareFacebook" target="_blank" rel="noopener" class="share-link" data-magnetic>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          <span>Facebook</span>
+        </a>
+        <a href="#" id="shareLinkedIn" target="_blank" rel="noopener" class="share-link" data-magnetic>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          <span>LinkedIn</span>
+        </a>
+        <button class="share-link share-copy" id="shareCopy" data-magnetic>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          <span id="shareCopyText">Copy Link</span>
+        </button>
+      </div>
+      <button class="share-close" id="shareClose" aria-label="Close">✕</button>
+    </div>
+  </div>
+
   <!-- ============ NAVIGATION ============ -->
   <nav class="nav" id="nav">
-    <a href="#home" class="nav-logo" data-magnetic>
+    <a href="#" class="nav-logo" data-page="home" data-magnetic>
       <span class="logo-mark">N</span>
       <span class="logo-text">NOISEMAKERS</span>
     </a>
     <ul class="nav-menu" id="navMenu">
-      <li><a href="#home" class="nav-link" data-magnetic>Home</a></li>
-      <li><a href="#about" class="nav-link" data-magnetic>About</a></li>
-      <li><a href="#services" class="nav-link" data-magnetic>Services</a></li>
-      <li><a href="#portfolio" class="nav-link" data-magnetic>Portfolio</a></li>
-      <li><a href="#music" class="nav-link" data-magnetic>Music</a></li>
-      <li><a href="#videos" class="nav-link" data-magnetic>Videos</a></li>
-      <li><a href="#studio" class="nav-link" data-magnetic>Studio</a></li>
-      <li><a href="#testimonials" class="nav-link" data-magnetic>Testimonials</a></li>
-      <li><a href="#contact" class="nav-link" data-magnetic>Contact</a></li>
-      <li><a href="#book" class="nav-cta" data-magnetic>Book Session</a></li>
+      <li><a href="#" class="nav-link active" data-page="home" data-magnetic>Home</a></li>
+      <li><a href="#" class="nav-link" data-page="about" data-magnetic>About</a></li>
+      <li><a href="#" class="nav-link" data-page="services" data-magnetic>Services</a></li>
+      <li><a href="#" class="nav-link" data-page="portfolio" data-magnetic>Portfolio</a></li>
+      <li><a href="#" class="nav-link" data-page="music" data-magnetic>Music</a></li>
+      <li><a href="#" class="nav-link" data-page="videos" data-magnetic>Videos</a></li>
+      <li><a href="#" class="nav-link" data-page="studio" data-magnetic>Studio</a></li>
+      <li><a href="#" class="nav-link" data-page="testimonials" data-magnetic>Testimonials</a></li>
+      <li><a href="#" class="nav-link" data-page="contact" data-magnetic>Contact</a></li>
+      <li><a href="#" class="nav-cta" data-page="book" data-magnetic>Book Session</a></li>
     </ul>
     <div class="nav-actions">
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" data-magnetic>
         <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
         <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-      </button>
-      <button class="search-btn" id="searchBtn" aria-label="Search" data-magnetic>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
       </button>
       <button class="hamburger" id="hamburger" aria-label="Menu" data-magnetic>
         <span></span><span></span><span></span>
@@ -121,544 +151,553 @@
     </div>
   </nav>
 
-  <!-- ============ SEARCH POPUP ============ -->
-  <div class="search-popup" id="searchPopup">
-    <div class="search-inner">
-      <input type="text" class="search-input" id="searchInput" placeholder="Search tracks, projects, services..." />
-      <button class="search-close" id="searchClose" aria-label="Close">✕</button>
-    </div>
-  </div>
+  <!-- ============ PAGE WRAPPER ============ -->
+  <main class="page-wrapper" id="pageWrapper">
 
-  <!-- ============ HERO ============ -->
-  <section class="hero" id="home">
-    <div class="hero-bg">
-      <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=1920&q=80" alt="Studio" loading="eager" />
-      <div class="hero-overlay"></div>
-    </div>
-
-    <div class="hero-content">
-      <div class="hero-tag reveal">
-        <span class="tag-dot"></span>
-        <span>Ottawa, Canada · Available Worldwide</span>
-      </div>
-
-      <h1 class="hero-title reveal">
-        <span class="title-line">CRAFTING MUSIC</span>
-        <span class="title-line">THAT SPEAKS</span>
-        <span class="title-line gradient-text">BEYOND WORDS</span>
-      </h1>
-
-      <div class="hero-subtitle reveal">
-        <span class="subtitle-label">I am a</span>
-        <span class="typing" id="typing"></span>
-        <span class="typing-cursor">|</span>
-      </div>
-
-      <p class="hero-desc reveal">
-        Where sound becomes art. Professional music production, mixing & mastering for artists who demand excellence.
-      </p>
-
-      <div class="hero-buttons reveal">
-        <a href="#music" class="btn btn-primary" data-magnetic>
-          <span>Listen Now</span>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-        </a>
-        <a href="#book" class="btn btn-ghost" data-magnetic>
-          <span>Book Studio Session</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-        <a href="#portfolio" class="btn btn-outline" data-magnetic>
-          <span>Watch Portfolio</span>
-        </a>
-      </div>
-
-      <div class="hero-socials reveal">
-        <a href="#" aria-label="Instagram" data-magnetic><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-        <a href="#" aria-label="YouTube" data-magnetic><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
-        <a href="#" aria-label="Spotify" data-magnetic><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.06-.84-.18-.9-.6-.06-.42.18-.84.6-.9 4.56-1.02 8.52-.6 11.64 1.38.42.18.48.66.24 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.38-1.32 9.78-.66 13.5 1.62.36.18.54.78.24 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg></a>
-        <a href="#" aria-label="SoundCloud" data-magnetic><svg viewBox="0 0 24 24" fill="currentColor"><path d="M1.175 12.225c-.051 0-.094.046-.101.1l-.233 2.154.233 2.105c.007.058.05.098.101.098.05 0 .09-.04.099-.098l.255-2.105-.27-2.154c-.009-.06-.05-.1-.1-.1m-.899.828c-.06 0-.091.037-.104.094L0 14.479l.165 1.308c0 .055.045.094.099.094.055 0 .09-.038.104-.094l.21-1.319-.21-1.334c0-.061-.045-.094-.1-.094m1.83-1.229c-.061 0-.12.045-.12.104l-.21 2.563.225 2.458c0 .06.045.104.105.104.074 0 .12-.044.12-.104l.24-2.474-.24-2.547c0-.06-.06-.104-.12-.104m.944-.091c-.074 0-.135.06-.15.135l-.18 2.64.18 2.53c.015.075.076.135.15.135.09 0 .15-.06.15-.135l.21-2.53-.21-2.64c-.015-.075-.075-.135-.15-.135m1.005-.54c-.09 0-.165.075-.18.165l-.165 3.18.165 2.563c.015.09.09.165.18.165.105 0 .165-.075.18-.165l.18-2.563-.18-3.18c-.015-.09-.09-.165-.18-.165m1.035-.18c-.105 0-.195.09-.21.195l-.135 3.36.15 2.563c.015.105.105.195.21.195.12 0 .195-.09.21-.195l.165-2.563-.165-3.36c-.015-.105-.105-.195-.21-.195m1.035.18c-.12 0-.21.09-.225.21l-.12 3.18.12 2.563c.015.12.105.21.225.21.12 0 .21-.09.225-.21l.15-2.563-.15-3.18c-.015-.12-.105-.21-.225-.21m1.05-.36c-.135 0-.24.105-.255.24l-.105 3.54.105 2.563c.015.135.12.24.255.24.135 0 .24-.105.255-.24l.12-2.563-.12-3.54c-.015-.135-.12-.24-.255-.24m1.065.09c-.15 0-.27.12-.285.27l-.09 3.45.09 2.563c.015.15.135.27.285.27.15 0 .27-.12.285-.27l.105-2.563-.105-3.45c-.015-.15-.135-.27-.285-.27m1.065-.18c-.165 0-.3.135-.315.3l-.075 3.63.075 2.563c.015.165.15.3.315.3.165 0 .3-.135.315-.3l.09-2.563-.09-3.63c-.015-.165-.15-.3-.315-.3m1.08.18c-.18 0-.315.15-.33.33l-.06 3.45.06 2.563c.015.18.15.33.33.33.165 0 .315-.15.33-.33l.075-2.563-.075-3.45c-.015-.18-.165-.33-.33-.33m1.08-.36c-.195 0-.345.15-.36.345l-.045 3.81.045 2.563c.015.195.165.345.36.345.18 0 .345-.15.36-.345l.06-2.563-.06-3.81c-.015-.195-.18-.345-.36-.345m1.08.27c-.195 0-.36.165-.375.36l-.03 3.54.03 2.563c.015.195.18.36.375.36.195 0 .36-.165.375-.36l.045-2.563-.045-3.54c-.015-.195-.18-.36-.375-.36m1.08-.18c-.21 0-.375.165-.39.375l-.015 3.72.015 2.563c.015.21.18.375.39.375.21 0 .375-.165.39-.375l.03-2.563-.03-3.72c-.015-.21-.18-.375-.39-.375m1.08.09c-.225 0-.39.18-.405.39l-.015 3.63.015 2.563c.015.21.18.39.405.39.21 0 .39-.18.405-.39l.015-2.563-.015-3.63c-.015-.21-.195-.39-.405-.39m1.08-.18c-.225 0-.405.18-.42.405l-.015 3.81.015 2.563c.015.225.195.405.42.405.225 0 .405-.18.42-.405l.015-2.563-.015-3.81c-.015-.225-.195-.405-.42-.405m1.08.18c-.24 0-.42.195-.435.42l-.015 3.63.015 2.563c.015.24.195.42.435.42.225 0 .42-.195.435-.42l.015-2.563-.015-3.63c-.015-.225-.21-.42-.435-.42m1.095-.09c-.24 0-.435.195-.45.435l-.015 3.72.015 2.563c.015.24.21.435.45.435.24 0 .435-.195.45-.435l.015-2.563-.015-3.72c-.015-.24-.21-.435-.45-.435m1.095.09c-.255 0-.45.21-.465.45l-.015 3.63.015 2.563c.015.255.21.45.465.45.24 0 .45-.21.465-.45l.015-2.563-.015-3.63c-.015-.255-.225-.45-.465-.45m1.095-.18c-.255 0-.465.21-.48.465l-.015 3.81.015 2.563c.015.255.225.465.48.465.255 0 .465-.21.48-.465l.015-2.563-.015-3.81c-.015-.255-.225-.465-.48-.465m1.095.18c-.27 0-.48.225-.495.48l-.015 3.63.015 2.563c.015.27.225.48.495.48.255 0 .48-.225.495-.48l.015-2.563-.015-3.63c-.015-.27-.24-.48-.495-.48m1.095-.09c-.27 0-.495.225-.51.495l-.015 3.72.015 2.563c.015.27.24.495.51.495.27 0 .495-.225.51-.495l.015-2.563-.015-3.72c-.015-.27-.24-.495-.51-.495M12 5.5c-1.5 0-2.7 1.2-2.7 2.7v8.4c.15-.3.45-.5.75-.5.3 0 .6.2.75.5V8.2c0-.9.75-1.65 1.65-1.65.3 0 .6.1.85.25C13.5 5.95 12.8 5.5 12 5.5"/></svg></a>
-      </div>
-    </div>
-
-    <!-- Equalizer -->
-    <div class="hero-equalizer reveal">
-      <div class="eq-bar"></div><div class="eq-bar"></div><div class="eq-bar"></div>
-      <div class="eq-bar"></div><div class="eq-bar"></div><div class="eq-bar"></div>
-      <div class="eq-bar"></div><div class="eq-bar"></div>
-    </div>
-
-    <!-- Scroll indicator -->
-    <div class="scroll-indicator">
-      <span>SCROLL</span>
-      <div class="scroll-line"></div>
-    </div>
-  </section>
-
-  <!-- ============ ABOUT ============ -->
-  <section class="section about" id="about">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="section-tag">01 · ABOUT</span>
-        <h2 class="section-title">THE <span class="gradient-text">ARTIST</span></h2>
-      </div>
-
-      <div class="about-grid">
-        <div class="about-image reveal">
-          <div class="about-image-frame">
-            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&q=80" alt="NOISEMAKERS in studio" loading="lazy" />
-            <div class="about-image-glow"></div>
-          </div>
-          <div class="about-image-badge">
-            <span class="badge-year">EST.</span>
-            <span class="badge-num">2014</span>
-            <span class="badge-loc">MONROVIA → OTTAWA</span>
-          </div>
+    <!-- ============ HOME PAGE ============ -->
+    <section class="page active" id="page-home">
+      <div class="hero">
+        <div class="hero-bg">
+          <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=1920&q=80" alt="Studio" loading="eager" />
+          <div class="hero-overlay"></div>
         </div>
 
-        <div class="about-content reveal">
-          <h3 class="about-heading">Sound is my language. <br/>Music is my mission.</h3>
-          <p class="about-text">
-            Based in <strong>Ottawa, Canada</strong>, <strong>NOISEMAKERS</strong> is a Liberian songwriter, producer, musician and sound engineer dedicated to helping artists create timeless music.
-          </p>
-          <p class="about-text">
-            From songwriting to final mastering, every production is crafted with creativity, precision and emotion. I believe every artist has a unique sonic fingerprint — my job is to help you discover it, amplify it, and share it with the world.
-          </p>
-          <p class="about-text">
-            With over a decade of experience and collaborations across Africa, North America and Europe, I bring an international perspective to every session. Whether you're an emerging talent or an established name — let's make something unforgettable.
+        <div class="hero-content">
+          <div class="hero-tag reveal">
+            <span class="tag-dot"></span>
+            <span>Ottawa, Canada · Available Worldwide</span>
+          </div>
+
+          <h1 class="hero-title reveal">
+            <span class="title-line">CRAFTING MUSIC</span>
+            <span class="title-line">THAT SPEAKS</span>
+            <span class="title-line gradient-text">BEYOND WORDS</span>
+          </h1>
+
+          <div class="hero-subtitle reveal">
+            <span class="subtitle-label">I am a</span>
+            <span class="typing" id="typing"></span>
+            <span class="typing-cursor">|</span>
+          </div>
+
+          <p class="hero-desc reveal">
+            Where sound becomes art. Professional music production, mixing & mastering for artists who demand excellence.
           </p>
 
-          <div class="about-stats">
-            <div class="stat">
-              <span class="stat-num" data-count="150">0</span><span class="stat-suffix">+</span>
-              <span class="stat-label">Songs Produced</span>
+          <div class="hero-buttons reveal">
+            <a href="#" class="btn btn-primary" data-page="music" data-magnetic>
+              <span>Listen Now</span>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </a>
+            <a href="#" class="btn btn-ghost" data-page="book" data-magnetic>
+              <span>Book Studio Session</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Equalizer -->
+        <div class="hero-equalizer reveal">
+          <div class="eq-bar"></div><div class="eq-bar"></div><div class="eq-bar"></div>
+          <div class="eq-bar"></div><div class="eq-bar"></div><div class="eq-bar"></div>
+          <div class="eq-bar"></div><div class="eq-bar"></div>
+        </div>
+
+        <!-- TRADEMARK SECTION (attached to home) -->
+        <div class="trademark">
+          <div class="trademark-inner">
+            <div class="trademark-brand">
+              <span class="logo-mark">N</span>
+              <div class="trademark-text">
+                <strong>NOISEMAKERS</strong>
+                <span>Where Sound Becomes Art</span>
+              </div>
             </div>
-            <div class="stat">
-              <span class="stat-num" data-count="500">0</span><span class="stat-suffix">+</span>
-              <span class="stat-label">Studio Hours</span>
+            <div class="trademark-socials">
+              <a href="#" aria-label="Instagram" data-magnetic><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+              <a href="#" aria-label="YouTube" data-magnetic><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
+              <a href="#" aria-label="Spotify" data-magnetic><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.06-.84-.18-.9-.6-.06-.42.18-.84.6-.9 4.56-1.02 8.52-.6 11.64 1.38.42.18.48.66.24 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.38-1.32 9.78-.66 13.5 1.62.36.18.54.78.24 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg></a>
+              <a href="#" aria-label="SoundCloud" data-magnetic><svg viewBox="0 0 24 24" fill="currentColor"><path d="M1.175 12.225c-.051 0-.094.046-.101.1l-.233 2.154.233 2.105c.007.058.05.098.101.098.05 0 .09-.04.099-.098l.255-2.105-.27-2.154c-.009-.06-.05-.1-.1-.1m-.899.828c-.06 0-.091.037-.104.094L0 14.479l.165 1.308c0 .055.045.094.099.094.055 0 .09-.038.104-.094l.21-1.319-.21-1.334c0-.061-.045-.094-.1-.094m1.83-1.229c-.061 0-.12.045-.12.104l-.21 2.563.225 2.458c0 .06.045.104.105.104.074 0 .12-.044.12-.104l.24-2.474-.24-2.547c0-.06-.06-.104-.12-.104m.944-.091c-.074 0-.135.06-.15.135l-.18 2.64.18 2.53c.015.075.076.135.15.135.09 0 .15-.06.15-.135l.21-2.53-.21-2.64c-.015-.075-.075-.135-.15-.135m1.005-.54c-.09 0-.165.075-.18.165l-.165 3.18.165 2.563c.015.09.09.165.18.165.105 0 .165-.075.18-.165l.18-2.563-.18-3.18c-.015-.09-.09-.165-.18-.165m1.035-.18c-.105 0-.195.09-.21.195l-.135 3.36.15 2.563c.015.105.105.195.21.195.12 0 .195-.09.21-.195l.165-2.563-.165-3.36c-.015-.105-.105-.195-.21-.195m1.035.18c-.12 0-.21.09-.225.21l-.12 3.18.12 2.563c.015.12.105.21.225.21.12 0 .21-.09.225-.21l.15-2.563-.15-3.18c-.015-.12-.105-.21-.225-.21m1.05-.36c-.135 0-.24.105-.255.24l-.105 3.54.105 2.563c.015.135.12.24.255.24.135 0 .24-.105.255-.24l.12-2.563-.12-3.54c-.015-.135-.12-.24-.255-.24m1.065.09c-.15 0-.27.12-.285.27l-.09 3.45.09 2.563c.015.15.135.27.285.27.15 0 .27-.12.285-.27l.105-2.563-.105-3.45c-.015-.15-.135-.27-.285-.27m1.065-.18c-.165 0-.3.135-.315.3l-.075 3.63.075 2.563c.015.165.15.3.315.3.165 0 .3-.135.315-.3l.09-2.563-.09-3.63c-.015-.165-.15-.3-.315-.3m1.08.18c-.18 0-.315.15-.33.33l-.06 3.45.06 2.563c.015.18.15.33.33.33.165 0 .315-.15.33-.33l.075-2.563-.075-3.45c-.015-.18-.165-.33-.33-.33m1.08-.36c-.195 0-.345.15-.36.345l-.045 3.81.045 2.563c.015.195.165.345.36.345.18 0 .345-.15.36-.345l.06-2.563-.06-3.81c-.015-.195-.18-.345-.36-.345m1.08.27c-.195 0-.36.165-.375.36l-.03 3.54.03 2.563c.015.195.18.36.375.36.195 0 .36-.165.375-.36l.045-2.563-.045-3.54c-.015-.195-.18-.36-.375-.36m1.08-.18c-.21 0-.375.165-.39.375l-.015 3.72.015 2.563c.015.21.18.375.39.375.21 0 .375-.165.39-.375l.03-2.563-.03-3.72c-.015-.21-.18-.375-.39-.375m1.08.09c-.225 0-.39.18-.405.39l-.015 3.63.015 2.563c.015.21.18.39.405.39.21 0 .39-.18.405-.39l.015-2.563-.015-3.63c-.015-.21-.195-.39-.405-.39m1.08-.18c-.225 0-.405.18-.42.405l-.015 3.81.015 2.563c.015.225.195.405.42.405.225 0 .405-.18.42-.405l.015-2.563-.015-3.81c-.015-.225-.195-.405-.42-.405m1.08.18c-.24 0-.42.195-.435.42l-.015 3.63.015 2.563c.015.24.195.42.435.42.225 0 .42-.195.435-.42l.015-2.563-.015-3.63c-.015-.225-.21-.42-.435-.42m1.095-.09c-.24 0-.435.195-.45.435l-.015 3.72.015 2.563c.015.24.21.435.45.435.24 0 .435-.195.45-.435l.015-2.563-.015-3.72c-.015-.24-.21-.435-.45-.435m1.095.09c-.255 0-.45.21-.465.45l-.015 3.63.015 2.563c.015.255.21.45.465.45.24 0 .45-.21.465-.45l.015-2.563-.015-3.63c-.015-.255-.225-.45-.465-.45m1.095-.18c-.255 0-.465.21-.48.465l-.015 3.81.015 2.563c.015.255.225.465.48.465.255 0 .465-.21.48-.465l.015-2.563-.015-3.81c-.015-.255-.225-.465-.48-.465m1.095.18c-.27 0-.48.225-.495.48l-.015 3.63.015 2.563c.015.27.225.48.495.48.255 0 .48-.225.495-.48l.015-2.563-.015-3.63c-.015-.27-.24-.48-.495-.48m1.095-.09c-.27 0-.495.225-.51.495l-.015 3.72.015 2.563c.015.27.24.495.51.495.27 0 .495-.225.51-.495l.015-2.563-.015-3.72c-.015-.27-.24-.495-.51-.495M12 5.5c-1.5 0-2.7 1.2-2.7 2.7v8.4c.15-.3.45-.5.75-.5.3 0 .6.2.75.5V8.2c0-.9.75-1.65 1.65-1.65.3 0 .6.1.85.25C13.5 5.95 12.8 5.5 12 5.5"/></svg></a>
+              <a href="#" aria-label="TikTok" data-magnetic><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.45a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.88z"/></svg></a>
             </div>
-            <div class="stat">
-              <span class="stat-num" data-count="50">0</span><span class="stat-suffix">+</span>
-              <span class="stat-label">Artists</span>
-            </div>
-            <div class="stat">
-              <span class="stat-num" data-count="10">0</span><span class="stat-suffix">+</span>
-              <span class="stat-label">Years Experience</span>
+            <div class="trademark-powered">
+              Powered by <strong>KS1 Empire Global Foundation (KS1EGF)</strong>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ============ SERVICES ============ -->
-  <section class="section services" id="services">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="section-tag">02 · SERVICES</span>
-        <h2 class="section-title">WHAT I <span class="gradient-text">CREATE</span></h2>
-        <p class="section-desc">End-to-end music production services, crafted with precision and passion.</p>
-      </div>
+    <!-- ============ ABOUT PAGE ============ -->
+    <section class="page" id="page-about">
+      <div class="page-inner about-page">
+        <div class="section-head reveal">
+          <span class="section-tag">01 · ABOUT</span>
+          <h2 class="section-title">THE <span class="gradient-text">ARTIST</span></h2>
+        </div>
 
-      <div class="services-grid" id="servicesGrid">
-        <!-- Cards injected via JS -->
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ PORTFOLIO ============ -->
-  <section class="section portfolio" id="portfolio">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="section-tag">03 · PORTFOLIO</span>
-        <h2 class="section-title">SELECTED <span class="gradient-text">WORKS</span></h2>
-        <p class="section-desc">A curated selection of productions, mixes and creative collaborations.</p>
-      </div>
-
-      <div class="portfolio-filters reveal">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="album">Albums</button>
-        <button class="filter-btn" data-filter="single">Singles</button>
-        <button class="filter-btn" data-filter="video">Videos</button>
-        <button class="filter-btn" data-filter="mix">Mixes</button>
-      </div>
-
-      <div class="portfolio-grid" id="portfolioGrid">
-        <!-- Injected via JS -->
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ MUSIC PLAYER ============ -->
-  <section class="section music" id="music">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="section-tag">04 · LISTEN</span>
-        <h2 class="section-title">THE <span class="gradient-text">SOUND</span></h2>
-        <p class="section-desc">Press play. Feel the craft.</p>
-      </div>
-
-      <div class="player reveal">
-        <div class="player-art">
-          <img id="playerArt" src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&q=80" alt="Album art" />
-          <div class="player-vinyl">
-            <div class="vinyl-disc" id="vinylDisc">
-              <div class="vinyl-hole"></div>
+        <div class="about-grid reveal-3d">
+          <div class="about-image reveal">
+            <div class="about-image-frame tilt-3d">
+              <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&q=80" alt="NOISEMAKERS in studio" loading="lazy" />
+              <div class="about-image-glow"></div>
             </div>
+            <div class="about-image-badge">
+              <span class="badge-year">EST.</span>
+              <span class="badge-num">2026</span>
+              <span class="badge-loc">MONROVIA → OTTAWA</span>
+            </div>
+          </div>
+
+          <div class="about-content reveal">
+            <h3 class="about-heading">Sound is my language. <br/>Music is my mission.</h3>
+            <p class="about-text">
+              Based in <strong>Ottawa, Canada</strong>, <strong>NOISEMAKERS</strong> is a Liberian songwriter, producer, musician and sound engineer dedicated to helping artists create timeless music.
+            </p>
+            <p class="about-text">
+              From songwriting to final mastering, every production is crafted with creativity, precision and emotion. I believe every artist has a unique sonic fingerprint — my job is to help you discover it, amplify it, and share it with the world.
+            </p>
+            <p class="about-text">
+              With over a decade of experience, I bring an international perspective to every session. Whether you're an emerging talent or an established name — let's make something unforgettable.
+            </p>
           </div>
         </div>
 
-        <div class="player-info">
-          <div class="player-meta">
-            <span class="player-artist" id="playerArtist">NOISEMAKERS</span>
-            <span class="player-title" id="playerTitle">Select a track</span>
-          </div>
-
-          <div class="player-wave" id="playerWave">
-            <!-- Waveform bars injected via JS -->
-          </div>
-
-          <div class="player-controls">
-            <div class="player-time">
-              <span id="playerCurrent">0:00</span>
-              <span id="playerDuration">0:00</span>
+        <!-- TRADEMARK -->
+        <div class="trademark">
+          <div class="trademark-inner">
+            <div class="trademark-brand">
+              <span class="logo-mark">N</span>
+              <div class="trademark-text">
+                <strong>NOISEMAKERS</strong>
+                <span>Where Sound Becomes Art</span>
+              </div>
             </div>
-            <div class="player-buttons">
-              <button class="player-btn" id="prevBtn" aria-label="Previous">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
-              </button>
-              <button class="player-btn player-btn-play" id="playBtn" aria-label="Play">
-                <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M6 4h4v16H6zm8 0h4v16h-4z"/></svg>
-              </button>
-              <button class="player-btn" id="nextBtn" aria-label="Next">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg>
-              </button>
+            <div class="trademark-socials">
+              <a href="#" aria-label="Instagram" data-magnetic><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+              <a href="#" aria-label="YouTube" data-magnetic><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
+              <a href="#" aria-label="Spotify" data-magnetic><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.06-.84-.18-.9-.6-.06-.42.18-.84.6-.9 4.56-1.02 8.52-.6 11.64 1.38.42.18.48.66.24 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.38-1.32 9.78-.66 13.5 1.62.36.18.54.78.24 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg></a>
+              <a href="#" aria-label="SoundCloud" data-magnetic><svg viewBox="0 0 24 24" fill="currentColor"><path d="M1.175 12.225c-.051 0-.094.046-.101.1l-.233 2.154.233 2.105c.007.058.05.098.101.098.05 0 .09-.04.099-.098l.255-2.105-.27-2.154c-.009-.06-.05-.1-.1-.1m-.899.828c-.06 0-.091.037-.104.094L0 14.479l.165 1.308c0 .055.045.094.099.094.055 0 .09-.038.104-.094l.21-1.319-.21-1.334c0-.061-.045-.094-.1-.094m1.83-1.229c-.061 0-.12.045-.12.104l-.21 2.563.225 2.458c0 .06.045.104.105.104.074 0 .12-.044.12-.104l.24-2.474-.24-2.547c0-.06-.06-.104-.12-.104m.944-.091c-.074 0-.135.06-.15.135l-.18 2.64.18 2.53c.015.075.076.135.15.135.09 0 .15-.06.15-.135l.21-2.53-.21-2.64c-.015-.075-.075-.135-.15-.135m1.005-.54c-.09 0-.165.075-.18.165l-.165 3.18.165 2.563c.015.09.09.165.18.165.105 0 .165-.075.18-.165l.18-2.563-.18-3.18c-.015-.09-.09-.165-.18-.165m1.035-.18c-.105 0-.195.09-.21.195l-.135 3.36.15 2.563c.015.105.105.195.21.195.12 0 .195-.09.21-.195l.165-2.563-.165-3.36c-.015-.105-.105-.195-.21-.195m1.035.18c-.12 0-.21.09-.225.21l-.12 3.18.12 2.563c.015.12.105.21.225.21.12 0 .21-.09.225-.21l.15-2.563-.15-3.18c-.015-.12-.105-.21-.225-.21m1.05-.36c-.135 0-.24.105-.255.24l-.105 3.54.105 2.563c.015.135.12.24.255.24.135 0 .24-.105.255-.24l.12-2.563-.12-3.54c-.015-.135-.12-.24-.255-.24m1.065.09c-.15 0-.27.12-.285.27l-.09 3.45.09 2.563c.015.15.135.27.285.27.15 0 .27-.12.285-.27l.105-2.563-.105-3.45c-.015-.15-.135-.27-.285-.27m1.065-.18c-.165 0-.3.135-.315.3l-.075 3.63.075 2.563c.015.165.15.3.315.3.165 0 .3-.135.315-.3l.09-2.563-.09-3.63c-.015-.165-.15-.3-.315-.3m1.08.18c-.18 0-.315.15-.33.33l-.06 3.45.06 2.563c.015.18.15.33.33.33.165 0 .315-.15.33-.33l.075-2.563-.075-3.45c-.015-.18-.165-.33-.33-.33m1.08-.36c-.195 0-.345.15-.36.345l-.045 3.81.045 2.563c.015.195.165.345.36.345.18 0 .345-.15.36-.345l.06-2.563-.06-3.81c-.015-.195-.18-.345-.36-.345m1.08.27c-.195 0-.36.165-.375.36l-.03 3.54.03 2.563c.015.195.18.36.375.36.195 0 .36-.165.375-.36l.045-2.563-.045-3.54c-.015-.195-.18-.36-.375-.36m1.08-.18c-.21 0-.375.165-.39.375l-.015 3.72.015 2.563c.015.21.18.375.39.375.21 0 .375-.165.39-.375l.03-2.563-.03-3.72c-.015-.21-.18-.375-.39-.375m1.08.09c-.225 0-.39.18-.405.39l-.015 3.63.015 2.563c.015.21.18.39.405.39.21 0 .39-.18.405-.39l.015-2.563-.015-3.63c-.015-.21-.195-.39-.405-.39m1.08-.18c-.225 0-.405.18-.42.405l-.015 3.81.015 2.563c.015.225.195.405.42.405.225 0 .405-.18.42-.405l.015-2.563-.015-3.81c-.015-.225-.195-.405-.42-.405m1.08.18c-.24 0-.42.195-.435.42l-.015 3.63.015 2.563c.015.24.195.42.435.42.225 0 .42-.195.435-.42l.015-2.563-.015-3.63c-.015-.225-.21-.42-.435-.42m1.095-.09c-.24 0-.435.195-.45.435l-.015 3.72.015 2.563c.015.24.21.435.45.435.24 0 .435-.195.45-.435l.015-2.563-.015-3.72c-.015-.24-.21-.435-.45-.435m1.095.09c-.255 0-.45.21-.465.45l-.015 3.63.015 2.563c.015.255.21.45.465.45.24 0 .45-.21.465-.45l.015-2.563-.015-3.63c-.015-.255-.225-.45-.465-.45m1.095-.18c-.255 0-.465.21-.48.465l-.015 3.81.015 2.563c.015.255.225.465.48.465.255 0 .465-.21.48-.465l.015-2.563-.015-3.81c-.015-.255-.225-.465-.48-.465m1.095.18c-.27 0-.48.225-.495.48l-.015 3.63.015 2.563c.015.27.225.48.495.48.255 0 .48-.225.495-.48l.015-2.563-.015-3.63c-.015-.27-.24-.48-.495-.48m1.095-.09c-.27 0-.495.225-.51.495l-.015 3.72.015 2.563c.015.27.24.495.51.495.27 0 .495-.225.51-.495l.015-2.563-.015-3.72c-.015-.27-.24-.495-.51-.495M12 5.5c-1.5 0-2.7 1.2-2.7 2.7v8.4c.15-.3.45-.5.75-.5.3 0 .6.2.75.5V8.2c0-.9.75-1.65 1.65-1.65.3 0 .6.1.85.25C13.5 5.95 12.8 5.5 12 5.5"/></svg></a>
+              <a href="#" aria-label="TikTok" data-magnetic><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.45a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.88z"/></svg></a>
             </div>
-            <div class="player-volume">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
-              <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.7" />
-            </div>
-          </div>
-
-          <div class="player-progress">
-            <div class="progress-bar" id="progressBar">
-              <div class="progress-fill" id="progressFill"></div>
+            <div class="trademark-powered">
+              Powered by <strong>KS1 Empire Global Foundation (KS1EGF)</strong>
             </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="player-playlist" id="playerPlaylist">
+    <!-- ============ SERVICES PAGE ============ -->
+    <section class="page" id="page-services">
+      <div class="page-inner services-page">
+        <div class="section-head reveal">
+          <span class="section-tag">02 · SERVICES</span>
+          <h2 class="section-title">WHAT I <span class="gradient-text">CREATE</span></h2>
+          <p class="section-desc">End-to-end music production services, crafted with precision and passion.</p>
+        </div>
+
+        <div class="services-grid" id="servicesGrid">
+          <!-- Cards injected via JS -->
+        </div>
+
+        <!-- TRADEMARK -->
+        <div class="trademark">
+          <div class="trademark-inner">
+            <div class="trademark-brand">
+              <span class="logo-mark">N</span>
+              <div class="trademark-text">
+                <strong>NOISEMAKERS</strong>
+                <span>Where Sound Becomes Art</span>
+              </div>
+            </div>
+            <div class="trademark-socials">
+              <a href="#" aria-label="Instagram" data-magnetic><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+              <a href="#" aria-label="YouTube" data-magnetic><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
+              <a href="#" aria-label="Spotify" data-magnetic><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.06-.84-.18-.9-.6-.06-.42.18-.84.6-.9 4.56-1.02 8.52-.6 11.64 1.38.42.18.48.66.24 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.38-1.32 9.78-.66 13.5 1.62.36.18.54.78.24 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg></a>
+              <a href="#" aria-label="SoundCloud" data-magnetic><svg viewBox="0 0 24 24" fill="currentColor"><path d="M1.175 12.225c-.051 0-.094.046-.101.1l-.233 2.154.233 2.105c.007.058.05.098.101.098.05 0 .09-.04.099-.098l.255-2.105-.27-2.154c-.009-.06-.05-.1-.1-.1m-.899.828c-.06 0-.091.037-.104.094L0 14.479l.165 1.308c0 .055.045.094.099.094.055 0 .09-.038.104-.094l.21-1.319-.21-1.334c0-.061-.045-.094-.1-.094m1.83-1.229c-.061 0-.12.045-.12.104l-.21 2.563.225 2.458c0 .06.045.104.105.104.074 0 .12-.044.12-.104l.24-2.474-.24-2.547c0-.06-.06-.104-.12-.104m.944-.091c-.074 0-.135.06-.15.135l-.18 2.64.18 2.53c.015.075.076.135.15.135.09 0 .15-.06.15-.135l.21-2.53-.21-2.64c-.015-.075-.075-.135-.15-.135m1.005-.54c-.09 0-.165.075-.18.165l-.165 3.18.165 2.563c.015.09.09.165.18.165.105 0 .165-.075.18-.165l.18-2.563-.18-3.18c-.015-.09-.09-.165-.18-.165m1.035-.18c-.105 0-.195.09-.21.195l-.135 3.36.15 2.563c.015.105.105.195.21.195.12 0 .195-.09.21-.195l.165-2.563-.165-3.36c-.015-.105-.105-.195-.21-.195m1.035.18c-.12 0-.21.09-.225.21l-.12 3.18.12 2.563c.015.12.105.21.225.21.12 0 .21-.09.225-.21l.15-2.563-.15-3.18c-.015-.12-.105-.21-.225-.21m1.05-.36c-.135 0-.24.105-.255.24l-.105 3.54.105 2.563c.015.135.12.24.255.24.135 0 .24-.105.255-.24l.12-2.563-.12-3.54c-.015-.135-.12-.24-.255-.24m1.065.09c-.15 0-.27.12-.285.27l-.09 3.45.09 2.563c.015.15.135.27.285.27.15 0 .27-.12.285-.27l.105-2.563-.105-3.45c-.015-.15-.135-.27-.285-.27m1.065-.18c-.165 0-.3.135-.315.3l-.075 3.63.075 2.563c.015.165.15.3.315.3.165 0 .3-.135.315-.3l.09-2.563-.09-3.63c-.015-.165-.15-.3-.315-.3m1.08.18c-.18 0-.315.15-.33.33l-.06 3.45.06 2.563c.015.18.15.33.33.33.165 0 .315-.15.33-.33l.075-2.563-.075-3.45c-.015-.18-.165-.33-.33-.33m1.08-.36c-.195 0-.345.15-.36.345l-.045 3.81.045 2.563c.015.195.165.345.36.345.18 0 .345-.15.36-.345l.06-2.563-.06-3.81c-.015-.195-.18-.345-.36-.345m1.08.27c-.195 0-.36.165-.375.36l-.03 3.54.03 2.563c.015.195.18.36.375.36.195 0 .36-.165.375-.36l.045-2.563-.045-3.54c-.015-.195-.18-.36-.375-.36m1.08-.18c-.21 0-.375.165-.39.375l-.015 3.72.015 2.563c.015.21.18.375.39.375.21 0 .375-.165.39-.375l.03-2.563-.03-3.72c-.015-.21-.18-.375-.39-.375m1.08.09c-.225 0-.39.18-.405.39l-.015 3.63.015 2.563c.015.21.18.39.405.39.21 0 .39-.18.405-.39l.015-2.563-.015-3.63c-.015-.21-.195-.39-.405-.39m1.08-.18c-.225 0-.405.18-.42.405l-.015 3.81.015 2.563c.015.225.195.405.42.405.225 0 .405-.18.42-.405l.015-2.563-.015-3.81c-.015-.225-.195-.405-.42-.405m1.08.18c-.24 0-.42.195-.435.42l-.015 3.63.015 2.563c.015.24.195.42.435.42.225 0 .42-.195.435-.42l.015-2.563-.015-3.63c-.015-.225-.21-.42-.435-.42m1.095-.09c-.24 0-.435.195-.45.435l-.015 3.72.015 2.563c.015.24.21.435.45.435.24 0 .435-.195.45-.435l.015-2.563-.015-3.72c-.015-.24-.21-.435-.45-.435m1.095.09c-.255 0-.45.21-.465.45l-.015 3.63.015 2.563c.015.255.21.45.465.45.24 0 .45-.21.465-.45l.015-2.563-.015-3.63c-.015-.255-.225-.45-.465-.45m1.095-.18c-.255 0-.465.21-.48.465l-.015 3.81.015 2.563c.015.255.225.465.48.465.255 0 .465-.21.48-.465l.015-2.563-.015-3.81c-.015-.255-.225-.465-.48-.465m1.095.18c-.27 0-.48.225-.495.48l-.015 3.63.015 2.563c.015.27.225.48.495.48.255 0 .48-.225.495-.48l.015-2.563-.015-3.63c-.015-.27-.24-.48-.495-.48m1.095-.09c-.27 0-.495.225-.51.495l-.015 3.72.015 2.563c.015.27.24.495.51.495.27 0 .495-.225.51-.495l.015-2.563-.015-3.72c-.015-.27-.24-.495-.51-.495M12 5.5c-1.5 0-2.7 1.2-2.7 2.7v8.4c.15-.3.45-.5.75-.5.3 0 .6.2.75.5V8.2c0-.9.75-1.65 1.65-1.65.3 0 .6.1.85.25C13.5 5.95 12.8 5.5 12 5.5"/></svg></a>
+              <a href="#" aria-label="TikTok" data-magnetic><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.45a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.88z"/></svg></a>
+            </div>
+            <div class="trademark-powered">
+              Powered by <strong>KS1 Empire Global Foundation (KS1EGF)</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PORTFOLIO PAGE (Coming Soon) ============ -->
+    <section class="page" id="page-portfolio">
+      <div class="page-inner coming-soon-page">
+        <div class="coming-soon reveal-3d">
+          <div class="coming-soon-icon tilt-3d">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          </div>
+          <span class="section-tag">03 · PORTFOLIO</span>
+          <h2 class="coming-soon-title">COMING <span class="gradient-text">SOON</span></h2>
+          <p class="coming-soon-desc">A curated selection of productions, mixes and creative collaborations is on its way. Stay tuned.</p>
+          <a href="https://wa.me/13439873280" target="_blank" rel="noopener" class="btn btn-primary" data-magnetic>
+            <span>Get Notified on WhatsApp</span>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+        </div>
+
+        <!-- TRADEMARK -->
+        <div class="trademark">
+          <div class="trademark-inner">
+            <div class="trademark-brand">
+              <span class="logo-mark">N</span>
+              <div class="trademark-text">
+                <strong>NOISEMAKERS</strong>
+                <span>Where Sound Becomes Art</span>
+              </div>
+            </div>
+            <div class="trademark-socials">
+              <a href="#" aria-label="Instagram" data-magnetic><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+              <a href="#" aria-label="YouTube" data-magnetic><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
+              <a href="#" aria-label="Spotify" data-magnetic><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.06-.84-.18-.9-.6-.06-.42.18-.84.6-.9 4.56-1.02 8.52-.6 11.64 1.38.42.18.48.66.24 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.38-1.32 9.78-.66 13.5 1.62.36.18.54.78.24 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg></a>
+              <a href="#" aria-label="SoundCloud" data-magnetic><svg viewBox="0 0 24 24" fill="currentColor"><path d="M1.175 12.225c-.051 0-.094.046-.101.1l-.233 2.154.233 2.105c.007.058.05.098.101.098.05 0 .09-.04.099-.098l.255-2.105-.27-2.154c-.009-.06-.05-.1-.1-.1m-.899.828c-.06 0-.091.037-.104.094L0 14.479l.165 1.308c0 .055.045.094.099.094.055 0 .09-.038.104-.094l.21-1.319-.21-1.334c0-.061-.045-.094-.1-.094m1.83-1.229c-.061 0-.12.045-.12.104l-.21 2.563.225 2.458c0 .06.045.104.105.104.074 0 .12-.044.12-.104l.24-2.474-.24-2.547c0-.06-.06-.104-.12-.104m.944-.091c-.074 0-.135.06-.15.135l-.18 2.64.18 2.53c.015.075.076.135.15.135.09 0 .15-.06.15-.135l.21-2.53-.21-2.64c-.015-.075-.075-.135-.15-.135m1.005-.54c-.09 0-.165.075-.18.165l-.165 3.18.165 2.563c.015.09.09.165.18.165.105 0 .165-.075.18-.165l.18-2.563-.18-3.18c-.015-.09-.09-.165-.18-.165m1.035-.18c-.105 0-.195.09-.21.195l-.135 3.36.15 2.563c.015.105.105.195.21.195.12 0 .195-.09.21-.195l.165-2.563-.165-3.36c-.015-.105-.105-.195-.21-.195m1.035.18c-.12 0-.21.09-.225.21l-.12 3.18.12 2.563c.015.12.105.21.225.21.12 0 .21-.09.225-.21l.15-2.563-.15-3.18c-.015-.12-.105-.21-.225-.21m1.05-.36c-.135 0-.24.105-.255.24l-.105 3.54.105 2.563c.015.135.12.24.255.24.135 0 .24-.105.255-.24l.12-2.563-.12-3.54c-.015-.135-.12-.24-.255-.24m1.065.09c-.15 0-.27.12-.285.27l-.09 3.45.09 2.563c.015.15.135.27.285.27.15 0 .27-.12.285-.27l.105-2.563-.105-3.45c-.015-.15-.135-.27-.285-.27m1.065-.18c-.165 0-.3.135-.315.3l-.075 3.63.075 2.563c.015.165.15.3.315.3.165 0 .3-.135.315-.3l.09-2.563-.09-3.63c-.015-.165-.15-.3-.315-.3m1.08.18c-.18 0-.315.15-.33.33l-.06 3.45.06 2.563c.015.18.15.33.33.33.165 0 .315-.15.33-.33l.075-2.563-.075-3.45c-.015-.18-.165-.33-.33-.33m1.08-.36c-.195 0-.345.15-.36.345l-.045 3.81.045 2.563c.015.195.165.345.36.345.18 0 .345-.15.36-.345l.06-2.563-.06-3.81c-.015-.195-.18-.345-.36-.345m1.08.27c-.195 0-.36.165-.375.36l-.03 3.54.03 2.563c.015.195.18.36.375.36.195 0 .36-.165.375-.36l.045-2.563-.045-3.54c-.015-.195-.18-.36-.375-.36m1.08-.18c-.21 0-.375.165-.39.375l-.015 3.72.015 2.563c.015.21.18.375.39.375.21 0 .375-.165.39-.375l.03-2.563-.03-3.72c-.015-.21-.18-.375-.39-.375m1.08.09c-.225 0-.39.18-.405.39l-.015 3.63.015 2.563c.015.21.18.39.405.39.21 0 .39-.18.405-.39l.015-2.563-.015-3.63c-.015-.21-.195-.39-.405-.39m1.08-.18c-.225 0-.405.18-.42.405l-.015 3.81.015 2.563c.015.225.195.405.42.405.225 0 .405-.18.42-.405l.015-2.563-.015-3.81c-.015-.225-.195-.405-.42-.405m1.08.18c-.24 0-.42.195-.435.42l-.015 3.63.015 2.563c.015.24.195.42.435.42.225 0 .42-.195.435-.42l.015-2.563-.015-3.63c-.015-.225-.21-.42-.435-.42m1.095-.09c-.24 0-.435.195-.45.435l-.015 3.72.015 2.563c.015.24.21.435.45.435.24 0 .435-.195.45-.435l.015-2.563-.015-3.72c-.015-.24-.21-.435-.45-.435m1.095.09c-.255 0-.45.21-.465.45l-.015 3.63.015 2.563c.015.255.21.45.465.45.24 0 .45-.21.465-.45l.015-2.563-.015-3.63c-.015-.255-.225-.45-.465-.45m1.095-.18c-.255 0-.465.21-.48.465l-.015 3.81.015 2.563c.015.255.225.465.48.465.255 0 .465-.21.48-.465l.015-2.563-.015-3.81c-.015-.255-.225-.465-.48-.465m1.095.18c-.27 0-.48.225-.495.48l-.015 3.63.015 2.563c.015.27.225.48.495.48.255 0 .48-.225.495-.48l.015-2.563-.015-3.63c-.015-.27-.24-.48-.495-.48m1.095-.09c-.27 0-.495.225-.51.495l-.015 3.72.015 2.563c.015.27.24.495.51.495.27 0 .495-.225.51-.495l.015-2.563-.015-3.72c-.015-.27-.24-.495-.51-.495M12 5.5c-1.5 0-2.7 1.2-2.7 2.7v8.4c.15-.3.45-.5.75-.5.3 0 .6.2.75.5V8.2c0-.9.75-1.65 1.65-1.65.3 0 .6.1.85.25C13.5 5.95 12.8 5.5 12 5.5"/></svg></a>
+              <a href="#" aria-label="TikTok" data-magnetic><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.45a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.88z"/></svg></a>
+            </div>
+            <div class="trademark-powered">
+              Powered by <strong>KS1 Empire Global Foundation (KS1EGF)</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MUSIC PAGE (Coming Soon) ============ -->
+    <section class="page" id="page-music">
+      <div class="page-inner coming-soon-page">
+        <div class="coming-soon reveal-3d">
+          <div class="coming-soon-icon tilt-3d">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+          </div>
+          <span class="section-tag">04 · LISTEN</span>
+          <h2 class="coming-soon-title">COMING <span class="gradient-text">SOON</span></h2>
+          <p class="coming-soon-desc">New tracks, productions and sonic journeys are on the way. Press play soon.</p>
+          <a href="https://wa.me/13439873280" target="_blank" rel="noopener" class="btn btn-primary" data-magnetic>
+            <span>Get Notified on WhatsApp</span>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+        </div>
+
+        <!-- TRADEMARK -->
+        <div class="trademark">
+          <div class="trademark-inner">
+            <div class="trademark-brand">
+              <span class="logo-mark">N</span>
+              <div class="trademark-text">
+                <strong>NOISEMAKERS</strong>
+                <span>Where Sound Becomes Art</span>
+              </div>
+            </div>
+            <div class="trademark-socials">
+              <a href="#" aria-label="Instagram" data-magnetic><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+              <a href="#" aria-label="YouTube" data-magnetic><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
+              <a href="#" aria-label="Spotify" data-magnetic><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.06-.84-.18-.9-.6-.06-.42.18-.84.6-.9 4.56-1.02 8.52-.6 11.64 1.38.42.18.48.66.24 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.38-1.32 9.78-.66 13.5 1.62.36.18.54.78.24 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg></a>
+              <a href="#" aria-label="SoundCloud" data-magnetic><svg viewBox="0 0 24 24" fill="currentColor"><path d="M1.175 12.225c-.051 0-.094.046-.101.1l-.233 2.154.233 2.105c.007.058.05.098.101.098.05 0 .09-.04.099-.098l.255-2.105-.27-2.154c-.009-.06-.05-.1-.1-.1m-.899.828c-.06 0-.091.037-.104.094L0 14.479l.165 1.308c0 .055.045.094.099.094.055 0 .09-.038.104-.094l.21-1.319-.21-1.334c0-.061-.045-.094-.1-.094m1.83-1.229c-.061 0-.12.045-.12.104l-.21 2.563.225 2.458c0 .06.045.104.105.104.074 0 .12-.044.12-.104l.24-2.474-.24-2.547c0-.06-.06-.104-.12-.104m.944-.091c-.074 0-.135.06-.15.135l-.18 2.64.18 2.53c.015.075.076.135.15.135.09 0 .15-.06.15-.135l.21-2.53-.21-2.64c-.015-.075-.075-.135-.15-.135m1.005-.54c-.09 0-.165.075-.18.165l-.165 3.18.165 2.563c.015.09.09.165.18.165.105 0 .165-.075.18-.165l.18-2.563-.18-3.18c-.015-.09-.09-.165-.18-.165m1.035-.18c-.105 0-.195.09-.21.195l-.135 3.36.15 2.563c.015.105.105.195.21.195.12 0 .195-.09.21-.195l.165-2.563-.165-3.36c-.015-.105-.105-.195-.21-.195m1.035.18c-.12 0-.21.09-.225.21l-.12 3.18.12 2.563c.015.12.105.21.225.21.12 0 .21-.09.225-.21l.15-2.563-.15-3.18c-.015-.12-.105-.21-.225-.21m1.05-.36c-.135 0-.24.105-.255.24l-.105 3.54.105 2.563c.015.135.12.24.255.24.135 0 .24-.105.255-.24l.12-2.563-.12-3.54c-.015-.135-.12-.24-.255-.24m1.065.09c-.15 0-.27.12-.285.27l-.09 3.45.09 2.563c.015.15.135.27.285.27.15 0 .27-.12.285-.27l.105-2.563-.105-3.45c-.015-.15-.135-.27-.285-.27m1.065-.18c-.165 0-.3.135-.315.3l-.075 3.63.075 2.563c.015.165.15.3.315.3.165 0 .3-.135.315-.3l.09-2.563-.09-3.63c-.015-.165-.15-.3-.315-.3m1.08.18c-.18 0-.315.15-.33.33l-.06 3.45.06 2.563c.015.18.15.33.33.33.165 0 .315-.15.33-.33l.075-2.563-.075-3.45c-.015-.18-.165-.33-.33-.33m1.08-.36c-.195 0-.345.15-.36.345l-.045 3.81.045 2.563c.015.195.165.345.36.345.18 0 .345-.15.36-.345l.06-2.563-.06-3.81c-.015-.195-.18-.345-.36-.345m1.08.27c-.195 0-.36.165-.375.36l-.03 3.54.03 2.563c.015.195.18.36.375.36.195 0 .36-.165.375-.36l.045-2.563-.045-3.54c-.015-.195-.18-.36-.375-.36m1.08-.18c-.21 0-.375.165-.39.375l-.015 3.72.015 2.563c.015.21.18.375.39.375.21 0 .375-.165.39-.375l.03-2.563-.03-3.72c-.015-.21-.18-.375-.39-.375m1.08.09c-.225 0-.39.18-.405.39l-.015 3.63.015 2.563c.015.21.18.39.405.39.21 0 .39-.18.405-.39l.015-2.563-.015-3.63c-.015-.21-.195-.39-.405-.39m1.08-.18c-.225 0-.405.18-.42.405l-.015 3.81.015 2.563c.015.225.195.405.42.405.225 0 .405-.18.42-.405l.015-2.563-.015-3.81c-.015-.225-.195-.405-.42-.405m1.08.18c-.24 0-.42.195-.435.42l-.015 3.63.015 2.563c.015.24.195.42.435.42.225 0 .42-.195.435-.42l.015-2.563-.015-3.63c-.015-.225-.21-.42-.435-.42m1.095-.09c-.24 0-.435.195-.45.435l-.015 3.72.015 2.563c.015.24.21.435.45.435.24 0 .435-.195.45-.435l.015-2.563-.015-3.72c-.015-.24-.21-.435-.45-.435m1.095.09c-.255 0-.45.21-.465.45l-.015 3.63.015 2.563c.015.255.21.45.465.45.24 0 .45-.21.465-.45l.015-2.563-.015-3.63c-.015-.255-.225-.45-.465-.45m1.095-.18c-.255 0-.465.21-.48.465l-.015 3.81.015 2.563c.015.255.225.465.48.465.255 0 .465-.21.48-.465l.015-2.563-.015-3.81c-.015-.255-.225-.465-.48-.465m1.095.18c-.27 0-.48.225-.495.48l-.015 3.63.015 2.563c.015.27.225.48.495.48.255 0 .48-.225.495-.48l.015-2.563-.015-3.63c-.015-.27-.24-.48-.495-.48m1.095-.09c-.27 0-.495.225-.51.495l-.015 3.72.015 2.563c.015.27.24.495.51.495.27 0 .495-.225.51-.495l.015-2.563-.015-3.72c-.015-.27-.24-.495-.51-.495M12 5.5c-1.5 0-2.7 1.2-2.7 2.7v8.4c.15-.3.45-.5.75-.5.3 0 .6.2.75.5V8.2c0-.9.75-1.65 1.65-1.65.3 0 .6.1.85.25C13.5 5.95 12.8 5.5 12 5.5"/></svg></a>
+              <a href="#" aria-label="TikTok" data-magnetic><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.45a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.88z"/></svg></a>
+            </div>
+            <div class="trademark-powered">
+              Powered by <strong>KS1 Empire Global Foundation (KS1EGF)</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ VIDEOS PAGE (Coming Soon) ============ -->
+    <section class="page" id="page-videos">
+      <div class="page-inner coming-soon-page">
+        <div class="coming-soon reveal-3d">
+          <div class="coming-soon-icon tilt-3d">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+          </div>
+          <span class="section-tag">05 · VIDEOS</span>
+          <h2 class="coming-soon-title">COMING <span class="gradient-text">SOON</span></h2>
+          <p class="coming-soon-desc">Studio sessions, music videos and behind-the-scenes content are on the way.</p>
+          <a href="https://wa.me/13439873280" target="_blank" rel="noopener" class="btn btn-primary" data-magnetic>
+            <span>Get Notified on WhatsApp</span>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+        </div>
+
+        <!-- TRADEMARK -->
+        <div class="trademark">
+          <div class="trademark-inner">
+            <div class="trademark-brand">
+              <span class="logo-mark">N</span>
+              <div class="trademark-text">
+                <strong>NOISEMAKERS</strong>
+                <span>Where Sound Becomes Art</span>
+              </div>
+            </div>
+            <div class="trademark-socials">
+              <a href="#" aria-label="Instagram" data-magnetic><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+              <a href="#" aria-label="YouTube" data-magnetic><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
+              <a href="#" aria-label="Spotify" data-magnetic><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.06-.84-.18-.9-.6-.06-.42.18-.84.6-.9 4.56-1.02 8.52-.6 11.64 1.38.42.18.48.66.24 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.38-1.32 9.78-.66 13.5 1.62.36.18.54.78.24 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg></a>
+              <a href="#" aria-label="SoundCloud" data-magnetic><svg viewBox="0 0 24 24" fill="currentColor"><path d="M1.175 12.225c-.051 0-.094.046-.101.1l-.233 2.154.233 2.105c.007.058.05.098.101.098.05 0 .09-.04.099-.098l.255-2.105-.27-2.154c-.009-.06-.05-.1-.1-.1m-.899.828c-.06 0-.091.037-.104.094L0 14.479l.165 1.308c0 .055.045.094.099.094.055 0 .09-.038.104-.094l.21-1.319-.21-1.334c0-.061-.045-.094-.1-.094m1.83-1.229c-.061 0-.12.045-.12.104l-.21 2.563.225 2.458c0 .06.045.104.105.104.074 0 .12-.044.12-.104l.24-2.474-.24-2.547c0-.06-.06-.104-.12-.104m.944-.091c-.074 0-.135.06-.15.135l-.18 2.64.18 2.53c.015.075.076.135.15.135.09 0 .15-.06.15-.135l.21-2.53-.21-2.64c-.015-.075-.075-.135-.15-.135m1.005-.54c-.09 0-.165.075-.18.165l-.165 3.18.165 2.563c.015.09.09.165.18.165.105 0 .165-.075.18-.165l.18-2.563-.18-3.18c-.015-.09-.09-.165-.18-.165m1.035-.18c-.105 0-.195.09-.21.195l-.135 3.36.15 2.563c.015.105.105.195.21.195.12 0 .195-.09.21-.195l.165-2.563-.165-3.36c-.015-.105-.105-.195-.21-.195m1.035.18c-.12 0-.21.09-.225.21l-.12 3.18.12 2.563c.015.12.105.21.225.21.12 0 .21-.09.225-.21l.15-2.563-.15-3.18c-.015-.12-.105-.21-.225-.21m1.05-.36c-.135 0-.24.105-.255.24l-.105 3.54.105 2.563c.015.135.12.24.255.24.135 0 .24-.105.255-.24l.12-2.563-.12-3.54c-.015-.135-.12-.24-.255-.24m1.065.09c-.15 0-.27.12-.285.27l-.09 3.45.09 2.563c.015.15.135.27.285.27.15 0 .27-.12.285-.27l.105-2.563-.105-3.45c-.015-.15-.135-.27-.285-.27m1.065-.18c-.165 0-.3.135-.315.3l-.075 3.63.075 2.563c.015.165.15.3.315.3.165 0 .3-.135.315-.3l.09-2.563-.09-3.63c-.015-.165-.15-.3-.315-.3m1.08.18c-.18 0-.315.15-.33.33l-.06 3.45.06 2.563c.015.18.15.33.33.33.165 0 .315-.15.33-.33l.075-2.563-.075-3.45c-.015-.18-.165-.33-.33-.33m1.08-.36c-.195 0-.345.15-.36.345l-.045 3.81.045 2.563c.015.195.165.345.36.345.18 0 .345-.15.36-.345l.06-2.563-.06-3.81c-.015-.195-.18-.345-.36-.345m1.08.27c-.195 0-.36.165-.375.36l-.03 3.54.03 2.563c.015.195.18.36.375.36.195 0 .36-.165.375-.36l.045-2.563-.045-3.54c-.015-.195-.18-.36-.375-.36m1.08-.18c-.21 0-.375.165-.39.375l-.015 3.72.015 2.563c.015.21.18.375.39.375.21 0 .375-.165.39-.375l.03-2.563-.03-3.72c-.015-.21-.18-.375-.39-.375m1.08.09c-.225 0-.39.18-.405.39l-.015 3.63.015 2.563c.015.21.18.39.405.39.21 0 .39-.18.405-.39l.015-2.563-.015-3.63c-.015-.21-.195-.39-.405-.39m1.08-.18c-.225 0-.405.18-.42.405l-.015 3.81.015 2.563c.015.225.195.405.42.405.225 0 .405-.18.42-.405l.015-2.563-.015-3.81c-.015-.225-.195-.405-.42-.405m1.08.18c-.24 0-.42.195-.435.42l-.015 3.63.015 2.563c.015.24.195.42.435.42.225 0 .42-.195.435-.42l.015-2.563-.015-3.63c-.015-.225-.21-.42-.435-.42m1.095-.09c-.24 0-.435.195-.45.435l-.015 3.72.015 2.563c.015.24.21.435.45.435.24 0 .435-.195.45-.435l.015-2.563-.015-3.72c-.015-.24-.21-.435-.45-.435m1.095.09c-.255 0-.45.21-.465.45l-.015 3.63.015 2.563c.015.255.21.45.465.45.24 0 .45-.21.465-.45l.015-2.563-.015-3.63c-.015-.255-.225-.45-.465-.45m1.095-.18c-.255 0-.465.21-.48.465l-.015 3.81.015 2.563c.015.255.225.465.48.465.255 0 .465-.21.48-.465l.015-2.563-.015-3.81c-.015-.255-.225-.465-.48-.465m1.095.18c-.27 0-.48.225-.495.48l-.015 3.63.015 2.563c.015.27.225.48.495.48.255 0 .48-.225.495-.48l.015-2.563-.015-3.63c-.015-.27-.24-.48-.495-.48m1.095-.09c-.27 0-.495.225-.51.495l-.015 3.72.015 2.563c.015.27.24.495.51.495.27 0 .495-.225.51-.495l.015-2.563-.015-3.72c-.015-.27-.24-.495-.51-.495M12 5.5c-1.5 0-2.7 1.2-2.7 2.7v8.4c.15-.3.45-.5.75-.5.3 0 .6.2.75.5V8.2c0-.9.75-1.65 1.65-1.65.3 0 .6.1.85.25C13.5 5.95 12.8 5.5 12 5.5"/></svg></a>
+              <a href="#" aria-label="TikTok" data-magnetic><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.45a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.88z"/></svg></a>
+            </div>
+            <div class="trademark-powered">
+              Powered by <strong>KS1 Empire Global Foundation (KS1EGF)</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STUDIO PAGE ============ -->
+    <section class="page" id="page-studio">
+      <div class="page-inner studio-page">
+        <div class="section-head reveal">
+          <span class="section-tag">06 · STUDIO</span>
+          <h2 class="section-title">THE <span class="gradient-text">SPACE</span></h2>
+          <p class="section-desc">Where ideas become records. A professional environment built for creativity.</p>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid">
           <!-- Injected via JS -->
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ============ VIDEOS ============ -->
-  <section class="section videos" id="videos">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="section-tag">05 · VIDEOS</span>
-        <h2 class="section-title">BEHIND THE <span class="gradient-text">SOUND</span></h2>
-        <p class="section-desc">Studio sessions, music videos and creative moments.</p>
-      </div>
-
-      <div class="videos-grid" id="videosGrid">
-        <!-- Injected via JS -->
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ STUDIO GALLERY ============ -->
-  <section class="section studio" id="studio">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="section-tag">06 · STUDIO</span>
-        <h2 class="section-title">THE <span class="gradient-text">SPACE</span></h2>
-        <p class="section-desc">Where ideas become records. A professional environment built for creativity.</p>
-      </div>
-
-      <div class="gallery-grid" id="galleryGrid">
-        <!-- Injected via JS -->
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ WORKFLOW ============ -->
-  <section class="section workflow" id="workflow">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="section-tag">07 · PROCESS</span>
-        <h2 class="section-title">THE <span class="gradient-text">WORKFLOW</span></h2>
-        <p class="section-desc">From the first idea to the final master — a proven creative process.</p>
-      </div>
-
-      <div class="workflow-timeline reveal">
-        <div class="timeline-line"></div>
-        <div class="timeline-step" data-step="1">
-          <div class="step-marker">01</div>
-          <div class="step-content">
-            <h4>Idea</h4>
-            <p>We start with a conversation. Your vision, references, and the feeling you want to capture.</p>
-          </div>
-        </div>
-        <div class="timeline-step" data-step="2">
-          <div class="step-marker">02</div>
-          <div class="step-content">
-            <h4>Songwriting</h4>
-            <p>Melodies, lyrics and structure. Crafting the emotional core of the song.</p>
-          </div>
-        </div>
-        <div class="timeline-step" data-step="3">
-          <div class="step-marker">03</div>
-          <div class="step-content">
-            <h4>Recording</h4>
-            <p>Capturing pristine performances in a professional acoustic environment.</p>
-          </div>
-        </div>
-        <div class="timeline-step" data-step="4">
-          <div class="step-marker">04</div>
-          <div class="step-content">
-            <h4>Production</h4>
-            <p>Building the sonic world — instrumentation, arrangement and texture.</p>
-          </div>
-        </div>
-        <div class="timeline-step" data-step="5">
-          <div class="step-marker">05</div>
-          <div class="step-content">
-            <h4>Mixing</h4>
-            <p>Balancing every element for clarity, depth and impact.</p>
-          </div>
-        </div>
-        <div class="timeline-step" data-step="6">
-          <div class="step-marker">06</div>
-          <div class="step-content">
-            <h4>Mastering</h4>
-            <p>Final polish — loudness, translation and release-ready quality.</p>
-          </div>
-        </div>
-        <div class="timeline-step" data-step="7">
-          <div class="step-marker">07</div>
-          <div class="step-content">
-            <h4>Release</h4>
-            <p>Your music is ready for the world. Distribution support available.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ TESTIMONIALS ============ -->
-  <section class="section testimonials" id="testimonials">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="section-tag">08 · TESTIMONIALS</span>
-        <h2 class="section-title">WORDS FROM <span class="gradient-text">ARTISTS</span></h2>
-      </div>
-
-      <div class="testimonials-slider reveal" id="testimonialsSlider">
-        <!-- Injected via JS -->
-      </div>
-      <div class="testimonials-nav">
-        <button class="testi-btn" id="testiPrev" aria-label="Previous">←</button>
-        <div class="testi-dots" id="testiDots"></div>
-        <button class="testi-btn" id="testiNext" aria-label="Next">→</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ BOOK A SESSION ============ -->
-  <section class="section book" id="book">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="section-tag">09 · BOOK</span>
-        <h2 class="section-title">LET'S <span class="gradient-text">CREATE</span></h2>
-        <p class="section-desc">Ready to bring your vision to life? Book a session and let's make something unforgettable.</p>
-      </div>
-
-      <form class="book-form reveal" id="bookForm">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="artistName">Artist Name</label>
-            <input type="text" id="artistName" name="artistName" required placeholder="Your stage name" />
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required placeholder="you@example.com" />
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="phone">Phone / WhatsApp</label>
-            <input type="tel" id="phone" name="phone" placeholder="+1 (___) ___-____" />
-          </div>
-          <div class="form-group">
-            <label for="projectType">Project Type</label>
-            <select id="projectType" name="projectType" required>
-              <option value="">Select a service</option>
-              <option>Music Production</option>
-              <option>Mixing</option>
-              <option>Mastering</option>
-              <option>Songwriting</option>
-              <option>Beat Production</option>
-              <option>Studio Recording</option>
-              <option>Vocal Production</option>
-              <option>Podcast Editing</option>
-              <option>Sound Design</option>
-              <option>Full Project (A–Z)</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="budget">Budget Range (CAD)</label>
-            <select id="budget" name="budget">
-              <option value="">Select budget</option>
-              <option>Under $500</option>
-              <option>$500 – $1,500</option>
-              <option>$1,500 – $5,000</option>
-              <option>$5,000 – $10,000</option>
-              <option>$10,000+</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="date">Preferred Date</label>
-            <input type="date" id="date" name="date" />
-          </div>
-        </div>
-        <div class="form-group full">
-          <label for="message">Tell me about your project</label>
-          <textarea id="message" name="message" rows="5" placeholder="Share your vision, references, timeline..."></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary btn-submit" data-magnetic>
-          <span>Send Request</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </button>
-      </form>
-    </div>
-  </section>
-
-  <!-- ============ CONTACT ============ -->
-  <section class="section contact" id="contact">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="section-tag">10 · CONTACT</span>
-        <h2 class="section-title">GET IN <span class="gradient-text">TOUCH</span></h2>
-      </div>
-
-      <div class="contact-grid reveal">
-        <div class="contact-info">
-          <div class="contact-item">
-            <div class="contact-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <!-- TRADEMARK -->
+        <div class="trademark">
+          <div class="trademark-inner">
+            <div class="trademark-brand">
+              <span class="logo-mark">N</span>
+              <div class="trademark-text">
+                <strong>NOISEMAKERS</strong>
+                <span>Where Sound Becomes Art</span>
+              </div>
             </div>
-            <div>
-              <h4>Location</h4>
-              <p>Ottawa, Ontario, Canada</p>
+            <div class="trademark-socials">
+              <a href="#" aria-label="Instagram" data-magnetic><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+              <a href="#" aria-label="YouTube" data-magnetic><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
+              <a href="#" aria-label="Spotify" data-magnetic><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.06-.84-.18-.9-.6-.06-.42.18-.84.6-.9 4.56-1.02 8.52-.6 11.64 1.38.42.18.48.66.24 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.38-1.32 9.78-.66 13.5 1.62.36.18.54.78.24 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg></a>
+              <a href="#" aria-label="SoundCloud" data-magnetic><svg viewBox="0 0 24 24" fill="currentColor"><path d="M1.175 12.225c-.051 0-.094.046-.101.1l-.233 2.154.233 2.105c.007.058.05.098.101.098.05 0 .09-.04.099-.098l.255-2.105-.27-2.154c-.009-.06-.05-.1-.1-.1m-.899.828c-.06 0-.091.037-.104.094L0 14.479l.165 1.308c0 .055.045.094.099.094.055 0 .09-.038.104-.094l.21-1.319-.21-1.334c0-.061-.045-.094-.1-.094m1.83-1.229c-.061 0-.12.045-.12.104l-.21 2.563.225 2.458c0 .06.045.104.105.104.074 0 .12-.044.12-.104l.24-2.474-.24-2.547c0-.06-.06-.104-.12-.104m.944-.091c-.074 0-.135.06-.15.135l-.18 2.64.18 2.53c.015.075.076.135.15.135.09 0 .15-.06.15-.135l.21-2.53-.21-2.64c-.015-.075-.075-.135-.15-.135m1.005-.54c-.09 0-.165.075-.18.165l-.165 3.18.165 2.563c.015.09.09.165.18.165.105 0 .165-.075.18-.165l.18-2.563-.18-3.18c-.015-.09-.09-.165-.18-.165m1.035-.18c-.105 0-.195.09-.21.195l-.135 3.36.15 2.563c.015.105.105.195.21.195.12 0 .195-.09.21-.195l.165-2.563-.165-3.36c-.015-.105-.105-.195-.21-.195m1.035.18c-.12 0-.21.09-.225.21l-.12 3.18.12 2.563c.015.12.105.21.225.21.12 0 .21-.09.225-.21l.15-2.563-.15-3.18c-.015-.12-.105-.21-.225-.21m1.05-.36c-.135 0-.24.105-.255.24l-.105 3.54.105 2.563c.015.135.12.24.255.24.135 0 .24-.105.255-.24l.12-2.563-.12-3.54c-.015-.135-.12-.24-.255-.24m1.065.09c-.15 0-.27.12-.285.27l-.09 3.45.09 2.563c.015.15.135.27.285.27.15 0 .27-.12.285-.27l.105-2.563-.105-3.45c-.015-.15-.135-.27-.285-.27m1.065-.18c-.165 0-.3.135-.315.3l-.075 3.63.075 2.563c.015.165.15.3.315.3.165 0 .3-.135.315-.3l.09-2.563-.09-3.63c-.015-.165-.15-.3-.315-.3m1.08.18c-.18 0-.315.15-.33.33l-.06 3.45.06 2.563c.015.18.15.33.33.33.165 0 .315-.15.33-.33l.075-2.563-.075-3.45c-.015-.18-.165-.33-.33-.33m1.08-.36c-.195 0-.345.15-.36.345l-.045 3.81.045 2.563c.015.195.165.345.36.345.18 0 .345-.15.36-.345l.06-2.563-.06-3.81c-.015-.195-.18-.345-.36-.345m1.08.27c-.195 0-.36.165-.375.36l-.03 3.54.03 2.563c.015.195.18.36.375.36.195 0 .36-.165.375-.36l.045-2.563-.045-3.54c-.015-.195-.18-.36-.375-.36m1.08-.18c-.21 0-.375.165-.39.375l-.015 3.72.015 2.563c.015.21.18.375.39.375.21 0 .375-.165.39-.375l.03-2.563-.03-3.72c-.015-.21-.18-.375-.39-.375m1.08.09c-.225 0-.39.18-.405.39l-.015 3.63.015 2.563c.015.21.18.39.405.39.21 0 .39-.18.405-.39l.015-2.563-.015-3.63c-.015-.21-.195-.39-.405-.39m1.08-.18c-.225 0-.405.18-.42.405l-.015 3.81.015 2.563c.015.225.195.405.42.405.225 0 .405-.18.42-.405l.015-2.563-.015-3.81c-.015-.225-.195-.405-.42-.405m1.08.18c-.24 0-.42.195-.435.42l-.015 3.63.015 2.563c.015.24.195.42.435.42.225 0 .42-.195.435-.42l.015-2.563-.015-3.63c-.015-.225-.21-.42-.435-.42m1.095-.09c-.24 0-.435.195-.45.435l-.015 3.72.015 2.563c.015.24.21.435.45.435.24 0 .435-.195.45-.435l.015-2.563-.015-3.72c-.015-.24-.21-.435-.45-.435m1.095.09c-.255 0-.45.21-.465.45l-.015 3.63.015 2.563c.015.255.21.45.465.45.24 0 .45-.21.465-.45l.015-2.563-.015-3.63c-.015-.255-.225-.45-.465-.45m1.095-.18c-.255 0-.465.21-.48.465l-.015 3.81.015 2.563c.015.255.225.465.48.465.255 0 .465-.21.48-.465l.015-2.563-.015-3.81c-.015-.255-.225-.465-.48-.465m1.095.18c-.27 0-.48.225-.495.48l-.015 3.63.015 2.563c.015.27.225.48.495.48.255 0 .48-.225.495-.48l.015-2.563-.015-3.63c-.015-.27-.24-.48-.495-.48m1.095-.09c-.27 0-.495.225-.51.495l-.015 3.72.015 2.563c.015.27.24.495.51.495.27 0 .495-.225.51-.495l.015-2.563-.015-3.72c-.015-.27-.24-.495-.51-.495M12 5.5c-1.5 0-2.7 1.2-2.7 2.7v8.4c.15-.3.45-.5.75-.5.3 0 .6.2.75.5V8.2c0-.9.75-1.65 1.65-1.65.3 0 .6.1.85.25C13.5 5.95 12.8 5.5 12 5.5"/></svg></a>
+              <a href="#" aria-label="TikTok" data-magnetic><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.45a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.88z"/></svg></a>
+            </div>
+            <div class="trademark-powered">
+              Powered by <strong>KS1 Empire Global Foundation (KS1EGF)</strong>
             </div>
           </div>
-          <div class="contact-item">
-            <div class="contact-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS PAGE ============ -->
+    <section class="page" id="page-testimonials">
+      <div class="page-inner testimonials-page">
+        <div class="section-head reveal">
+          <span class="section-tag">08 · TESTIMONIALS</span>
+          <h2 class="section-title">WORDS FROM <span class="gradient-text">ARTISTS</span></h2>
+        </div>
+
+        <div class="testimonials-slider reveal" id="testimonialsSlider">
+          <!-- Injected via JS -->
+        </div>
+        <div class="testimonials-nav">
+          <button class="testi-btn" id="testiPrev" aria-label="Previous">←</button>
+          <div class="testi-dots" id="testiDots"></div>
+          <button class="testi-btn" id="testiNext" aria-label="Next">→</button>
+        </div>
+
+        <!-- TRADEMARK -->
+        <div class="trademark">
+          <div class="trademark-inner">
+            <div class="trademark-brand">
+              <span class="logo-mark">N</span>
+              <div class="trademark-text">
+                <strong>NOISEMAKERS</strong>
+                <span>Where Sound Becomes Art</span>
+              </div>
             </div>
-            <div>
-              <h4>Email</h4>
-              <a href="mailto:hello@noisemakers.ca">hello@noisemakers.ca</a>
+            <div class="trademark-socials">
+              <a href="#" aria-label="Instagram" data-magnetic><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+              <a href="#" aria-label="YouTube" data-magnetic><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
+              <a href="#" aria-label="Spotify" data-magnetic><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.06-.84-.18-.9-.6-.06-.42.18-.84.6-.9 4.56-1.02 8.52-.6 11.64 1.38.42.18.48.66.24 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.38-1.32 9.78-.66 13.5 1.62.36.18.54.78.24 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg></a>
+              <a href="#" aria-label="SoundCloud" data-magnetic><svg viewBox="0 0 24 24" fill="currentColor"><path d="M1.175 12.225c-.051 0-.094.046-.101.1l-.233 2.154.233 2.105c.007.058.05.098.101.098.05 0 .09-.04.099-.098l.255-2.105-.27-2.154c-.009-.06-.05-.1-.1-.1m-.899.828c-.06 0-.091.037-.104.094L0 14.479l.165 1.308c0 .055.045.094.099.094.055 0 .09-.038.104-.094l.21-1.319-.21-1.334c0-.061-.045-.094-.1-.094m1.83-1.229c-.061 0-.12.045-.12.104l-.21 2.563.225 2.458c0 .06.045.104.105.104.074 0 .12-.044.12-.104l.24-2.474-.24-2.547c0-.06-.06-.104-.12-.104m.944-.091c-.074 0-.135.06-.15.135l-.18 2.64.18 2.53c.015.075.076.135.15.135.09 0 .15-.06.15-.135l.21-2.53-.21-2.64c-.015-.075-.075-.135-.15-.135m1.005-.54c-.09 0-.165.075-.18.165l-.165 3.18.165 2.563c.015.09.09.165.18.165.105 0 .165-.075.18-.165l.18-2.563-.18-3.18c-.015-.09-.09-.165-.18-.165m1.035-.18c-.105 0-.195.09-.21.195l-.135 3.36.15 2.563c.015.105.105.195.21.195.12 0 .195-.09.21-.195l.165-2.563-.165-3.36c-.015-.105-.105-.195-.21-.195m1.035.18c-.12 0-.21.09-.225.21l-.12 3.18.12 2.563c.015.12.105.21.225.21.12 0 .21-.09.225-.21l.15-2.563-.15-3.18c-.015-.12-.105-.21-.225-.21m1.05-.36c-.135 0-.24.105-.255.24l-.105 3.54.105 2.563c.015.135.12.24.255.24.135 0 .24-.105.255-.24l.12-2.563-.12-3.54c-.015-.135-.12-.24-.255-.24m1.065.09c-.15 0-.27.12-.285.27l-.09 3.45.09 2.563c.015.15.135.27.285.27.15 0 .27-.12.285-.27l.105-2.563-.105-3.45c-.015-.15-.135-.27-.285-.27m1.065-.18c-.165 0-.3.135-.315.3l-.075 3.63.075 2.563c.015.165.15.3.315.3.165 0 .3-.135.315-.3l.09-2.563-.09-3.63c-.015-.165-.15-.3-.315-.3m1.08.18c-.18 0-.315.15-.33.33l-.06 3.45.06 2.563c.015.18.15.33.33.33.165 0 .315-.15.33-.33l.075-2.563-.075-3.45c-.015-.18-.165-.33-.33-.33m1.08-.36c-.195 0-.345.15-.36.345l-.045 3.81.045 2.563c.015.195.165.345.36.345.18 0 .345-.15.36-.345l.06-2.563-.06-3.81c-.015-.195-.18-.345-.36-.345m1.08.27c-.195 0-.36.165-.375.36l-.03 3.54.03 2.563c.015.195.18.36.375.36.195 0 .36-.165.375-.36l.045-2.563-.045-3.54c-.015-.195-.18-.36-.375-.36m1.08-.18c-.21 0-.375.165-.39.375l-.015 3.72.015 2.563c.015.21.18.375.39.375.21 0 .375-.165.39-.375l.03-2.563-.03-3.72c-.015-.21-.18-.375-.39-.375m1.08.09c-.225 0-.39.18-.405.39l-.015 3.63.015 2.563c.015.21.18.39.405.39.21 0 .39-.18.405-.39l.015-2.563-.015-3.63c-.015-.21-.195-.39-.405-.39m1.08-.18c-.225 0-.405.18-.42.405l-.015 3.81.015 2.563c.015.225.195.405.42.405.225 0 .405-.18.42-.405l.015-2.563-.015-3.81c-.015-.225-.195-.405-.42-.405m1.08.18c-.24 0-.42.195-.435.42l-.015 3.63.015 2.563c.015.24.195.42.435.42.225 0 .42-.195.435-.42l.015-2.563-.015-3.63c-.015-.225-.21-.42-.435-.42m1.095-.09c-.24 0-.435.195-.45.435l-.015 3.72.015 2.563c.015.24.21.435.45.435.24 0 .435-.195.45-.435l.015-2.563-.015-3.72c-.015-.24-.21-.435-.45-.435m1.095.09c-.255 0-.45.21-.465.45l-.015 3.63.015 2.563c.015.255.21.45.465.45.24 0 .45-.21.465-.45l.015-2.563-.015-3.63c-.015-.255-.225-.45-.465-.45m1.095-.18c-.255 0-.465.21-.48.465l-.015 3.81.015 2.563c.015.255.225.465.48.465.255 0 .465-.21.48-.465l.015-2.563-.015-3.81c-.015-.255-.225-.465-.48-.465m1.095.18c-.27 0-.48.225-.495.48l-.015 3.63.015 2.563c.015.27.225.48.495.48.255 0 .48-.225.495-.48l.015-2.563-.015-3.63c-.015-.27-.24-.48-.495-.48m1.095-.09c-.27 0-.495.225-.51.495l-.015 3.72.015 2.563c.015.27.24.495.51.495.27 0 .495-.225.51-.495l.015-2.563-.015-3.72c-.015-.27-.24-.495-.51-.495M12 5.5c-1.5 0-2.7 1.2-2.7 2.7v8.4c.15-.3.45-.5.75-.5.3 0 .6.2.75.5V8.2c0-.9.75-1.65 1.65-1.65.3 0 .6.1.85.25C13.5 5.95 12.8 5.5 12 5.5"/></svg></a>
+              <a href="#" aria-label="TikTok" data-magnetic><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.45a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.88z"/></svg></a>
+            </div>
+            <div class="trademark-powered">
+              Powered by <strong>KS1 Empire Global Foundation (KS1EGF)</strong>
             </div>
           </div>
-          <div class="contact-item">
-            <div class="contact-icon">
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BOOK PAGE ============ -->
+    <section class="page" id="page-book">
+      <div class="page-inner book-page">
+        <div class="section-head reveal">
+          <span class="section-tag">09 · BOOK</span>
+          <h2 class="section-title">LET'S <span class="gradient-text">CREATE</span></h2>
+          <p class="section-desc">Ready to bring your vision to life? Book a session and let's make something unforgettable.</p>
+        </div>
+
+        <form class="book-form reveal" id="bookForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="artistName">Artist Name</label>
+              <input type="text" id="artistName" name="artistName" required placeholder="Your stage name" />
+            </div>
+            <div class="form-group">
+              <label for="phone">WhatsApp Number</label>
+              <input type="tel" id="phone" name="phone" required placeholder="+1 (___) ___-____" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="projectType">Project Type</label>
+              <select id="projectType" name="projectType" required>
+                <option value="">Select a service</option>
+                <option>Music Production</option>
+                <option>Mixing</option>
+                <option>Mastering</option>
+                <option>Songwriting</option>
+                <option>Beat Production</option>
+                <option>Studio Recording</option>
+                <option>Vocal Production</option>
+                <option>Podcast Editing</option>
+                <option>Sound Design</option>
+                <option>Full Project (A–Z)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="budget">Budget Range (CAD)</label>
+              <select id="budget" name="budget">
+                <option value="">Select budget</option>
+                <option>Under $500</option>
+                <option>$500 – $1,500</option>
+                <option>$1,500 – $5,000</option>
+                <option>$5,000 – $10,000</option>
+                <option>$10,000+</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="date">Preferred Date</label>
+              <input type="date" id="date" name="date" />
+            </div>
+            <div class="form-group">
+              <label>&nbsp;</label>
+              <a href="https://wa.me/13439873280" target="_blank" rel="noopener" class="btn btn-outline wa-direct" data-magnetic>
+                <span>Or Chat Directly on WhatsApp</span>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="form-group full">
+            <label for="message">Tell me about your project</label>
+            <textarea id="message" name="message" rows="4" placeholder="Share your vision, references, timeline..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-submit" data-magnetic>
+            <span>Send Request via WhatsApp</span>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </button>
+        </form>
+
+        <!-- TRADEMARK -->
+        <div class="trademark">
+          <div class="trademark-inner">
+            <div class="trademark-brand">
+              <span class="logo-mark">N</span>
+              <div class="trademark-text">
+                <strong>NOISEMAKERS</strong>
+                <span>Where Sound Becomes Art</span>
+              </div>
+            </div>
+            <div class="trademark-socials">
+              <a href="#" aria-label="Instagram" data-magnetic><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+              <a href="#" aria-label="YouTube" data-magnetic><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
+              <a href="#" aria-label="Spotify" data-magnetic><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.06-.84-.18-.9-.6-.06-.42.18-.84.6-.9 4.56-1.02 8.52-.6 11.64 1.38.42.18.48.66.24 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.38-1.32 9.78-.66 13.5 1.62.36.18.54.78.24 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg></a>
+              <a href="#" aria-label="SoundCloud" data-magnetic><svg viewBox="0 0 24 24" fill="currentColor"><path d="M1.175 12.225c-.051 0-.094.046-.101.1l-.233 2.154.233 2.105c.007.058.05.098.101.098.05 0 .09-.04.099-.098l.255-2.105-.27-2.154c-.009-.06-.05-.1-.1-.1m-.899.828c-.06 0-.091.037-.104.094L0 14.479l.165 1.308c0 .055.045.094.099.094.055 0 .09-.038.104-.094l.21-1.319-.21-1.334c0-.061-.045-.094-.1-.094m1.83-1.229c-.061 0-.12.045-.12.104l-.21 2.563.225 2.458c0 .06.045.104.105.104.074 0 .12-.044.12-.104l.24-2.474-.24-2.547c0-.06-.06-.104-.12-.104m.944-.091c-.074 0-.135.06-.15.135l-.18 2.64.18 2.53c.015.075.076.135.15.135.09 0 .15-.06.15-.135l.21-2.53-.21-2.64c-.015-.075-.075-.135-.15-.135m1.005-.54c-.09 0-.165.075-.18.165l-.165 3.18.165 2.563c.015.09.09.165.18.165.105 0 .165-.075.18-.165l.18-2.563-.18-3.18c-.015-.09-.09-.165-.18-.165m1.035-.18c-.105 0-.195.09-.21.195l-.135 3.36.15 2.563c.015.105.105.195.21.195.12 0 .195-.09.21-.195l.165-2.563-.165-3.36c-.015-.105-.105-.195-.21-.195m1.035.18c-.12 0-.21.09-.225.21l-.12 3.18.12 2.563c.015.12.105.21.225.21.12 0 .21-.09.225-.21l.15-2.563-.15-3.18c-.015-.12-.105-.21-.225-.21m1.05-.36c-.135 0-.24.105-.255.24l-.105 3.54.105 2.563c.015.135.12.24.255.24.135 0 .24-.105.255-.24l.12-2.563-.12-3.54c-.015-.135-.12-.24-.255-.24m1.065.09c-.15 0-.27.12-.285.27l-.09 3.45.09 2.563c.015.15.135.27.285.27.15 0 .27-.12.285-.27l.105-2.563-.105-3.45c-.015-.15-.135-.27-.285-.27m1.065-.18c-.165 0-.3.135-.315.3l-.075 3.63.075 2.563c.015.165.15.3.315.3.165 0 .3-.135.315-.3l.09-2.563-.09-3.63c-.015-.165-.15-.3-.315-.3m1.08.18c-.18 0-.315.15-.33.33l-.06 3.45.06 2.563c.015.18.15.33.33.33.165 0 .315-.15.33-.33l.075-2.563-.075-3.45c-.015-.18-.165-.33-.33-.33m1.08-.36c-.195 0-.345.15-.36.345l-.045 3.81.045 2.563c.015.195.165.345.36.345.18 0 .345-.15.36-.345l.06-2.563-.06-3.81c-.015-.195-.18-.345-.36-.345m1.08.27c-.195 0-.36.165-.375.36l-.03 3.54.03 2.563c.015.195.18.36.375.36.195 0 .36-.165.375-.36l.045-2.563-.045-3.54c-.015-.195-.18-.36-.375-.36m1.08-.18c-.21 0-.375.165-.39.375l-.015 3.72.015 2.563c.015.21.18.375.39.375.21 0 .375-.165.39-.375l.03-2.563-.03-3.72c-.015-.21-.18-.375-.39-.375m1.08.09c-.225 0-.39.18-.405.39l-.015 3.63.015 2.563c.015.21.18.39.405.39.21 0 .39-.18.405-.39l.015-2.563-.015-3.63c-.015-.21-.195-.39-.405-.39m1.08-.18c-.225 0-.405.18-.42.405l-.015 3.81.015 2.563c.015.225.195.405.42.405.225 0 .405-.18.42-.405l.015-2.563-.015-3.81c-.015-.225-.195-.405-.42-.405m1.08.18c-.24 0-.42.195-.435.42l-.015 3.63.015 2.563c.015.24.195.42.435.42.225 0 .42-.195.435-.42l.015-2.563-.015-3.63c-.015-.225-.21-.42-.435-.42m1.095-.09c-.24 0-.435.195-.45.435l-.015 3.72.015 2.563c.015.24.21.435.45.435.24 0 .435-.195.45-.435l.015-2.563-.015-3.72c-.015-.24-.21-.435-.45-.435m1.095.09c-.255 0-.45.21-.465.45l-.015 3.63.015 2.563c.015.255.21.45.465.45.24 0 .45-.21.465-.45l.015-2.563-.015-3.63c-.015-.255-.225-.45-.465-.45m1.095-.18c-.255 0-.465.21-.48.465l-.015 3.81.015 2.563c.015.255.225.465.48.465.255 0 .465-.21.48-.465l.015-2.563-.015-3.81c-.015-.255-.225-.465-.48-.465m1.095.18c-.27 0-.48.225-.495.48l-.015 3.63.015 2.563c.015.27.225.48.495.48.255 0 .48-.225.495-.48l.015-2.563-.015-3.63c-.015-.27-.24-.48-.495-.48m1.095-.09c-.27 0-.495.225-.51.495l-.015 3.72.015 2.563c.015.27.24.495.51.495.27 0 .495-.225.51-.495l.015-2.563-.015-3.72c-.015-.27-.24-.495-.51-.495M12 5.5c-1.5 0-2.7 1.2-2.7 2.7v8.4c.15-.3.45-.5.75-.5.3 0 .6.2.75.5V8.2c0-.9.75-1.65 1.65-1.65.3 0 .6.1.85.25C13.5 5.95 12.8 5.5 12 5.5"/></svg></a>
+              <a href="#" aria-label="TikTok" data-magnetic><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.45a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.88z"/></svg></a>
+            </div>
+            <div class="trademark-powered">
+              Powered by <strong>KS1 Empire Global Foundation (KS1EGF)</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT PAGE ============ -->
+    <section class="page" id="page-contact">
+      <div class="page-inner contact-page">
+        <div class="section-head reveal">
+          <span class="section-tag">10 · CONTACT</span>
+          <h2 class="section-title">GET IN <span class="gradient-text">TOUCH</span></h2>
+        </div>
+
+        <div class="contact-grid reveal">
+          <div class="contact-info">
+            <div class="contact-item tilt-3d">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <h4>Location</h4>
+                <p>Ottawa, Ontario, Canada</p>
+              </div>
+            </div>
+            <div class="contact-item tilt-3d">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              </div>
+              <div>
+                <h4>WhatsApp (VennyBeats)</h4>
+                <a href="https://wa.me/13439873280" target="_blank" rel="noopener">+1 (343) 987-3280</a>
+              </div>
+            </div>
+            <a href="https://wa.me/13439873280" target="_blank" rel="noopener" class="btn btn-primary wa-big tilt-3d" data-magnetic>
+              <span>Start a WhatsApp Conversation</span>
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            </div>
-            <div>
-              <h4>WhatsApp</h4>
-              <a href="https://wa.me/16135550123" target="_blank" rel="noopener">+1 (613) 555-0123</a>
-            </div>
+            </a>
           </div>
-          <div class="contact-socials">
-            <a href="#" aria-label="Instagram">IG</a>
-            <a href="#" aria-label="YouTube">YT</a>
-            <a href="#" aria-label="Spotify">SP</a>
-            <a href="#" aria-label="SoundCloud">SC</a>
-            <a href="#" aria-label="TikTok">TT</a>
+
+          <div class="contact-map tilt-3d">
+            <div class="map-placeholder">
+              <div class="map-pin">
+                <div class="map-pin-dot"></div>
+                <div class="map-pin-pulse"></div>
+              </div>
+              <div class="map-label">Ottawa, Canada</div>
+              <div class="map-grid"></div>
+            </div>
           </div>
         </div>
 
-        <div class="contact-map">
-          <div class="map-placeholder">
-            <div class="map-pin">
-              <div class="map-pin-dot"></div>
-              <div class="map-pin-pulse"></div>
+        <!-- TRADEMARK -->
+        <div class="trademark">
+          <div class="trademark-inner">
+            <div class="trademark-brand">
+              <span class="logo-mark">N</span>
+              <div class="trademark-text">
+                <strong>NOISEMAKERS</strong>
+                <span>Where Sound Becomes Art</span>
+              </div>
             </div>
-            <div class="map-label">Ottawa, Canada</div>
-            <div class="map-grid"></div>
+            <div class="trademark-socials">
+              <a href="#" aria-label="Instagram" data-magnetic><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+              <a href="#" aria-label="YouTube" data-magnetic><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
+              <a href="#" aria-label="Spotify" data-magnetic><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.06-.84-.18-.9-.6-.06-.42.18-.84.6-.9 4.56-1.02 8.52-.6 11.64 1.38.42.18.48.66.24 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.38-1.32 9.78-.66 13.5 1.62.36.18.54.78.24 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg></a>
+              <a href="#" aria-label="SoundCloud" data-magnetic><svg viewBox="0 0 24 24" fill="currentColor"><path d="M1.175 12.225c-.051 0-.094.046-.101.1l-.233 2.154.233 2.105c.007.058.05.098.101.098.05 0 .09-.04.099-.098l.255-2.105-.27-2.154c-.009-.06-.05-.1-.1-.1m-.899.828c-.06 0-.091.037-.104.094L0 14.479l.165 1.308c0 .055.045.094.099.094.055 0 .09-.038.104-.094l.21-1.319-.21-1.334c0-.061-.045-.094-.1-.094m1.83-1.229c-.061 0-.12.045-.12.104l-.21 2.563.225 2.458c0 .06.045.104.105.104.074 0 .12-.044.12-.104l.24-2.474-.24-2.547c0-.06-.06-.104-.12-.104m.944-.091c-.074 0-.135.06-.15.135l-.18 2.64.18 2.53c.015.075.076.135.15.135.09 0 .15-.06.15-.135l.21-2.53-.21-2.64c-.015-.075-.075-.135-.15-.135m1.005-.54c-.09 0-.165.075-.18.165l-.165 3.18.165 2.563c.015.09.09.165.18.165.105 0 .165-.075.18-.165l.18-2.563-.18-3.18c-.015-.09-.09-.165-.18-.165m1.035-.18c-.105 0-.195.09-.21.195l-.135 3.36.15 2.563c.015.105.105.195.21.195.12 0 .195-.09.21-.195l.165-2.563-.165-3.36c-.015-.105-.105-.195-.21-.195m1.035.18c-.12 0-.21.09-.225.21l-.12 3.18.12 2.563c.015.12.105.21.225.21.12 0 .21-.09.225-.21l.15-2.563-.15-3.18c-.015-.12-.105-.21-.225-.21m1.05-.36c-.135 0-.24.105-.255.24l-.105 3.54.105 2.563c.015.135.12.24.255.24.135 0 .24-.105.255-.24l.12-2.563-.12-3.54c-.015-.135-.12-.24-.255-.24m1.065.09c-.15 0-.27.12-.285.27l-.09 3.45.09 2.563c.015.15.135.27.285.27.15 0 .27-.12.285-.27l.105-2.563-.105-3.45c-.015-.15-.135-.27-.285-.27m1.065-.18c-.165 0-.3.135-.315.3l-.075 3.63.075 2.563c.015.165.15.3.315.3.165 0 .3-.135.315-.3l.09-2.563-.09-3.63c-.015-.165-.15-.3-.315-.3m1.08.18c-.18 0-.315.15-.33.33l-.06 3.45.06 2.563c.015.18.15.33.33.33.165 0 .315-.15.33-.33l.075-2.563-.075-3.45c-.015-.18-.165-.33-.33-.33m1.08-.36c-.195 0-.345.15-.36.345l-.045 3.81.045 2.563c.015.195.165.345.36.345.18 0 .345-.15.36-.345l.06-2.563-.06-3.81c-.015-.195-.18-.345-.36-.345m1.08.27c-.195 0-.36.165-.375.36l-.03 3.54.03 2.563c.015.195.18.36.375.36.195 0 .36-.165.375-.36l.045-2.563-.045-3.54c-.015-.195-.18-.36-.375-.36m1.08-.18c-.21 0-.375.165-.39.375l-.015 3.72.015 2.563c.015.21.18.375.39.375.21 0 .375-.165.39-.375l.03-2.563-.03-3.72c-.015-.21-.18-.375-.39-.375m1.08.09c-.225 0-.39.18-.405.39l-.015 3.63.015 2.563c.015.21.18.39.405.39.21 0 .39-.18.405-.39l.015-2.563-.015-3.63c-.015-.21-.195-.39-.405-.39m1.08-.18c-.225 0-.405.18-.42.405l-.015 3.81.015 2.563c.015.225.195.405.42.405.225 0 .405-.18.42-.405l.015-2.563-.015-3.81c-.015-.225-.195-.405-.42-.405m1.08.18c-.24 0-.42.195-.435.42l-.015 3.63.015 2.563c.015.24.195.42.435.42.225 0 .42-.195.435-.42l.015-2.563-.015-3.63c-.015-.225-.21-.42-.435-.42m1.095-.09c-.24 0-.435.195-.45.435l-.015 3.72.015 2.563c.015.24.21.435.45.435.24 0 .435-.195.45-.435l.015-2.563-.015-3.72c-.015-.24-.21-.435-.45-.435m1.095.09c-.255 0-.45.21-.465.45l-.015 3.63.015 2.563c.015.255.21.45.465.45.24 0 .45-.21.465-.45l.015-2.563-.015-3.63c-.015-.255-.225-.45-.465-.45m1.095-.18c-.255 0-.465.21-.48.465l-.015 3.81.015 2.563c.015.255.225.465.48.465.255 0 .465-.21.48-.465l.015-2.563-.015-3.81c-.015-.255-.225-.465-.48-.465m1.095.18c-.27 0-.48.225-.495.48l-.015 3.63.015 2.563c.015.27.225.48.495.48.255 0 .48-.225.495-.48l.015-2.563-.015-3.63c-.015-.27-.24-.48-.495-.48m1.095-.09c-.27 0-.495.225-.51.495l-.015 3.72.015 2.563c.015.27.24.495.51.495.27 0 .495-.225.51-.495l.015-2.563-.015-3.72c-.015-.27-.24-.495-.51-.495M12 5.5c-1.5 0-2.7 1.2-2.7 2.7v8.4c.15-.3.45-.5.75-.5.3 0 .6.2.75.5V8.2c0-.9.75-1.65 1.65-1.65.3 0 .6.1.85.25C13.5 5.95 12.8 5.5 12 5.5"/></svg></a>
+              <a href="#" aria-label="TikTok" data-magnetic><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.45a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.88z"/></svg></a>
+            </div>
+            <div class="trademark-powered">
+              Powered by <strong>KS1 Empire Global Foundation (KS1EGF)</strong>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ============ FOOTER ============ -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <a href="#home" class="nav-logo">
-            <span class="logo-mark">N</span>
-            <span class="logo-text">NOISEMAKERS</span>
-          </a>
-          <p>Where sound becomes art. Professional music production, mixing & mastering from Ottawa to the world.</p>
-          <div class="footer-socials">
-            <a href="#" aria-label="Instagram">Instagram</a>
-            <a href="#" aria-label="YouTube">YouTube</a>
-            <a href="#" aria-label="Spotify">Spotify</a>
-            <a href="#" aria-label="SoundCloud">SoundCloud</a>
-          </div>
-        </div>
-        <div class="footer-col">
-          <h5>Navigate</h5>
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#portfolio">Portfolio</a>
-          <a href="#music">Music</a>
-          <a href="#contact">Contact</a>
-        </div>
-        <div class="footer-col">
-          <h5>Services</h5>
-          <a href="#services">Music Production</a>
-          <a href="#services">Mixing & Mastering</a>
-          <a href="#services">Songwriting</a>
-          <a href="#services">Studio Recording</a>
-          <a href="#services">Sound Design</a>
-        </div>
-        <div class="footer-col">
-          <h5>Newsletter</h5>
-          <p class="footer-newsletter-text">Get updates on new releases and studio availability.</p>
-          <form class="footer-newsletter" id="newsletterForm">
-            <input type="email" placeholder="Your email" required />
-            <button type="submit" aria-label="Subscribe">→</button>
-          </form>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2026 NOISEMAKERS. All rights reserved. Crafted with passion in Ottawa.</p>
-        <p><a href="#">Privacy</a> · <a href="#">Terms</a></p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- ============ BACK TO TOP ============ -->
-  <button class="back-to-top" id="backToTop" aria-label="Back to top">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
-  </button>
-
-  <!-- ============ PORTFOLIO MODAL ============ -->
-  <div class="modal" id="portfolioModal">
-    <div class="modal-content">
-      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
-      <div class="modal-body" id="modalBody"></div>
-    </div>
-  </div>
+  </main>
 
   <!-- ============ LIGHTBOX ============ -->
   <div class="lightbox" id="lightbox">
