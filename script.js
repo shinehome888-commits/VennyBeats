@@ -18,35 +18,6 @@ const DATA = {
     { icon: 'zap', title: 'Sound Design', desc: 'Custom sound design for film, games, ads and creative projects.' }
   ],
 
-  portfolio: [
-    { title: 'Monrovia Nights', artist: 'K. Johnson', role: 'Producer · Mixer', type: 'album', img: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&q=80', desc: 'A 10-track Afrobeats album recorded between Ottawa and Monrovia. Nominated for Best International Production 2024.', links: ['Spotify', 'Apple Music', 'YouTube'] },
-    { title: 'Northern Lights', artist: 'Aria Moon', role: 'Producer · Songwriter', type: 'single', img: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&q=80', desc: 'An ethereal R&B single that reached #12 on the Canadian Indie chart.', links: ['Spotify', 'Apple Music'] },
-    { title: 'Studio Sessions Vol. 1', artist: 'NOISEMAKERS', role: 'Producer · Engineer', type: 'video', img: 'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=600&q=80', desc: 'Behind-the-scenes documentary of a week in the studio with emerging Ottawa artists.', links: ['YouTube', 'Vimeo'] },
-    { title: 'Diaspora', artist: 'The Collective', role: 'Executive Producer', type: 'album', img: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=600&q=80', desc: 'A collaborative album celebrating African diaspora sounds. 14 tracks, 7 artists, 3 countries.', links: ['Spotify', 'Apple Music', 'Tidal'] },
-    { title: 'Echoes', artist: 'L. Mensah', role: 'Mixer · Mastering', type: 'single', img: 'https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=600&q=80', desc: 'A haunting ballad mixed in Dolby Atmos for immersive streaming platforms.', links: ['Apple Music', 'Tidal'] },
-    { title: 'Ottawa Underground', artist: 'Various Artists', role: 'Compiler · Mixer', type: 'mix', img: 'https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=600&q=80', desc: 'A curated mixtape showcasing the best of Ottawa\'s emerging hip-hop scene.', links: ['SoundCloud', 'Spotify'] },
-    { title: 'Golden Hour', artist: 'S. Williams', role: 'Producer · Songwriter', type: 'single', img: 'https://images.unsplash.com/photo-1506157786151-b8491531f063?w=600&q=80', desc: 'A sun-drenched pop single produced for international sync placement.', links: ['Spotify', 'YouTube'] },
-    { title: 'Rhythm & Roots', artist: 'K. Johnson', role: 'Producer', type: 'video', img: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=600&q=80', desc: 'Music video directed and scored by NOISEMAKERS. 500K+ views.', links: ['YouTube'] },
-    { title: 'Midnight in Gatineau', artist: 'Aria Moon', role: 'Mixer', type: 'mix', img: 'https://images.unsplash.com/photo-1501612780327-45045538702b?w=600&q=80', desc: 'A moody, atmospheric mix for late-night listening. Mastered for vinyl release.', links: ['Bandcamp', 'Spotify'] }
-  ],
-
-  tracks: [
-    { title: 'Monrovia Nights', artist: 'K. Johnson', duration: '3:42', img: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=200&q=80' },
-    { title: 'Northern Lights', artist: 'Aria Moon', duration: '4:18', img: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=200&q=80' },
-    { title: 'Diaspora', artist: 'The Collective', duration: '3:56', img: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=200&q=80' },
-    { title: 'Echoes', artist: 'L. Mensah', duration: '5:02', img: 'https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=200&q=80' },
-    { title: 'Golden Hour', artist: 'S. Williams', duration: '3:28', img: 'https://images.unsplash.com/photo-1506157786151-b8491531f063?w=200&q=80' }
-  ],
-
-  videos: [
-    { title: 'Studio Session: Monrovia Nights', artist: 'K. Johnson · Behind the Scenes', img: 'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=600&q=80' },
-    { title: 'Making of: Northern Lights', artist: 'Aria Moon · Documentary', img: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=600&q=80' },
-    { title: 'Rhythm & Roots', artist: 'K. Johnson · Official Video', img: 'https://images.unsplash.com/photo-1501612780327-45045538702b?w=600&q=80' },
-    { title: 'Inside the Mix', artist: 'NOISEMAKERS · Tutorial', img: 'https://images.unsplash.com/photo-1520166012956-add9ba0835cb?w=600&q=80' },
-    { title: 'Ottawa Underground', artist: 'Various Artists · Documentary', img: 'https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=600&q=80' },
-    { title: 'Golden Hour (Lyric Video)', artist: 'S. Williams · Lyric Video', img: 'https://images.unsplash.com/photo-1506157786151-b8491531f063?w=600&q=80' }
-  ],
-
   gallery: [
     { src: 'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800&q=80', caption: 'Main Studio Room' },
     { src: 'https://images.unsplash.com/photo-1520166012956-add9ba0835cb?w=800&q=80', caption: 'Mixing Console' },
@@ -60,12 +31,12 @@ const DATA = {
   ],
 
   testimonials: [
-    { name: 'K. Johnson', role: 'Recording Artist · Monrovia', text: 'NOISEMAKERS doesn\'t just produce music — he captures emotion. Working with him transformed my sound completely. Every session felt like magic.', img: 'https://i.pravatar.cc/100?img=12' },
-    { name: 'Aria Moon', role: 'Singer-Songwriter · Ottawa', text: 'The most professional and talented producer I\'ve ever worked with. He understood my vision instantly and elevated it beyond what I imagined possible.', img: 'https://i.pravatar.cc/100?img=47' },
-    { name: 'The Collective', role: 'Band · Toronto', text: 'From songwriting to mastering, NOISEMAKERS delivered excellence at every step. Our album wouldn\'t exist without his vision and technical mastery.', img: 'https://i.pravatar.cc/100?img=33' },
-    { name: 'L. Mensah', role: 'Artist · Accra', text: 'A true craftsman. The attention to detail in mixing and mastering is world-class. My music finally sounds the way I always dreamed it would.', img: 'https://i.pravatar.cc/100?img=15' },
-    { name: 'S. Williams', role: 'Pop Artist · Vancouver', text: 'NOISEMAKERS has an incredible ear and a gift for bringing out the best in artists. The studio atmosphere is inspiring and the results speak for themselves.', img: 'https://i.pravatar.cc/100?img=44' },
-    { name: 'D. Okafor', role: 'Independent Artist · Lagos', text: 'Remote collaboration made easy. The files came back sounding better than I could have imagined. Truly international quality.', img: 'https://i.pravatar.cc/100?img=60' }
+    { name: 'K. Johnson', role: 'Recording Artist · Monrovia', text: 'NOISEMAKERS doesn\'t just produce music — he captures emotion. Working with him transformed my sound completely. Every session felt like magic.' },
+    { name: 'Aria Moon', role: 'Singer-Songwriter · Ottawa', text: 'The most professional and talented producer I\'ve ever worked with. He understood my vision instantly and elevated it beyond what I imagined possible.' },
+    { name: 'The Collective', role: 'Band · Toronto', text: 'From songwriting to mastering, NOISEMAKERS delivered excellence at every step. Our album wouldn\'t exist without his vision and technical mastery.' },
+    { name: 'L. Mensah', role: 'Artist · Accra', text: 'A true craftsman. The attention to detail in mixing and mastering is world-class. My music finally sounds the way I always dreamed it would.' },
+    { name: 'S. Williams', role: 'Pop Artist · Vancouver', text: 'NOISEMAKERS has an incredible ear and a gift for bringing out the best in artists. The studio atmosphere is inspiring and the results speak for themselves.' },
+    { name: 'D. Okafor', role: 'Independent Artist · Lagos', text: 'Remote collaboration made easy. The files came back sounding better than I could have imagined. Truly international quality.' }
   ]
 };
 
@@ -83,6 +54,45 @@ const ICONS = {
   zap: '<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>'
 };
 
+/* ============ PAGE NAVIGATION ============ */
+(function initPages() {
+  const pages = document.querySelectorAll('.page');
+  const navLinks = document.querySelectorAll('[data-page]');
+
+  function showPage(pageId) {
+    pages.forEach(p => p.classList.remove('active'));
+    const target = document.getElementById('page-' + pageId);
+    if (target) {
+      target.classList.add('active');
+      // Update nav active state
+      document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+      const activeLink = document.querySelector(`.nav-link[data-page="${pageId}"]`);
+      if (activeLink) activeLink.classList.add('active');
+      // Re-trigger reveal animations
+      setTimeout(() => {
+        initRevealAnimations();
+      }, 100);
+    }
+  }
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const pageId = link.getAttribute('data-page');
+      showPage(pageId);
+      // Close mobile menu
+      document.getElementById('hamburger').classList.remove('active');
+      document.getElementById('navMenu').classList.remove('mobile-open');
+      // Scroll page-inner to top if needed
+      const pageInner = document.querySelector('#page-' + pageId + ' .page-inner');
+      if (pageInner) pageInner.scrollTop = 0;
+    });
+  });
+
+  // Start on home
+  showPage('home');
+})();
+
 /* ============ LOADER ============ */
 (function initLoader() {
   const percent = document.getElementById('loaderPercent');
@@ -98,7 +108,6 @@ const ICONS = {
         loader.classList.add('hidden');
         document.body.style.overflow = '';
         initRevealAnimations();
-        initCounters();
       }, 500);
     }
     percent.textContent = Math.floor(p) + '%';
@@ -127,14 +136,12 @@ const ICONS = {
   }
   animate();
 
-  // Hover states
-  const hoverables = document.querySelectorAll('a, button, .portfolio-item, .service-card, .gallery-item, input, select, textarea');
+  const hoverables = document.querySelectorAll('a, button, .gallery-item, .service-card, input, select, textarea');
   hoverables.forEach(el => {
     el.addEventListener('mouseenter', () => ring.classList.add('hover'));
     el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
   });
 
-  // Magnetic effect
   document.querySelectorAll('[data-magnetic]').forEach(el => {
     el.addEventListener('mousemove', e => {
       const rect = el.getBoundingClientRect();
@@ -148,7 +155,7 @@ const ICONS = {
   });
 })();
 
-/* ============ BACKGROUND CANVAS (particles) ============ */
+/* ============ BACKGROUND CANVAS ============ */
 (function initParticles() {
   const canvas = document.getElementById('bgCanvas');
   if (!canvas) return;
@@ -190,8 +197,6 @@ const ICONS = {
   function animate() {
     ctx.clearRect(0, 0, w, h);
     particles.forEach(p => { p.update(); p.draw(); });
-
-    // Connect nearby particles
     for (let i = 0; i < particles.length; i++) {
       for (let j = i + 1; j < particles.length; j++) {
         const dx = particles[i].x - particles[j].x;
@@ -217,47 +222,27 @@ const ICONS = {
   const nav = document.getElementById('nav');
   const hamburger = document.getElementById('hamburger');
   const menu = document.getElementById('navMenu');
-  const links = menu.querySelectorAll('.nav-link, .nav-cta');
 
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 50);
+  // Trigger scrolled state based on any scroll (for mobile page-inner)
+  document.querySelectorAll('.page-inner').forEach(pi => {
+    pi.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', pi.scrollTop > 30);
+    });
   });
+  // Also always show scrolled on non-home pages
+  const observer = new MutationObserver(() => {
+    const active = document.querySelector('.page.active');
+    if (active && active.id !== 'page-home') {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+  });
+  observer.observe(document.getElementById('pageWrapper'), { subtree: true, attributes: true, attributeFilter: ['class'] });
 
   hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
     menu.classList.toggle('mobile-open');
-  });
-
-  links.forEach(link => {
-    link.addEventListener('click', () => {
-      hamburger.classList.remove('active');
-      menu.classList.remove('mobile-open');
-    });
-  });
-})();
-
-/* ============ SEARCH ============ */
-(function initSearch() {
-  const btn = document.getElementById('searchBtn');
-  const popup = document.getElementById('searchPopup');
-  const close = document.getElementById('searchClose');
-  const input = document.getElementById('searchInput');
-
-  btn.addEventListener('click', () => {
-    popup.classList.add('open');
-    setTimeout(() => input.focus(), 300);
-  });
-  close.addEventListener('click', () => popup.classList.remove('open'));
-  popup.addEventListener('click', e => {
-    if (e.target === popup) popup.classList.remove('open');
-  });
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') popup.classList.remove('open');
-    if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
-      e.preventDefault();
-      popup.classList.add('open');
-      setTimeout(() => input.focus(), 300);
-    }
   });
 })();
 
@@ -310,7 +295,7 @@ const ICONS = {
   const grid = document.getElementById('servicesGrid');
   if (!grid) return;
   grid.innerHTML = DATA.services.map(s => `
-    <div class="service-card reveal">
+    <div class="service-card reveal tilt-3d">
       <div class="service-icon">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${ICONS[s.icon]}</svg>
       </div>
@@ -319,7 +304,6 @@ const ICONS = {
     </div>
   `).join('');
 
-  // Mouse glow follow
   grid.querySelectorAll('.service-card').forEach(card => {
     card.addEventListener('mousemove', e => {
       const rect = card.getBoundingClientRect();
@@ -327,222 +311,6 @@ const ICONS = {
       card.style.setProperty('--my', (e.clientY - rect.top) + 'px');
     });
   });
-})();
-
-/* ============ RENDER PORTFOLIO ============ */
-(function renderPortfolio() {
-  const grid = document.getElementById('portfolioGrid');
-  if (!grid) return;
-
-  function render(filter = 'all') {
-    const items = filter === 'all' ? DATA.portfolio : DATA.portfolio.filter(p => p.type === filter);
-    grid.innerHTML = items.map((p, i) => `
-      <div class="portfolio-item reveal" data-index="${DATA.portfolio.indexOf(p)}">
-        <img src="${p.img}" alt="${p.title}" loading="lazy" />
-        <span class="portfolio-tag">${p.type}</span>
-        <div class="portfolio-overlay">
-          <h4>${p.title}</h4>
-          <p>${p.artist} · ${p.role}</p>
-        </div>
-      </div>
-    `).join('');
-    attachPortfolioEvents();
-    initRevealAnimations();
-  }
-
-  function attachPortfolioEvents() {
-    grid.querySelectorAll('.portfolio-item').forEach(item => {
-      item.addEventListener('click', () => openPortfolioModal(+item.dataset.index));
-    });
-  }
-
-  document.querySelectorAll('.filter-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      render(btn.dataset.filter);
-    });
-  });
-
-  render();
-})();
-
-function openPortfolioModal(index) {
-  const p = DATA.portfolio[index];
-  const modal = document.getElementById('portfolioModal');
-  const body = document.getElementById('modalBody');
-  body.innerHTML = `
-    <img src="${p.img}" alt="${p.title}" />
-    <h3>${p.title}</h3>
-    <div class="modal-artist">${p.artist}</div>
-    <div class="modal-role">${p.role}</div>
-    <p>${p.desc}</p>
-    <div class="modal-links">
-      ${p.links.map(l => `<a href="#" target="_blank" rel="noopener">${l} ↗</a>`).join('')}
-    </div>
-  `;
-  modal.classList.add('open');
-}
-document.getElementById('modalClose').addEventListener('click', () => {
-  document.getElementById('portfolioModal').classList.remove('open');
-});
-document.getElementById('portfolioModal').addEventListener('click', e => {
-  if (e.target.id === 'portfolioModal') e.currentTarget.classList.remove('open');
-});
-
-/* ============ MUSIC PLAYER ============ */
-(function initPlayer() {
-  const playlist = document.getElementById('playerPlaylist');
-  const playBtn = document.getElementById('playBtn');
-  const prevBtn = document.getElementById('prevBtn');
-  const nextBtn = document.getElementById('nextBtn');
-  const art = document.getElementById('playerArt');
-  const titleEl = document.getElementById('playerTitle');
-  const artistEl = document.getElementById('playerArtist');
-  const currentEl = document.getElementById('playerCurrent');
-  const durationEl = document.getElementById('playerDuration');
-  const progressFill = document.getElementById('progressFill');
-  const progressBar = document.getElementById('progressBar');
-  const volume = document.getElementById('volumeSlider');
-  const vinyl = document.getElementById('vinylDisc');
-  const wave = document.getElementById('playerWave');
-
-  // Build waveform bars
-  const WAVE_BARS = 60;
-  for (let i = 0; i < WAVE_BARS; i++) {
-    const bar = document.createElement('span');
-    bar.style.height = (Math.random() * 60 + 20) + '%';
-    wave.appendChild(bar);
-  }
-  const waveBars = wave.querySelectorAll('span');
-
-  // Build playlist
-  playlist.innerHTML = DATA.tracks.map((t, i) => `
-    <div class="playlist-item" data-index="${i}">
-      <img src="${t.img}" alt="${t.title}" />
-      <div class="playlist-info">
-        <h5>${t.title}</h5>
-        <span>${t.artist}</span>
-      </div>
-      <div class="playlist-duration">${t.duration}</div>
-    </div>
-  `).join('');
-
-  let current = 0;
-  let isPlaying = false;
-  let progress = 0;
-  let progressInterval;
-
-  function parseDuration(str) {
-    const [m, s] = str.split(':').map(Number);
-    return m * 60 + s;
-  }
-
-  function loadTrack(i) {
-    current = i;
-    const t = DATA.tracks[i];
-    art.src = t.img;
-    titleEl.textContent = t.title;
-    artistEl.textContent = t.artist;
-    durationEl.textContent = t.duration;
-    currentEl.textContent = '0:00';
-    progress = 0;
-    progressFill.style.width = '0%';
-    playlist.querySelectorAll('.playlist-item').forEach((el, idx) => {
-      el.classList.toggle('active', idx === i);
-    });
-  }
-
-  function formatTime(sec) {
-    const m = Math.floor(sec / 60);
-    const s = Math.floor(sec % 60);
-    return `${m}:${s.toString().padStart(2, '0')}`;
-  }
-
-  function play() {
-    isPlaying = true;
-    playBtn.querySelector('.icon-play').style.display = 'none';
-    playBtn.querySelector('.icon-pause').style.display = 'block';
-    vinyl.classList.add('playing');
-    const total = parseDuration(DATA.tracks[current].duration);
-    progressInterval = setInterval(() => {
-      progress += 0.5;
-      if (progress >= total) {
-        nextTrack();
-        return;
-      }
-      const pct = (progress / total) * 100;
-      progressFill.style.width = pct + '%';
-      currentEl.textContent = formatTime(progress);
-      // Animate wave
-      const activeBars = Math.floor((pct / 100) * WAVE_BARS);
-      waveBars.forEach((b, i) => b.classList.toggle('active', i < activeBars));
-    }, 500);
-  }
-
-  function pause() {
-    isPlaying = false;
-    playBtn.querySelector('.icon-play').style.display = 'block';
-    playBtn.querySelector('.icon-pause').style.display = 'none';
-    vinyl.classList.remove('playing');
-    clearInterval(progressInterval);
-  }
-
-  function nextTrack() {
-    pause();
-    loadTrack((current + 1) % DATA.tracks.length);
-    if (isPlaying) play();
-  }
-  function prevTrack() {
-    pause();
-    loadTrack((current - 1 + DATA.tracks.length) % DATA.tracks.length);
-    if (isPlaying) play();
-  }
-
-  playBtn.addEventListener('click', () => isPlaying ? pause() : play());
-  nextBtn.addEventListener('click', nextTrack);
-  prevBtn.addEventListener('click', prevTrack);
-
-  playlist.querySelectorAll('.playlist-item').forEach(item => {
-    item.addEventListener('click', () => {
-      pause();
-      loadTrack(+item.dataset.index);
-      play();
-    });
-  });
-
-  progressBar.addEventListener('click', e => {
-    const rect = progressBar.getBoundingClientRect();
-    const pct = (e.clientX - rect.left) / rect.width;
-    const total = parseDuration(DATA.tracks[current].duration);
-    progress = pct * total;
-    progressFill.style.width = (pct * 100) + '%';
-    currentEl.textContent = formatTime(progress);
-  });
-
-  volume.addEventListener('input', e => {
-    // Visual only — no actual audio in this demo
-  });
-
-  loadTrack(0);
-})();
-
-/* ============ RENDER VIDEOS ============ */
-(function renderVideos() {
-  const grid = document.getElementById('videosGrid');
-  if (!grid) return;
-  grid.innerHTML = DATA.videos.map(v => `
-    <div class="video-card reveal">
-      <img src="${v.img}" alt="${v.title}" loading="lazy" />
-      <div class="video-play">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-      </div>
-      <div class="video-info">
-        <h4>${v.title}</h4>
-        <span>${v.artist}</span>
-      </div>
-    </div>
-  `).join('');
 })();
 
 /* ============ RENDER GALLERY + LIGHTBOX ============ */
@@ -603,7 +371,6 @@ document.getElementById('portfolioModal').addEventListener('click', e => {
           <div class="testimonial-stars">${'★'.repeat(5)}</div>
           <p class="testimonial-text">"${t.text}"</p>
           <div class="testimonial-author">
-            <img src="${t.img}" alt="${t.name}" loading="lazy" />
             <div>
               <h5>${t.name}</h5>
               <span>${t.role}</span>
@@ -649,7 +416,6 @@ document.getElementById('portfolioModal').addEventListener('click', e => {
 
   buildDots();
 
-  // Auto slide
   let autoSlide = setInterval(() => {
     index = index >= maxIndex() ? 0 : index + 1;
     update();
@@ -665,7 +431,7 @@ document.getElementById('portfolioModal').addEventListener('click', e => {
 
 /* ============ SCROLL REVEAL ============ */
 function initRevealAnimations() {
-  const reveals = document.querySelectorAll('.reveal:not(.visible)');
+  const reveals = document.querySelectorAll('.reveal:not(.visible), .reveal-3d:not(.visible)');
   const io = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -673,134 +439,102 @@ function initRevealAnimations() {
         io.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
   reveals.forEach(el => io.observe(el));
-}
-
-/* ============ ANIMATED COUNTERS ============ */
-function initCounters() {
-  const counters = document.querySelectorAll('.stat-num');
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const el = entry.target;
-        const target = +el.dataset.count;
-        let current = 0;
-        const step = target / 60;
-        const timer = setInterval(() => {
-          current += step;
-          if (current >= target) {
-            current = target;
-            clearInterval(timer);
-          }
-          el.textContent = Math.floor(current);
-        }, 25);
-        io.unobserve(el);
+  // Also trigger any that are already in view (for page transitions)
+  setTimeout(() => {
+    reveals.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        el.classList.add('visible');
       }
     });
-  }, { threshold: 0.5 });
-  counters.forEach(c => io.observe(c));
+  }, 200);
 }
 
-/* ============ SCROLL PROGRESS ============ */
-(function initScrollProgress() {
-  const bar = document.getElementById('scrollProgress');
-  window.addEventListener('scroll', () => {
-    const h = document.documentElement;
-    const scrolled = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
-    bar.style.width = scrolled + '%';
-  }, { passive: true });
-})();
+/* ============ SHARE BUTTON ============ */
+(function initShare() {
+  const btn = document.getElementById('shareBtn');
+  const popup = document.getElementById('sharePopup');
+  const close = document.getElementById('shareClose');
+  const copyBtn = document.getElementById('shareCopy');
+  const copyText = document.getElementById('shareCopyText');
 
-/* ============ BACK TO TOP ============ */
-(function initBackToTop() {
-  const btn = document.getElementById('backToTop');
-  window.addEventListener('scroll', () => {
-    btn.classList.toggle('visible', window.scrollY > 500);
+  const siteUrl = window.location.href;
+  const siteTitle = 'NOISEMAKERS — Where Sound Becomes Art';
+  const siteDesc = 'Liberian music producer & sound engineer based in Ottawa, Canada.';
+
+  document.getElementById('shareWhatsApp').href = `https://wa.me/?text=${encodeURIComponent(siteTitle + ' — ' + siteUrl)}`;
+  document.getElementById('shareTwitter').href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(siteTitle)}&url=${encodeURIComponent(siteUrl)}`;
+  document.getElementById('shareFacebook').href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(siteUrl)}`;
+  document.getElementById('shareLinkedIn').href = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(siteUrl)}`;
+
+  btn.addEventListener('click', () => popup.classList.add('open'));
+  close.addEventListener('click', () => popup.classList.remove('open'));
+  popup.addEventListener('click', e => { if (e.target === popup) popup.classList.remove('open'); });
+
+  copyBtn.addEventListener('click', () => {
+    navigator.clipboard.writeText(siteUrl).then(() => {
+      copyText.textContent = '✓ Copied!';
+      setTimeout(() => copyText.textContent = 'Copy Link', 2000);
+    }).catch(() => {
+      // Fallback
+      const ta = document.createElement('textarea');
+      ta.value = siteUrl;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      copyText.textContent = '✓ Copied!';
+      setTimeout(() => copyText.textContent = 'Copy Link', 2000);
+    });
   });
-  btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') popup.classList.remove('open');
+  });
 })();
 
-/* ============ BOOKING FORM ============ */
+/* ============ BOOK FORM (WhatsApp redirect) ============ */
 (function initBookForm() {
   const form = document.getElementById('bookForm');
   if (!form) return;
   form.addEventListener('submit', e => {
     e.preventDefault();
-    const btn = form.querySelector('.btn-submit span');
-    const original = btn.textContent;
-    btn.textContent = 'Sending...';
-    setTimeout(() => {
-      btn.textContent = '✓ Request Sent!';
-      form.reset();
-      setTimeout(() => btn.textContent = original, 3000);
-    }, 1200);
+    const data = new FormData(form);
+    const name = data.get('artistName') || '';
+    const phone = data.get('phone') || '';
+    const project = data.get('projectType') || '';
+    const budget = data.get('budget') || '';
+    const date = data.get('date') || '';
+    const message = data.get('message') || '';
+
+    const text = `*New Booking Request — NOISEMAKERS*%0A%0A*Artist:* ${name}%0A*WhatsApp:* ${phone}%0A*Project:* ${project}%0A*Budget:* ${budget}%0A*Preferred Date:* ${date}%0A%0A*Message:*%0A${message}`;
+    window.open(`https://wa.me/13439873280?text=${text}`, '_blank');
   });
 })();
 
-/* ============ NEWSLETTER ============ */
-(function initNewsletter() {
-  const form = document.getElementById('newsletterForm');
-  if (!form) return;
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    const btn = form.querySelector('button');
-    btn.textContent = '✓';
-    form.reset();
-    setTimeout(() => btn.textContent = '→', 2500);
-  });
-})();
-
-/* ============ WORKFLOW TIMELINE ANIMATION ============ */
-(function initWorkflow() {
-  const steps = document.querySelectorAll('.timeline-step');
-  const io = new IntersectionObserver(entries => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add('visible'), i * 150);
-        io.unobserve(entry.target);
-      }
+/* ============ 3D TILT EFFECT ============ */
+(function init3DTilt() {
+  const tilts = document.querySelectorAll('.tilt-3d');
+  tilts.forEach(el => {
+    el.addEventListener('mousemove', e => {
+      const rect = el.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const cx = rect.width / 2;
+      const cy = rect.height / 2;
+      const rx = ((y - cy) / cy) * -6;
+      const ry = ((x - cx) / cx) * 6;
+      el.style.transform = `perspective(1000px) rotateX(${rx}deg) rotateY(${ry}deg) translateZ(10px)`;
     });
-  }, { threshold: 0.3 });
-  steps.forEach(s => io.observe(s));
-})();
-
-/* ============ PARALLAX ============ */
-(function initParallax() {
-  const hero = document.querySelector('.hero-bg img');
-  if (!hero) return;
-  window.addEventListener('scroll', () => {
-    const y = window.scrollY;
-    if (y < window.innerHeight) {
-      hero.style.transform = `translateY(${y * 0.3}px) scale(1.1)`;
-    }
-  }, { passive: true });
-})();
-
-/* ============ SMOOTH ANCHOR SCROLL ============ */
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    const href = a.getAttribute('href');
-    if (href === '#' || href.length < 2) return;
-    const target = document.querySelector(href);
-    if (target) {
-      e.preventDefault();
-      const offset = 80;
-      const y = target.getBoundingClientRect().top + window.scrollY - offset;
-      window.scrollTo({ top: y, behavior: 'smooth' });
-    }
+    el.addEventListener('mouseleave', () => {
+      el.style.transform = '';
+    });
   });
-});
-
-/* ============ PRELOAD CRITICAL IMAGES ============ */
-(function preload() {
-  const critical = [
-    'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=1920&q=80'
-  ];
-  critical.forEach(src => { const img = new Image(); img.src = src; });
 })();
 
 /* ============ CONSOLE GREETING ============ */
 console.log('%c🎵 NOISEMAKERS', 'font-size: 24px; font-weight: bold; color: #00c8ff;');
 console.log('%cWhere Sound Becomes Art.', 'font-size: 14px; color: #bdbdbd;');
-console.log('%cBuilt with passion in Ottawa, Canada.', 'font-size: 12px; color: #888;');
+console.log('%cPowered by KS1 Empire Global Foundation (KS1EGF)', 'font-size: 12px; color: #888;');
