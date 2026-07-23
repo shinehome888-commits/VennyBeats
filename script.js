@@ -1,9 +1,7 @@
 /* ============================================
    NOISEMAKERS — Interactive Script
-   Vanilla JS · No dependencies
    ============================================ */
 
-/* ============ DATA ============ */
 const DATA = {
   services: [
     { icon: 'music', title: 'Music Production', desc: 'Full-scale production from concept to final master. Beats, arrangements, and sonic identity.' },
@@ -17,7 +15,6 @@ const DATA = {
     { icon: 'refresh', title: 'Audio Restoration', desc: 'Rescue damaged recordings — remove noise, clicks, hums and restore clarity.' },
     { icon: 'zap', title: 'Sound Design', desc: 'Custom sound design for film, games, ads and creative projects.' }
   ],
-
   testimonials: [
     { name: 'K. Johnson', role: 'Recording Artist · Monrovia', text: 'NOISEMAKERS doesn\'t just produce music — he captures emotion. Working with him transformed my sound completely. Every session felt like magic.' },
     { name: 'Aria Moon', role: 'Singer-Songwriter · Ottawa', text: 'The most professional and talented producer I\'ve ever worked with. He understood my vision instantly and elevated it beyond what I imagined possible.' },
@@ -28,7 +25,6 @@ const DATA = {
   ]
 };
 
-/* ============ ICONS ============ */
 const ICONS = {
   music: '<path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>',
   sliders: '<line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/>',
@@ -52,14 +48,13 @@ const ICONS = {
     const target = document.getElementById('page-' + pageId);
     if (target) {
       target.classList.add('active');
-      // Scroll page to top
       const pageInner = target.querySelector('.page-inner');
-      if (pageInner) pageInner.scrollTop = 0;
-      // Update nav active state
+      if (pageInner) pageInner.scrollTop = 0; // Reset scroll on page change
+      
       document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
       const activeLink = document.querySelector(`.nav-link[data-page="${pageId}"]`);
       if (activeLink) activeLink.classList.add('active');
-      // Re-trigger reveal animations
+      
       setTimeout(() => initRevealAnimations(), 150);
     }
   }
@@ -69,13 +64,11 @@ const ICONS = {
       e.preventDefault();
       const pageId = link.getAttribute('data-page');
       showPage(pageId);
-      // Close mobile menu
       document.getElementById('hamburger').classList.remove('active');
       document.getElementById('navMenu').classList.remove('mobile-open');
     });
   });
 
-  // Start on home
   showPage('home');
 })();
 
@@ -105,37 +98,27 @@ const ICONS = {
   const dot = document.getElementById('cursorDot');
   const ring = document.getElementById('cursorRing');
   if (!dot || !ring) return;
-
   let mx = 0, my = 0, rx = 0, ry = 0;
   window.addEventListener('mousemove', e => {
     mx = e.clientX; my = e.clientY;
     dot.style.transform = `translate(${mx}px, ${my}px) translate(-50%, -50%)`;
   });
-
   function animate() {
-    rx += (mx - rx) * 0.15;
-    ry += (my - ry) * 0.15;
+    rx += (mx - rx) * 0.15; ry += (my - ry) * 0.15;
     ring.style.transform = `translate(${rx}px, ${ry}px) translate(-50%, -50%)`;
     requestAnimationFrame(animate);
   }
   animate();
-
-  const hoverables = document.querySelectorAll('a, button, input, select, textarea');
-  hoverables.forEach(el => {
+  document.querySelectorAll('a, button, input, select, textarea').forEach(el => {
     el.addEventListener('mouseenter', () => ring.classList.add('hover'));
     el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
   });
-
   document.querySelectorAll('[data-magnetic]').forEach(el => {
     el.addEventListener('mousemove', e => {
       const rect = el.getBoundingClientRect();
-      const x = e.clientX - rect.left - rect.width / 2;
-      const y = e.clientY - rect.top - rect.height / 2;
-      el.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+      el.style.transform = `translate(${(e.clientX - rect.left - rect.width/2) * 0.2}px, ${(e.clientY - rect.top - rect.height/2) * 0.2}px)`;
     });
-    el.addEventListener('mouseleave', () => {
-      el.style.transform = '';
-    });
+    el.addEventListener('mouseleave', () => { el.style.transform = ''; });
   });
 })();
 
@@ -145,54 +128,23 @@ const ICONS = {
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
   let w, h, particles = [];
-
-  function resize() {
-    w = canvas.width = window.innerWidth;
-    h = canvas.height = window.innerHeight;
-  }
-  resize();
-  window.addEventListener('resize', resize);
-
+  function resize() { w = canvas.width = window.innerWidth; h = canvas.height = window.innerHeight; }
+  resize(); window.addEventListener('resize', resize);
   class Particle {
-    constructor() {
-      this.x = Math.random() * w;
-      this.y = Math.random() * h;
-      this.vx = (Math.random() - 0.5) * 0.3;
-      this.vy = (Math.random() - 0.5) * 0.3;
-      this.r = Math.random() * 1.5 + 0.5;
-      this.a = Math.random() * 0.5 + 0.2;
-    }
-    update() {
-      this.x += this.vx;
-      this.y += this.vy;
-      if (this.x < 0 || this.x > w) this.vx *= -1;
-      if (this.y < 0 || this.y > h) this.vy *= -1;
-    }
-    draw() {
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(0, 200, 255, ${this.a})`;
-      ctx.fill();
-    }
+    constructor() { this.x = Math.random() * w; this.y = Math.random() * h; this.vx = (Math.random() - 0.5) * 0.3; this.vy = (Math.random() - 0.5) * 0.3; this.r = Math.random() * 1.5 + 0.5; this.a = Math.random() * 0.5 + 0.2; }
+    update() { this.x += this.vx; this.y += this.vy; if (this.x < 0 || this.x > w) this.vx *= -1; if (this.y < 0 || this.y > h) this.vy *= -1; }
+    draw() { ctx.beginPath(); ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2); ctx.fillStyle = `rgba(0, 200, 255, ${this.a})`; ctx.fill(); }
   }
-
   for (let i = 0; i < 80; i++) particles.push(new Particle());
-
   function animate() {
     ctx.clearRect(0, 0, w, h);
     particles.forEach(p => { p.update(); p.draw(); });
     for (let i = 0; i < particles.length; i++) {
       for (let j = i + 1; j < particles.length; j++) {
-        const dx = particles[i].x - particles[j].x;
-        const dy = particles[i].y - particles[j].y;
-        const d = Math.sqrt(dx*dx + dy*dy);
+        const d = Math.sqrt((particles[i].x - particles[j].x)**2 + (particles[i].y - particles[j].y)**2);
         if (d < 120) {
-          ctx.beginPath();
-          ctx.moveTo(particles[i].x, particles[i].y);
-          ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.strokeStyle = `rgba(0, 200, 255, ${0.15 * (1 - d/120)})`;
-          ctx.lineWidth = 0.5;
-          ctx.stroke();
+          ctx.beginPath(); ctx.moveTo(particles[i].x, particles[i].y); ctx.lineTo(particles[j].x, particles[j].y);
+          ctx.strokeStyle = `rgba(0, 200, 255, ${0.15 * (1 - d/120)})`; ctx.lineWidth = 0.5; ctx.stroke();
         }
       }
     }
@@ -204,19 +156,12 @@ const ICONS = {
 /* ============ NAVIGATION ============ */
 (function initNav() {
   const nav = document.getElementById('nav');
-  const hamburger = document.getElementById('hamburger');
-  const menu = document.getElementById('navMenu');
-
-  // Scroll detection for each page-inner
   document.querySelectorAll('.page-inner').forEach(pi => {
-    pi.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', pi.scrollTop > 30);
-    }, { passive: true });
+    pi.addEventListener('scroll', () => nav.classList.toggle('scrolled', pi.scrollTop > 30), { passive: true });
   });
-
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    menu.classList.toggle('mobile-open');
+  document.getElementById('hamburger').addEventListener('click', () => {
+    document.getElementById('hamburger').classList.toggle('active');
+    document.getElementById('navMenu').classList.toggle('mobile-open');
   });
 })();
 
@@ -225,10 +170,8 @@ const ICONS = {
   const toggle = document.getElementById('themeToggle');
   const saved = localStorage.getItem('theme');
   if (saved) document.documentElement.setAttribute('data-theme', saved);
-
   toggle.addEventListener('click', () => {
-    const current = document.documentElement.getAttribute('data-theme');
-    const next = current === 'dark' ? 'light' : 'dark';
+    const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
     document.documentElement.setAttribute('data-theme', next);
     localStorage.setItem('theme', next);
   });
@@ -240,24 +183,14 @@ const ICONS = {
   if (!el) return;
   const words = ['Songwriter', 'Producer', 'Sound Engineer', 'Musician', 'Creative Director'];
   let wi = 0, ci = 0, deleting = false;
-
   function type() {
     const word = words[wi];
     if (!deleting) {
-      el.textContent = word.substring(0, ci + 1);
-      ci++;
-      if (ci === word.length) {
-        deleting = true;
-        setTimeout(type, 1800);
-        return;
-      }
+      el.textContent = word.substring(0, ci + 1); ci++;
+      if (ci === word.length) { deleting = true; setTimeout(type, 1800); return; }
     } else {
-      el.textContent = word.substring(0, ci - 1);
-      ci--;
-      if (ci === 0) {
-        deleting = false;
-        wi = (wi + 1) % words.length;
-      }
+      el.textContent = word.substring(0, ci - 1); ci--;
+      if (ci === 0) { deleting = false; wi = (wi + 1) % words.length; }
     }
     setTimeout(type, deleting ? 50 : 100);
   }
@@ -270,14 +203,10 @@ const ICONS = {
   if (!grid) return;
   grid.innerHTML = DATA.services.map(s => `
     <div class="service-card reveal tilt-3d">
-      <div class="service-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${ICONS[s.icon]}</svg>
-      </div>
-      <h3>${s.title}</h3>
-      <p>${s.desc}</p>
+      <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${ICONS[s.icon]}</svg></div>
+      <h3>${s.title}</h3><p>${s.desc}</p>
     </div>
   `).join('');
-
   grid.querySelectorAll('.service-card').forEach(card => {
     card.addEventListener('mousemove', e => {
       const rect = card.getBoundingClientRect();
@@ -291,26 +220,14 @@ const ICONS = {
 (function initTestimonials() {
   const slider = document.getElementById('testimonialsSlider');
   const dots = document.getElementById('testiDots');
-  const prev = document.getElementById('testiPrev');
-  const next = document.getElementById('testiNext');
   if (!slider) return;
-
-  slider.innerHTML = `<div class="testimonials-track">${
-    DATA.testimonials.map(t => `
-      <div class="testimonial">
-        <div class="testimonial-card tilt-3d">
-          <div class="testimonial-stars">${'★'.repeat(5)}</div>
-          <p class="testimonial-text">"${t.text}"</p>
-          <div class="testimonial-author">
-            <div>
-              <h5>${t.name}</h5>
-              <span>${t.role}</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    `).join('')
-  }</div>`;
+  slider.innerHTML = `<div class="testimonials-track">${DATA.testimonials.map(t => `
+    <div class="testimonial"><div class="testimonial-card tilt-3d">
+      <div class="testimonial-stars">${'★'.repeat(5)}</div>
+      <p class="testimonial-text">"${t.text}"</p>
+      <div class="testimonial-author"><div><h5>${t.name}</h5><span>${t.role}</span></div></div>
+    </div></div>
+  `).join('')}</div>`;
 
   const track = slider.querySelector('.testimonials-track');
   const items = slider.querySelectorAll('.testimonial');
@@ -320,65 +237,38 @@ const ICONS = {
 
   function buildDots() {
     dots.innerHTML = '';
-    const total = maxIndex() + 1;
-    for (let i = 0; i < total; i++) {
+    for (let i = 0; i <= maxIndex(); i++) {
       const d = document.createElement('div');
       d.className = 'testi-dot' + (i === index ? ' active' : '');
       d.addEventListener('click', () => { index = i; update(); });
       dots.appendChild(d);
     }
   }
-
   function update() {
     if (index > maxIndex()) index = maxIndex();
-    const pct = (100 / perView) * index;
-    track.style.transform = `translateX(-${pct}%)`;
+    track.style.transform = `translateX(-${(100 / perView) * index}%)`;
     dots.querySelectorAll('.testi-dot').forEach((d, i) => d.classList.toggle('active', i === index));
   }
-
-  prev.addEventListener('click', () => { index = Math.max(0, index - 1); update(); });
-  next.addEventListener('click', () => { index = Math.min(maxIndex(), index + 1); update(); });
-
-  window.addEventListener('resize', () => {
-    perView = window.innerWidth >= 1100 ? 3 : window.innerWidth >= 768 ? 2 : 1;
-    buildDots();
-    update();
-  });
-
+  document.getElementById('testiPrev').addEventListener('click', () => { index = Math.max(0, index - 1); update(); });
+  document.getElementById('testiNext').addEventListener('click', () => { index = Math.min(maxIndex(), index + 1); update(); });
+  window.addEventListener('resize', () => { perView = window.innerWidth >= 1100 ? 3 : window.innerWidth >= 768 ? 2 : 1; buildDots(); update(); });
   buildDots();
-
-  let autoSlide = setInterval(() => {
-    index = index >= maxIndex() ? 0 : index + 1;
-    update();
-  }, 5000);
+  let autoSlide = setInterval(() => { index = index >= maxIndex() ? 0 : index + 1; update(); }, 5000);
   slider.addEventListener('mouseenter', () => clearInterval(autoSlide));
-  slider.addEventListener('mouseleave', () => {
-    autoSlide = setInterval(() => {
-      index = index >= maxIndex() ? 0 : index + 1;
-      update();
-    }, 5000);
-  });
+  slider.addEventListener('mouseleave', () => { autoSlide = setInterval(() => { index = index >= maxIndex() ? 0 : index + 1; update(); }, 5000); });
 })();
 
 /* ============ SCROLL REVEAL ============ */
 function initRevealAnimations() {
   const reveals = document.querySelectorAll('.reveal:not(.visible), .reveal-3d:not(.visible)');
   const io = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        io.unobserve(entry.target);
-      }
-    });
+    entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); io.unobserve(entry.target); } });
   }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
   reveals.forEach(el => io.observe(el));
-  // Trigger any already in view
   setTimeout(() => {
     reveals.forEach(el => {
       const rect = el.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom > 0) {
-        el.classList.add('visible');
-      }
+      if (rect.top < window.innerHeight && rect.bottom > 0) el.classList.add('visible');
     });
   }, 250);
 }
@@ -387,41 +277,24 @@ function initRevealAnimations() {
 (function initShare() {
   const btn = document.getElementById('shareBtn');
   const popup = document.getElementById('sharePopup');
-  const close = document.getElementById('shareClose');
-  const copyBtn = document.getElementById('shareCopy');
-  const copyText = document.getElementById('shareCopyText');
-
   const siteUrl = window.location.href;
   const siteTitle = 'NOISEMAKERS — Where Sound Becomes Art';
-
+  
   document.getElementById('shareWhatsApp').href = `https://wa.me/?text=${encodeURIComponent(siteTitle + ' — ' + siteUrl)}`;
   document.getElementById('shareTwitter').href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(siteTitle)}&url=${encodeURIComponent(siteUrl)}`;
   document.getElementById('shareFacebook').href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(siteUrl)}`;
-  document.getElementById('shareLinkedIn').href = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(siteUrl)}`;
-
+  
   btn.addEventListener('click', () => popup.classList.add('open'));
-  close.addEventListener('click', () => popup.classList.remove('open'));
+  document.getElementById('shareClose').addEventListener('click', () => popup.classList.remove('open'));
   popup.addEventListener('click', e => { if (e.target === popup) popup.classList.remove('open'); });
-
-  copyBtn.addEventListener('click', () => {
+  
+  document.getElementById('shareCopy').addEventListener('click', () => {
     navigator.clipboard.writeText(siteUrl).then(() => {
-      copyText.textContent = '✓ Copied!';
-      setTimeout(() => copyText.textContent = 'Copy Link', 2000);
-    }).catch(() => {
-      const ta = document.createElement('textarea');
-      ta.value = siteUrl;
-      document.body.appendChild(ta);
-      ta.select();
-      document.execCommand('copy');
-      document.body.removeChild(ta);
-      copyText.textContent = '✓ Copied!';
-      setTimeout(() => copyText.textContent = 'Copy Link', 2000);
+      const txt = document.getElementById('shareCopyText');
+      txt.textContent = '✓ Copied!'; setTimeout(() => txt.textContent = 'Copy Link', 2000);
     });
   });
-
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') popup.classList.remove('open');
-  });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') popup.classList.remove('open'); });
 })();
 
 /* ============ BOOK FORM (WhatsApp redirect) ============ */
@@ -431,14 +304,7 @@ function initRevealAnimations() {
   form.addEventListener('submit', e => {
     e.preventDefault();
     const data = new FormData(form);
-    const name = data.get('artistName') || '';
-    const phone = data.get('phone') || '';
-    const project = data.get('projectType') || '';
-    const budget = data.get('budget') || '';
-    const date = data.get('date') || '';
-    const message = data.get('message') || '';
-
-    const text = `*New Booking Request — NOISEMAKERS*%0A%0A*Artist:* ${name}%0A*WhatsApp:* ${phone}%0A*Project:* ${project}%0A*Budget:* ${budget}%0A*Preferred Date:* ${date}%0A%0A*Message:*%0A${message}`;
+    const text = `*New Booking Request — NOISEMAKERS*%0A%0A*Artist:* ${data.get('artistName') || ''}%0A*WhatsApp:* ${data.get('phone') || ''}%0A*Project:* ${data.get('projectType') || ''}%0A*Budget:* ${data.get('budget') || ''}%0A*Date:* ${data.get('date') || ''}%0A%0A*Message:*%0A${data.get('message') || ''}`;
     window.open(`https://wa.me/13439873280?text=${text}`, '_blank');
   });
 })();
@@ -448,48 +314,21 @@ function initRevealAnimations() {
   function attachTilt(el) {
     el.addEventListener('mousemove', e => {
       const rect = el.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      const cx = rect.width / 2;
-      const cy = rect.height / 2;
-      const rx = ((y - cy) / cy) * -8;
-      const ry = ((x - cx) / cx) * 8;
+      const rx = ((e.clientY - rect.top - rect.height/2) / (rect.height/2)) * -8;
+      const ry = ((e.clientX - rect.left - rect.width/2) / (rect.width/2)) * 8;
       el.style.transform = `perspective(1000px) rotateX(${rx}deg) rotateY(${ry}deg) translateZ(10px)`;
     });
-    el.addEventListener('mouseleave', () => {
-      el.style.transform = '';
-    });
+    el.addEventListener('mouseleave', () => { el.style.transform = ''; });
   }
-
-  // Initial tilt elements
   document.querySelectorAll('.tilt-3d').forEach(attachTilt);
-
-  // Re-attach on DOM changes (for dynamically added elements)
-  const observer = new MutationObserver(() => {
-    document.querySelectorAll('.tilt-3d:not([data-tilt-attached])').forEach(el => {
-      attachTilt(el);
-      el.setAttribute('data-tilt-attached', 'true');
-    });
-  });
-  observer.observe(document.body, { childList: true, subtree: true });
-})();
-
-/* ============ 3D BUTTON HOVER ============ */
-(function init3DButtons() {
   document.querySelectorAll('.btn-3d').forEach(btn => {
     btn.addEventListener('mousemove', e => {
       const rect = btn.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      const cx = rect.width / 2;
-      const cy = rect.height / 2;
-      const rx = ((y - cy) / cy) * -6;
-      const ry = ((x - cx) / cx) * 6;
+      const rx = ((e.clientY - rect.top - rect.height/2) / (rect.height/2)) * -6;
+      const ry = ((e.clientX - rect.left - rect.width/2) / (rect.width/2)) * 6;
       btn.style.transform = `perspective(800px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-3px) translateZ(15px)`;
     });
-    btn.addEventListener('mouseleave', () => {
-      btn.style.transform = '';
-    });
+    btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
   });
 })();
 
@@ -498,33 +337,18 @@ function initRevealAnimations() {
   const hero = document.querySelector('.hero-bg img');
   const title = document.querySelector('.hero-title');
   if (!hero || !title) return;
-
   const pageInner = document.querySelector('#page-home .page-inner');
   if (!pageInner) return;
-
   pageInner.addEventListener('scroll', () => {
     const y = pageInner.scrollTop;
-    if (y < window.innerHeight) {
-      hero.style.transform = `translateY(${y * 0.3}px) scale(1.1)`;
-    }
+    if (y < window.innerHeight) hero.style.transform = `translateY(${y * 0.3}px) scale(1.1)`;
   }, { passive: true });
-
-  // Mouse parallax on hero title
-  const heroContent = document.querySelector('.hero-content');
-  if (heroContent) {
-    heroContent.addEventListener('mousemove', e => {
-      const rect = heroContent.getBoundingClientRect();
-      const x = (e.clientX - rect.left) / rect.width - 0.5;
-      const y = (e.clientY - rect.top) / rect.height - 0.5;
-      title.style.transform = `perspective(1000px) rotateX(${y * -3}deg) rotateY(${x * 3}deg)`;
-    });
-    heroContent.addEventListener('mouseleave', () => {
-      title.style.transform = '';
-    });
-  }
+  document.querySelector('.hero-content')?.addEventListener('mousemove', e => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    title.style.transform = `perspective(1000px) rotateX(${((e.clientY - rect.top - rect.height/2) / (rect.height/2)) * -3}deg) rotateY(${((e.clientX - rect.left - rect.width/2) / (rect.width/2)) * 3}deg)`;
+  });
+  document.querySelector('.hero-content')?.addEventListener('mouseleave', () => { title.style.transform = ''; });
 })();
 
-/* ============ CONSOLE GREETING ============ */
 console.log('%c🎵 NOISEMAKERS', 'font-size: 24px; font-weight: bold; color: #00c8ff;');
-console.log('%cWhere Sound Becomes Art.', 'font-size: 14px; color: #bdbdbd;');
 console.log('%cPowered by KS1 Empire Global Foundation (KS1EGF)', 'font-size: 12px; color: #888;');
