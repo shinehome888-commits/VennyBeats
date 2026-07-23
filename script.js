@@ -148,52 +148,14 @@ const ICONS = {
   animate();
 })();
 
-/* Navigation with trademark auto-hide */
+/* Navigation */
 (function initNav() {
   const nav = document.getElementById('nav');
-  const trademark = document.getElementById('trademark');
-  
   document.querySelectorAll('.page-inner').forEach(pi => {
-    let lastScroll = 0;
-    let scrollTimeout;
-    
     pi.addEventListener('scroll', () => {
-      const currentScroll = pi.scrollTop;
-      const maxScroll = pi.scrollHeight - pi.clientHeight;
-      
-      // Nav scrolled state
-      nav.classList.toggle('scrolled', currentScroll > 30);
-      
-      // Hide trademark when scrolling up, show when scrolling down or at bottom
-      if (currentScroll > lastScroll && currentScroll > 150) {
-        // Scrolling down
-        trademark.classList.remove('hidden');
-      } else if (currentScroll < lastScroll && currentScroll < maxScroll - 100) {
-        // Scrolling up (not near bottom)
-        trademark.classList.add('hidden');
-      }
-      
-      // Always show at bottom
-      if (currentScroll + pi.clientHeight >= maxScroll - 50) {
-        trademark.classList.remove('hidden');
-      }
-      
-      // Show at top
-      if (currentScroll < 50) {
-        trademark.classList.remove('hidden');
-      }
-      
-      lastScroll = currentScroll;
-      
-      // Clear any pending timeout
-      clearTimeout(scrollTimeout);
-      scrollTimeout = setTimeout(() => {
-        // After scroll stops, show trademark
-        trademark.classList.remove('hidden');
-      }, 1500);
+      nav.classList.toggle('scrolled', pi.scrollTop > 30);
     }, { passive: true });
   });
-  
   document.getElementById('hamburger').addEventListener('click', () => {
     document.getElementById('hamburger').classList.toggle('active');
     document.getElementById('navMenu').classList.toggle('mobile-open');
@@ -361,8 +323,6 @@ function initRevealAnimations() {
 (function initHeroParallax() {
   const title = document.querySelector('.hero-title');
   if (!title) return;
-  const pageInner = document.querySelector('#page-home .page-inner');
-  if (!pageInner) return;
   document.querySelector('.hero-content')?.addEventListener('mousemove', e => {
     const rect = e.currentTarget.getBoundingClientRect();
     title.style.transform = `perspective(1000px) rotateX(${((e.clientY - rect.top - rect.height/2) / (rect.height/2)) * -3}deg) rotateY(${((e.clientX - rect.left - rect.width/2) / (rect.width/2)) * 3}deg)`;
