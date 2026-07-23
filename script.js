@@ -18,18 +18,6 @@ const DATA = {
     { icon: 'zap', title: 'Sound Design', desc: 'Custom sound design for film, games, ads and creative projects.' }
   ],
 
-  gallery: [
-    { src: 'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800&q=80', caption: 'Main Studio Room' },
-    { src: 'https://images.unsplash.com/photo-1520166012956-add9ba0835cb?w=800&q=80', caption: 'Mixing Console' },
-    { src: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&q=80', caption: 'Vocal Booth' },
-    { src: 'https://images.unsplash.com/photo-1519508234439-4f23643125c3?w=800&q=80', caption: 'Studio Monitors' },
-    { src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80', caption: 'Microphone Collection' },
-    { src: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&q=80', caption: 'Synth Room' },
-    { src: 'https://images.unsplash.com/photo-1564183756862-6e457e3a89a6?w=800&q=80', caption: 'Control Room' },
-    { src: 'https://images.unsplash.com/photo-1571974599782-87624638275e?w=800&q=80', caption: 'Keyboard Station' },
-    { src: 'https://images.unsplash.com/photo-1519874179391-3ebc752241dd?w=800&q=80', caption: 'Recording Session' }
-  ],
-
   testimonials: [
     { name: 'K. Johnson', role: 'Recording Artist · Monrovia', text: 'NOISEMAKERS doesn\'t just produce music — he captures emotion. Working with him transformed my sound completely. Every session felt like magic.' },
     { name: 'Aria Moon', role: 'Singer-Songwriter · Ottawa', text: 'The most professional and talented producer I\'ve ever worked with. He understood my vision instantly and elevated it beyond what I imagined possible.' },
@@ -64,14 +52,15 @@ const ICONS = {
     const target = document.getElementById('page-' + pageId);
     if (target) {
       target.classList.add('active');
+      // Scroll page to top
+      const pageInner = target.querySelector('.page-inner');
+      if (pageInner) pageInner.scrollTop = 0;
       // Update nav active state
       document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
       const activeLink = document.querySelector(`.nav-link[data-page="${pageId}"]`);
       if (activeLink) activeLink.classList.add('active');
       // Re-trigger reveal animations
-      setTimeout(() => {
-        initRevealAnimations();
-      }, 100);
+      setTimeout(() => initRevealAnimations(), 150);
     }
   }
 
@@ -83,9 +72,6 @@ const ICONS = {
       // Close mobile menu
       document.getElementById('hamburger').classList.remove('active');
       document.getElementById('navMenu').classList.remove('mobile-open');
-      // Scroll page-inner to top if needed
-      const pageInner = document.querySelector('#page-' + pageId + ' .page-inner');
-      if (pageInner) pageInner.scrollTop = 0;
     });
   });
 
@@ -106,14 +92,12 @@ const ICONS = {
       clearInterval(interval);
       setTimeout(() => {
         loader.classList.add('hidden');
-        document.body.style.overflow = '';
         initRevealAnimations();
       }, 500);
     }
     percent.textContent = Math.floor(p) + '%';
     bar.style.width = p + '%';
   }, 80);
-  document.body.style.overflow = 'hidden';
 })();
 
 /* ============ CUSTOM CURSOR ============ */
@@ -136,7 +120,7 @@ const ICONS = {
   }
   animate();
 
-  const hoverables = document.querySelectorAll('a, button, .gallery-item, .service-card, input, select, textarea');
+  const hoverables = document.querySelectorAll('a, button, input, select, textarea');
   hoverables.forEach(el => {
     el.addEventListener('mouseenter', () => ring.classList.add('hover'));
     el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
@@ -223,22 +207,12 @@ const ICONS = {
   const hamburger = document.getElementById('hamburger');
   const menu = document.getElementById('navMenu');
 
-  // Trigger scrolled state based on any scroll (for mobile page-inner)
+  // Scroll detection for each page-inner
   document.querySelectorAll('.page-inner').forEach(pi => {
     pi.addEventListener('scroll', () => {
       nav.classList.toggle('scrolled', pi.scrollTop > 30);
-    });
+    }, { passive: true });
   });
-  // Also always show scrolled on non-home pages
-  const observer = new MutationObserver(() => {
-    const active = document.querySelector('.page.active');
-    if (active && active.id !== 'page-home') {
-      nav.classList.add('scrolled');
-    } else {
-      nav.classList.remove('scrolled');
-    }
-  });
-  observer.observe(document.getElementById('pageWrapper'), { subtree: true, attributes: true, attributeFilter: ['class'] });
 
   hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
@@ -313,49 +287,6 @@ const ICONS = {
   });
 })();
 
-/* ============ RENDER GALLERY + LIGHTBOX ============ */
-(function renderGallery() {
-  const grid = document.getElementById('galleryGrid');
-  if (!grid) return;
-  grid.innerHTML = DATA.gallery.map((g, i) => `
-    <div class="gallery-item reveal" data-index="${i}">
-      <img src="${g.src}" alt="${g.caption}" loading="lazy" />
-    </div>
-  `).join('');
-
-  const lightbox = document.getElementById('lightbox');
-  const lbImg = document.getElementById('lightboxImg');
-  const lbCaption = document.getElementById('lightboxCaption');
-  const lbClose = document.getElementById('lightboxClose');
-  const lbPrev = document.getElementById('lightboxPrev');
-  const lbNext = document.getElementById('lightboxNext');
-  let lbIndex = 0;
-
-  function openLB(i) {
-    lbIndex = i;
-    lbImg.src = DATA.gallery[i].src;
-    lbCaption.textContent = DATA.gallery[i].caption;
-    lightbox.classList.add('open');
-  }
-  function closeLB() { lightbox.classList.remove('open'); }
-  function nextLB() { openLB((lbIndex + 1) % DATA.gallery.length); }
-  function prevLB() { openLB((lbIndex - 1 + DATA.gallery.length) % DATA.gallery.length); }
-
-  grid.querySelectorAll('.gallery-item').forEach(item => {
-    item.addEventListener('click', () => openLB(+item.dataset.index));
-  });
-  lbClose.addEventListener('click', closeLB);
-  lbNext.addEventListener('click', nextLB);
-  lbPrev.addEventListener('click', prevLB);
-  lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLB(); });
-  document.addEventListener('keydown', e => {
-    if (!lightbox.classList.contains('open')) return;
-    if (e.key === 'Escape') closeLB();
-    if (e.key === 'ArrowRight') nextLB();
-    if (e.key === 'ArrowLeft') prevLB();
-  });
-})();
-
 /* ============ TESTIMONIALS SLIDER ============ */
 (function initTestimonials() {
   const slider = document.getElementById('testimonialsSlider');
@@ -367,7 +298,7 @@ const ICONS = {
   slider.innerHTML = `<div class="testimonials-track">${
     DATA.testimonials.map(t => `
       <div class="testimonial">
-        <div class="testimonial-card">
+        <div class="testimonial-card tilt-3d">
           <div class="testimonial-stars">${'★'.repeat(5)}</div>
           <p class="testimonial-text">"${t.text}"</p>
           <div class="testimonial-author">
@@ -441,7 +372,7 @@ function initRevealAnimations() {
     });
   }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
   reveals.forEach(el => io.observe(el));
-  // Also trigger any that are already in view (for page transitions)
+  // Trigger any already in view
   setTimeout(() => {
     reveals.forEach(el => {
       const rect = el.getBoundingClientRect();
@@ -449,7 +380,7 @@ function initRevealAnimations() {
         el.classList.add('visible');
       }
     });
-  }, 200);
+  }, 250);
 }
 
 /* ============ SHARE BUTTON ============ */
@@ -462,7 +393,6 @@ function initRevealAnimations() {
 
   const siteUrl = window.location.href;
   const siteTitle = 'NOISEMAKERS — Where Sound Becomes Art';
-  const siteDesc = 'Liberian music producer & sound engineer based in Ottawa, Canada.';
 
   document.getElementById('shareWhatsApp').href = `https://wa.me/?text=${encodeURIComponent(siteTitle + ' — ' + siteUrl)}`;
   document.getElementById('shareTwitter').href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(siteTitle)}&url=${encodeURIComponent(siteUrl)}`;
@@ -478,7 +408,6 @@ function initRevealAnimations() {
       copyText.textContent = '✓ Copied!';
       setTimeout(() => copyText.textContent = 'Copy Link', 2000);
     }).catch(() => {
-      // Fallback
       const ta = document.createElement('textarea');
       ta.value = siteUrl;
       document.body.appendChild(ta);
@@ -516,22 +445,83 @@ function initRevealAnimations() {
 
 /* ============ 3D TILT EFFECT ============ */
 (function init3DTilt() {
-  const tilts = document.querySelectorAll('.tilt-3d');
-  tilts.forEach(el => {
+  function attachTilt(el) {
     el.addEventListener('mousemove', e => {
       const rect = el.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
       const cx = rect.width / 2;
       const cy = rect.height / 2;
-      const rx = ((y - cy) / cy) * -6;
-      const ry = ((x - cx) / cx) * 6;
+      const rx = ((y - cy) / cy) * -8;
+      const ry = ((x - cx) / cx) * 8;
       el.style.transform = `perspective(1000px) rotateX(${rx}deg) rotateY(${ry}deg) translateZ(10px)`;
     });
     el.addEventListener('mouseleave', () => {
       el.style.transform = '';
     });
+  }
+
+  // Initial tilt elements
+  document.querySelectorAll('.tilt-3d').forEach(attachTilt);
+
+  // Re-attach on DOM changes (for dynamically added elements)
+  const observer = new MutationObserver(() => {
+    document.querySelectorAll('.tilt-3d:not([data-tilt-attached])').forEach(el => {
+      attachTilt(el);
+      el.setAttribute('data-tilt-attached', 'true');
+    });
   });
+  observer.observe(document.body, { childList: true, subtree: true });
+})();
+
+/* ============ 3D BUTTON HOVER ============ */
+(function init3DButtons() {
+  document.querySelectorAll('.btn-3d').forEach(btn => {
+    btn.addEventListener('mousemove', e => {
+      const rect = btn.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const cx = rect.width / 2;
+      const cy = rect.height / 2;
+      const rx = ((y - cy) / cy) * -6;
+      const ry = ((x - cx) / cx) * 6;
+      btn.style.transform = `perspective(800px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-3px) translateZ(15px)`;
+    });
+    btn.addEventListener('mouseleave', () => {
+      btn.style.transform = '';
+    });
+  });
+})();
+
+/* ============ HERO PARALLAX ============ */
+(function initHeroParallax() {
+  const hero = document.querySelector('.hero-bg img');
+  const title = document.querySelector('.hero-title');
+  if (!hero || !title) return;
+
+  const pageInner = document.querySelector('#page-home .page-inner');
+  if (!pageInner) return;
+
+  pageInner.addEventListener('scroll', () => {
+    const y = pageInner.scrollTop;
+    if (y < window.innerHeight) {
+      hero.style.transform = `translateY(${y * 0.3}px) scale(1.1)`;
+    }
+  }, { passive: true });
+
+  // Mouse parallax on hero title
+  const heroContent = document.querySelector('.hero-content');
+  if (heroContent) {
+    heroContent.addEventListener('mousemove', e => {
+      const rect = heroContent.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      title.style.transform = `perspective(1000px) rotateX(${y * -3}deg) rotateY(${x * 3}deg)`;
+    });
+    heroContent.addEventListener('mouseleave', () => {
+      title.style.transform = '';
+    });
+  }
 })();
 
 /* ============ CONSOLE GREETING ============ */
