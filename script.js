@@ -60,7 +60,7 @@ const ICONS = {
       e.preventDefault();
       showPage(link.getAttribute('data-page'));
       document.getElementById('hamburger').classList.remove('active');
-      document.getElementById('navMenu').classList.remove('mobile-open');
+      document.getElementById('mobileMenuOverlay').classList.remove('active');
     });
   });
 
@@ -158,7 +158,7 @@ const ICONS = {
   });
   document.getElementById('hamburger').addEventListener('click', () => {
     document.getElementById('hamburger').classList.toggle('active');
-    document.getElementById('navMenu').classList.toggle('mobile-open');
+    document.getElementById('mobileMenuOverlay').classList.toggle('active');
   });
 })();
 
