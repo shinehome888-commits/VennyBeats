@@ -1,7 +1,3 @@
-/* ============================================
-   NOISEMAKERS — Interactive Script
-   ============================================ */
-
 const DATA = {
   services: [
     { icon: 'music', title: 'Music Production', desc: 'Full-scale production from concept to final master. Beats, arrangements, and sonic identity.' },
@@ -16,12 +12,14 @@ const DATA = {
     { icon: 'zap', title: 'Sound Design', desc: 'Custom sound design for film, games, ads and creative projects.' }
   ],
   testimonials: [
-    { name: 'K. Johnson', role: 'Recording Artist · Monrovia', text: 'NOISEMAKERS doesn\'t just produce music — he captures emotion. Working with him transformed my sound completely. Every session felt like magic.' },
-    { name: 'Aria Moon', role: 'Singer-Songwriter · Ottawa', text: 'The most professional and talented producer I\'ve ever worked with. He understood my vision instantly and elevated it beyond what I imagined possible.' },
-    { name: 'The Collective', role: 'Band · Toronto', text: 'From songwriting to mastering, NOISEMAKERS delivered excellence at every step. Our album wouldn\'t exist without his vision and technical mastery.' },
-    { name: 'L. Mensah', role: 'Artist · Accra', text: 'A true craftsman. The attention to detail in mixing and mastering is world-class. My music finally sounds the way I always dreamed it would.' },
-    { name: 'S. Williams', role: 'Pop Artist · Vancouver', text: 'NOISEMAKERS has an incredible ear and a gift for bringing out the best in artists. The studio atmosphere is inspiring and the results speak for themselves.' },
-    { name: 'D. Okafor', role: 'Independent Artist · Lagos', text: 'Remote collaboration made easy. The files came back sounding better than I could have imagined. Truly international quality.' }
+    { name: 'K. Johnson', role: 'Recording Artist · Monrovia', text: 'NOISEMAKERS doesn\'t just produce music — he captures emotion. Working with him transformed my sound completely.' },
+    { name: 'Aria Moon', role: 'Singer-Songwriter · Ottawa', text: 'The most professional producer I\'ve ever worked with. He understood my vision instantly and elevated it beyond imagination.' },
+    { name: 'The Collective', role: 'Band · Toronto', text: 'From songwriting to mastering, NOISEMAKERS delivered excellence at every step. Our album wouldn\'t exist without his vision.' },
+    { name: 'L. Mensah', role: 'Artist · Accra', text: 'A true craftsman. The attention to detail in mixing and mastering is world-class.' },
+    { name: 'S. Williams', role: 'Pop Artist · Vancouver', text: 'NOISEMAKERS has an incredible ear and a gift for bringing out the best in artists.' },
+    { name: 'D. Okafor', role: 'Independent Artist · Lagos', text: 'Remote collaboration made easy. The files came back sounding better than I could have imagined.' },
+    { name: 'M. Thompson', role: 'Rapper · Montreal', text: 'Best investment I made in my career. The quality is unmatched and the experience was smooth from start to finish.' },
+    { name: 'R. Konneh', role: 'Gospel Artist · Liberia', text: 'Working with NOISEMAKERS brought my music to a whole new level. International quality from an African producer.' }
   ]
 };
 
@@ -38,7 +36,7 @@ const ICONS = {
   zap: '<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>'
 };
 
-/* ============ PAGE NAVIGATION ============ */
+/* Page Navigation */
 (function initPages() {
   const pages = document.querySelectorAll('.page');
   const navLinks = document.querySelectorAll('[data-page]');
@@ -49,12 +47,10 @@ const ICONS = {
     if (target) {
       target.classList.add('active');
       const pageInner = target.querySelector('.page-inner');
-      if (pageInner) pageInner.scrollTop = 0; // Reset scroll on page change
-      
+      if (pageInner) pageInner.scrollTop = 0;
       document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
       const activeLink = document.querySelector(`.nav-link[data-page="${pageId}"]`);
       if (activeLink) activeLink.classList.add('active');
-      
       setTimeout(() => initRevealAnimations(), 150);
     }
   }
@@ -62,8 +58,7 @@ const ICONS = {
   navLinks.forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault();
-      const pageId = link.getAttribute('data-page');
-      showPage(pageId);
+      showPage(link.getAttribute('data-page'));
       document.getElementById('hamburger').classList.remove('active');
       document.getElementById('navMenu').classList.remove('mobile-open');
     });
@@ -72,7 +67,7 @@ const ICONS = {
   showPage('home');
 })();
 
-/* ============ LOADER ============ */
+/* Loader */
 (function initLoader() {
   const percent = document.getElementById('loaderPercent');
   const bar = document.getElementById('loaderBarFill');
@@ -93,7 +88,7 @@ const ICONS = {
   }, 80);
 })();
 
-/* ============ CUSTOM CURSOR ============ */
+/* Cursor */
 (function initCursor() {
   const dot = document.getElementById('cursorDot');
   const ring = document.getElementById('cursorRing');
@@ -122,7 +117,7 @@ const ICONS = {
   });
 })();
 
-/* ============ BACKGROUND CANVAS ============ */
+/* Background Canvas */
 (function initParticles() {
   const canvas = document.getElementById('bgCanvas');
   if (!canvas) return;
@@ -153,31 +148,59 @@ const ICONS = {
   animate();
 })();
 
-/* ============ NAVIGATION ============ */
+/* Navigation with trademark auto-hide */
 (function initNav() {
   const nav = document.getElementById('nav');
+  const trademark = document.getElementById('trademark');
+  
   document.querySelectorAll('.page-inner').forEach(pi => {
-    pi.addEventListener('scroll', () => nav.classList.toggle('scrolled', pi.scrollTop > 30), { passive: true });
+    let lastScroll = 0;
+    let scrollTimeout;
+    
+    pi.addEventListener('scroll', () => {
+      const currentScroll = pi.scrollTop;
+      const maxScroll = pi.scrollHeight - pi.clientHeight;
+      
+      // Nav scrolled state
+      nav.classList.toggle('scrolled', currentScroll > 30);
+      
+      // Hide trademark when scrolling up, show when scrolling down or at bottom
+      if (currentScroll > lastScroll && currentScroll > 150) {
+        // Scrolling down
+        trademark.classList.remove('hidden');
+      } else if (currentScroll < lastScroll && currentScroll < maxScroll - 100) {
+        // Scrolling up (not near bottom)
+        trademark.classList.add('hidden');
+      }
+      
+      // Always show at bottom
+      if (currentScroll + pi.clientHeight >= maxScroll - 50) {
+        trademark.classList.remove('hidden');
+      }
+      
+      // Show at top
+      if (currentScroll < 50) {
+        trademark.classList.remove('hidden');
+      }
+      
+      lastScroll = currentScroll;
+      
+      // Clear any pending timeout
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        // After scroll stops, show trademark
+        trademark.classList.remove('hidden');
+      }, 1500);
+    }, { passive: true });
   });
+  
   document.getElementById('hamburger').addEventListener('click', () => {
     document.getElementById('hamburger').classList.toggle('active');
     document.getElementById('navMenu').classList.toggle('mobile-open');
   });
 })();
 
-/* ============ THEME TOGGLE ============ */
-(function initTheme() {
-  const toggle = document.getElementById('themeToggle');
-  const saved = localStorage.getItem('theme');
-  if (saved) document.documentElement.setAttribute('data-theme', saved);
-  toggle.addEventListener('click', () => {
-    const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    document.documentElement.setAttribute('data-theme', next);
-    localStorage.setItem('theme', next);
-  });
-})();
-
-/* ============ TYPING ANIMATION ============ */
+/* Typing */
 (function initTyping() {
   const el = document.getElementById('typing');
   if (!el) return;
@@ -197,7 +220,7 @@ const ICONS = {
   type();
 })();
 
-/* ============ RENDER SERVICES ============ */
+/* Services */
 (function renderServices() {
   const grid = document.getElementById('servicesGrid');
   if (!grid) return;
@@ -216,7 +239,7 @@ const ICONS = {
   });
 })();
 
-/* ============ TESTIMONIALS SLIDER ============ */
+/* Testimonials */
 (function initTestimonials() {
   const slider = document.getElementById('testimonialsSlider');
   const dots = document.getElementById('testiDots');
@@ -258,7 +281,7 @@ const ICONS = {
   slider.addEventListener('mouseleave', () => { autoSlide = setInterval(() => { index = index >= maxIndex() ? 0 : index + 1; update(); }, 5000); });
 })();
 
-/* ============ SCROLL REVEAL ============ */
+/* Reveal */
 function initRevealAnimations() {
   const reveals = document.querySelectorAll('.reveal:not(.visible), .reveal-3d:not(.visible)');
   const io = new IntersectionObserver(entries => {
@@ -273,7 +296,7 @@ function initRevealAnimations() {
   }, 250);
 }
 
-/* ============ SHARE BUTTON ============ */
+/* Share */
 (function initShare() {
   const btn = document.getElementById('shareBtn');
   const popup = document.getElementById('sharePopup');
@@ -283,6 +306,8 @@ function initRevealAnimations() {
   document.getElementById('shareWhatsApp').href = `https://wa.me/?text=${encodeURIComponent(siteTitle + ' — ' + siteUrl)}`;
   document.getElementById('shareTwitter').href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(siteTitle)}&url=${encodeURIComponent(siteUrl)}`;
   document.getElementById('shareFacebook').href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(siteUrl)}`;
+  document.getElementById('shareInstagram').href = 'https://www.instagram.com/';
+  document.getElementById('shareTikTok').href = `https://www.tiktok.com/share?url=${encodeURIComponent(siteUrl)}`;
   
   btn.addEventListener('click', () => popup.classList.add('open'));
   document.getElementById('shareClose').addEventListener('click', () => popup.classList.remove('open'));
@@ -297,7 +322,7 @@ function initRevealAnimations() {
   document.addEventListener('keydown', e => { if (e.key === 'Escape') popup.classList.remove('open'); });
 })();
 
-/* ============ BOOK FORM (WhatsApp redirect) ============ */
+/* Book Form */
 (function initBookForm() {
   const form = document.getElementById('bookForm');
   if (!form) return;
@@ -309,7 +334,7 @@ function initRevealAnimations() {
   });
 })();
 
-/* ============ 3D TILT EFFECT ============ */
+/* 3D Tilt */
 (function init3DTilt() {
   function attachTilt(el) {
     el.addEventListener('mousemove', e => {
@@ -332,17 +357,12 @@ function initRevealAnimations() {
   });
 })();
 
-/* ============ HERO PARALLAX ============ */
+/* Hero Parallax */
 (function initHeroParallax() {
-  const hero = document.querySelector('.hero-bg img');
   const title = document.querySelector('.hero-title');
-  if (!hero || !title) return;
+  if (!title) return;
   const pageInner = document.querySelector('#page-home .page-inner');
   if (!pageInner) return;
-  pageInner.addEventListener('scroll', () => {
-    const y = pageInner.scrollTop;
-    if (y < window.innerHeight) hero.style.transform = `translateY(${y * 0.3}px) scale(1.1)`;
-  }, { passive: true });
   document.querySelector('.hero-content')?.addEventListener('mousemove', e => {
     const rect = e.currentTarget.getBoundingClientRect();
     title.style.transform = `perspective(1000px) rotateX(${((e.clientY - rect.top - rect.height/2) / (rect.height/2)) * -3}deg) rotateY(${((e.clientX - rect.left - rect.width/2) / (rect.width/2)) * 3}deg)`;
