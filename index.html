@@ -1,21 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
   <meta name="theme-color" content="#050505" />
 
   <title>NOISEMAKERS — Where Sound Becomes Art | Music Producer Ottawa</title>
   <meta name="description" content="NOISEMAKERS is a Liberian songwriter, music producer and professional sound engineer based in Ottawa, Canada." />
-  <meta name="robots" content="index, follow" />
 
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="NOISEMAKERS — Where Sound Becomes Art" />
-  <meta property="og:description" content="Liberian music producer & sound engineer based in Ottawa, Canada." />
-  <meta property="og:image" content="https://i.ibb.co/1Gq8dy0j/IMG-9224.jpg" />
-  
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23050505'/%3E%3Ctext x='50' y='68' font-family='Arial' font-size='55' font-weight='bold' text-anchor='middle' fill='%2300C8FF'%3EN%3C/text%3E%3C/svg%3E" />
+  <link rel="icon" href="https://i.ibb.co/3m2GsdSw/Chat-GPT-Image-Jul-22-2026-09-30-36-PM.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,10 +20,7 @@
 
 <body>
 
-  <!-- ============ SCROLL PROGRESS ============ -->
   <div class="scroll-progress" id="scrollProgress"></div>
-
-  <!-- ============ CUSTOM CURSOR ============ -->
   <div class="cursor-dot" id="cursorDot"></div>
   <div class="cursor-ring" id="cursorRing"></div>
 
@@ -37,7 +28,7 @@
   <div class="loader" id="loader">
     <div class="loader-content">
       <div class="loader-logo">
-        <span class="loader-n">N</span>
+        <img src="https://i.ibb.co/3m2GsdSw/Chat-GPT-Image-Jul-22-2026-09-30-36-PM.png" alt="NOISEMAKERS" class="loader-img" />
         <div class="loader-waves">
           <span></span><span></span><span></span><span></span><span></span>
           <span></span><span></span><span></span><span></span>
@@ -49,7 +40,6 @@
     </div>
   </div>
 
-  <!-- ============ BACKGROUND EFFECTS ============ -->
   <canvas class="bg-canvas" id="bgCanvas"></canvas>
   <div class="bg-gradient-orbs">
     <div class="orb orb-1"></div>
@@ -66,8 +56,16 @@
       <h5>Share NOISEMAKERS</h5>
       <div class="share-links">
         <a href="#" id="shareWhatsApp" target="_blank" rel="noopener" class="share-link" data-magnetic>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
           <span>WhatsApp</span>
+        </a>
+        <a href="#" id="shareInstagram" target="_blank" rel="noopener" class="share-link" data-magnetic>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          <span>Instagram</span>
+        </a>
+        <a href="#" id="shareTikTok" target="_blank" rel="noopener" class="share-link" data-magnetic>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.45a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.88z"/></svg>
+          <span>TikTok</span>
         </a>
         <a href="#" id="shareTwitter" target="_blank" rel="noopener" class="share-link" data-magnetic>
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
@@ -89,7 +87,7 @@
   <!-- ============ NAVIGATION ============ -->
   <nav class="nav" id="nav">
     <a href="#" class="nav-logo" data-page="home" data-magnetic>
-      <span class="logo-mark">N</span>
+      <img src="https://i.ibb.co/3m2GsdSw/Chat-GPT-Image-Jul-22-2026-09-30-36-PM.png" alt="NOISEMAKERS" class="logo-img" />
       <span class="logo-text">NOISEMAKERS</span>
     </a>
     <ul class="nav-menu" id="navMenu">
@@ -105,10 +103,6 @@
       <li><a href="#" class="nav-cta" data-page="book" data-magnetic>Book Session</a></li>
     </ul>
     <div class="nav-actions">
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" data-magnetic>
-        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-      </button>
       <button class="hamburger" id="hamburger" aria-label="Menu" data-magnetic>
         <span></span><span></span><span></span>
       </button>
@@ -128,23 +122,19 @@
               <span class="tag-dot"></span>
               <span>Ottawa, Canada · Available Worldwide</span>
             </div>
-
             <h1 class="hero-title reveal">
               <span class="title-line">CRAFTING MUSIC</span>
               <span class="title-line">THAT SPEAKS</span>
               <span class="title-line gradient-text">BEYOND WORDS</span>
             </h1>
-
             <div class="hero-subtitle reveal">
               <span class="subtitle-label">I am a</span>
               <span class="typing" id="typing"></span>
               <span class="typing-cursor">|</span>
             </div>
-
             <p class="hero-desc reveal">
               Where sound becomes art. Professional music production, mixing & mastering for artists who demand excellence.
             </p>
-
             <div class="hero-buttons reveal">
               <a href="#" class="btn btn-primary btn-3d" data-page="music" data-magnetic>
                 <span>Listen Now</span>
@@ -156,11 +146,103 @@
               </a>
             </div>
           </div>
-
           <div class="hero-equalizer reveal">
             <div class="eq-bar"></div><div class="eq-bar"></div><div class="eq-bar"></div>
             <div class="eq-bar"></div><div class="eq-bar"></div><div class="eq-bar"></div>
             <div class="eq-bar"></div><div class="eq-bar"></div>
+          </div>
+        </div>
+
+        <!-- Featured Work Teaser -->
+        <div class="extra-section reveal">
+          <div class="section-head">
+            <span class="section-tag">Featured</span>
+            <h2 class="section-title">SOUND THAT <span class="gradient-text">MOVES</span></h2>
+          </div>
+          <div class="feature-grid">
+            <div class="feature-card tilt-3d">
+              <div class="feature-num">01</div>
+              <h3>Creative Vision</h3>
+              <p>Every production starts with understanding your artistic identity and translating it into sound.</p>
+            </div>
+            <div class="feature-card tilt-3d">
+              <div class="feature-num">02</div>
+              <h3>Technical Excellence</h3>
+              <p>Pristine recording, balanced mixing and release-ready mastering with international standards.</p>
+            </div>
+            <div class="feature-card tilt-3d">
+              <div class="feature-num">03</div>
+              <h3>Global Perspective</h3>
+              <p>From Monrovia to Ottawa — blending African roots with international production sensibilities.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="extra-section reveal">
+          <div class="section-head">
+            <span class="section-tag">By The Numbers</span>
+            <h2 class="section-title">PROVEN <span class="gradient-text">TRACK RECORD</span></h2>
+          </div>
+          <div class="stats-grid">
+            <div class="stat-card tilt-3d">
+              <div class="stat-num">150+</div>
+              <div class="stat-label">Songs Produced</div>
+            </div>
+            <div class="stat-card tilt-3d">
+              <div class="stat-num">500+</div>
+              <div class="stat-label">Studio Hours</div>
+            </div>
+            <div class="stat-card tilt-3d">
+              <div class="stat-num">50+</div>
+              <div class="stat-label">Artists Served</div>
+            </div>
+            <div class="stat-card tilt-3d">
+              <div class="stat-num">10+</div>
+              <div class="stat-label">Years Experience</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Why NOISEMAKERS -->
+        <div class="extra-section reveal">
+          <div class="section-head">
+            <span class="section-tag">Why Choose Me</span>
+            <h2 class="section-title">MORE THAN A <span class="gradient-text">PRODUCER</span></h2>
+          </div>
+          <div class="why-grid">
+            <div class="why-card tilt-3d">
+              <h3>🎵 Artist-First Approach</h3>
+              <p>Your vision drives every decision. I listen before I produce, ensuring the final product feels authentically yours.</p>
+            </div>
+            <div class="why-card tilt-3d">
+              <h3>🎧 Professional Equipment</h3>
+              <p>Industry-standard microphones, monitors and processing gear to capture and shape your sound with precision.</p>
+            </div>
+            <div class="why-card tilt-3d">
+              <h3>🌍 International Quality</h3>
+              <p>Productions that compete on global streaming platforms with clarity, loudness and translation.</p>
+            </div>
+            <div class="why-card tilt-3d">
+              <h3>⚡ Fast Turnaround</h3>
+              <p>Efficient workflows that respect your timeline without sacrificing quality or attention to detail.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="extra-section reveal cta-section">
+          <h2 class="section-title">READY TO <span class="gradient-text">CREATE?</span></h2>
+          <p>Let's turn your ideas into unforgettable music. Every great record starts with a conversation.</p>
+          <div class="cta-buttons">
+            <a href="#" class="btn btn-primary btn-3d" data-page="book" data-magnetic>
+              <span>Book a Session</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="https://wa.me/13439873280" target="_blank" rel="noopener" class="btn btn-ghost btn-3d" data-magnetic>
+              <span>Chat on WhatsApp</span>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+            </a>
           </div>
         </div>
       </div>
@@ -201,6 +283,80 @@
             </p>
           </div>
         </div>
+
+        <!-- Philosophy Section -->
+        <div class="extra-section reveal">
+          <div class="section-head">
+            <span class="section-tag">My Philosophy</span>
+            <h2 class="section-title">WHAT DRIVES <span class="gradient-text">THE CRAFT</span></h2>
+          </div>
+          <div class="philosophy-grid">
+            <div class="philosophy-card tilt-3d">
+              <h3>🎼 Story First</h3>
+              <p>Great music tells stories. Before any technical work, we find the narrative that will move listeners.</p>
+            </div>
+            <div class="philosophy-card tilt-3d">
+              <h3>🔥 Authenticity</h3>
+              <p>I never impose my style on yours. Instead, I amplify what makes your sound uniquely you.</p>
+            </div>
+            <div class="philosophy-card tilt-3d">
+              <h3>✨ Excellence</h3>
+              <p>Every detail matters. From the first note to the final master, nothing leaves the studio without perfection.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Musical Influences -->
+        <div class="extra-section reveal">
+          <div class="section-head">
+            <span class="section-tag">Influences</span>
+            <h2 class="section-title">SONIC <span class="gradient-text">ROOTS</span></h2>
+          </div>
+          <div class="influences-grid">
+            <div class="influence-item tilt-3d">Afrobeats</div>
+            <div class="influence-item tilt-3d">Hip-Hop</div>
+            <div class="influence-item tilt-3d">R&B</div>
+            <div class="influence-item tilt-3d">Pop</div>
+            <div class="influence-item tilt-3d">Gospel</div>
+            <div class="influence-item tilt-3d">Highlife</div>
+            <div class="influence-item tilt-3d">Jazz</div>
+            <div class="influence-item tilt-3d">Soul</div>
+          </div>
+        </div>
+
+        <!-- Gear Section -->
+        <div class="extra-section reveal">
+          <div class="section-head">
+            <span class="section-tag">The Tools</span>
+            <h2 class="section-title">PROFESSIONAL <span class="gradient-text">GEAR</span></h2>
+          </div>
+          <div class="gear-grid">
+            <div class="gear-card tilt-3d">
+              <h3>🎙️ Microphones</h3>
+              <p>Neumann, AKG, Shure — a curated collection for every voice and instrument.</p>
+            </div>
+            <div class="gear-card tilt-3d">
+              <h3>🔊 Monitoring</h3>
+              <p>Studio-grade monitors for accurate sound reproduction and mixing decisions.</p>
+            </div>
+            <div class="gear-card tilt-3d">
+              <h3>🎛️ Processing</h3>
+              <p>Premium preamps, compressors and EQs for that professional analog warmth.</p>
+            </div>
+            <div class="gear-card tilt-3d">
+              <h3>💻 Software</h3>
+              <p>Industry-standard DAWs and plugins including Pro Tools, Logic Pro and Universal Audio.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quote Section -->
+        <div class="extra-section reveal quote-section">
+          <blockquote>
+            "Music is not just what you hear — it's what you feel. My job is to make sure the world feels exactly what the artist intended."
+          </blockquote>
+          <cite>— NOISEMAKERS</cite>
+        </div>
       </div>
     </section>
 
@@ -214,6 +370,90 @@
           <p class="section-desc">End-to-end music production services, crafted with precision and passion.</p>
         </div>
         <div class="services-grid" id="servicesGrid"></div>
+
+        <!-- My Process -->
+        <div class="extra-section reveal">
+          <div class="section-head">
+            <span class="section-tag">The Process</span>
+            <h2 class="section-title">FROM IDEA TO <span class="gradient-text">RELEASE</span></h2>
+          </div>
+          <div class="process-grid">
+            <div class="process-step tilt-3d">
+              <div class="process-num">01</div>
+              <h3>Discovery</h3>
+              <p>We discuss your vision, references and goals to align on the creative direction.</p>
+            </div>
+            <div class="process-step tilt-3d">
+              <div class="process-num">02</div>
+              <h3>Songwriting</h3>
+              <p>Melodies, lyrics and structure crafted to match your artistic identity.</p>
+            </div>
+            <div class="process-step tilt-3d">
+              <div class="process-num">03</div>
+              <h3>Recording</h3>
+              <p>Pristine captures in an acoustically treated environment.</p>
+            </div>
+            <div class="process-step tilt-3d">
+              <div class="process-num">04</div>
+              <h3>Production</h3>
+              <p>Building the sonic world with instrumentation and arrangements.</p>
+            </div>
+            <div class="process-step tilt-3d">
+              <div class="process-num">05</div>
+              <h3>Mixing</h3>
+              <p>Balancing every element for clarity, depth and impact.</p>
+            </div>
+            <div class="process-step tilt-3d">
+              <div class="process-num">06</div>
+              <h3>Mastering</h3>
+              <p>Final polish for streaming, radio and release-ready quality.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- What's Included -->
+        <div class="extra-section reveal">
+          <div class="section-head">
+            <span class="section-tag">What's Included</span>
+            <h2 class="section-title">EVERY SESSION <span class="gradient-text">DELIVERS</span></h2>
+          </div>
+          <div class="included-grid">
+            <div class="included-card tilt-3d">✓ Pre-production consultation</div>
+            <div class="included-card tilt-3d">✓ Professional recording</div>
+            <div class="included-card tilt-3d">✓ Creative direction</div>
+            <div class="included-card tilt-3d">✓ Industry-standard mixing</div>
+            <div class="included-card tilt-3d">✓ Release-ready masters</div>
+            <div class="included-card tilt-3d">✓ Streaming optimization</div>
+            <div class="included-card tilt-3d">✓ Unlimited revisions</div>
+            <div class="included-card tilt-3d">✓ Fast turnaround</div>
+          </div>
+        </div>
+
+        <!-- FAQ -->
+        <div class="extra-section reveal">
+          <div class="section-head">
+            <span class="section-tag">Questions?</span>
+            <h2 class="section-title">FREQUENTLY <span class="gradient-text">ASKED</span></h2>
+          </div>
+          <div class="faq-list">
+            <div class="faq-item tilt-3d">
+              <h4>How long does a typical project take?</h4>
+              <p>Single productions typically take 1-2 weeks from start to final master. Albums vary based on complexity but generally 4-8 weeks.</p>
+            </div>
+            <div class="faq-item tilt-3d">
+              <h4>Do you work with remote artists?</h4>
+              <p>Absolutely. I work with artists worldwide through file sharing and video calls. Distance is never a barrier to great music.</p>
+            </div>
+            <div class="faq-item tilt-3d">
+              <h4>What genres do you specialize in?</h4>
+              <p>While versatile across genres, my specialties include Afrobeats, Hip-Hop, R&B, Pop and Gospel — with a unique Liberian-influenced sound.</p>
+            </div>
+            <div class="faq-item tilt-3d">
+              <h4>Do you provide distribution help?</h4>
+              <p>Yes. I can guide you through distribution on major platforms like Spotify, Apple Music, and help with release strategies.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -230,8 +470,33 @@
           <p class="coming-soon-desc">A curated selection of productions, mixes and creative collaborations is on its way. Stay tuned.</p>
           <a href="https://wa.me/13439873280" target="_blank" rel="noopener" class="btn btn-primary btn-3d" data-magnetic>
             <span>Get Notified on WhatsApp</span>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
           </a>
+        </div>
+
+        <!-- What to Expect -->
+        <div class="extra-section reveal">
+          <div class="section-head">
+            <span class="section-tag">Coming Soon</span>
+            <h2 class="section-title">WHAT TO <span class="gradient-text">EXPECT</span></h2>
+          </div>
+          <div class="feature-grid">
+            <div class="feature-card tilt-3d">
+              <div class="feature-num">01</div>
+              <h3>Full Productions</h3>
+              <p>Complete album and single productions showcasing range across genres.</p>
+            </div>
+            <div class="feature-card tilt-3d">
+              <div class="feature-num">02</div>
+              <h3>Mix Showcase</h3>
+              <p>Before/after comparisons demonstrating the power of professional mixing.</p>
+            </div>
+            <div class="feature-card tilt-3d">
+              <div class="feature-num">03</div>
+              <h3>Artist Spotlights</h3>
+              <p>Stories of collaborations with emerging and established artists worldwide.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -249,8 +514,32 @@
           <p class="coming-soon-desc">New tracks, productions and sonic journeys are on the way. Press play soon.</p>
           <a href="https://wa.me/13439873280" target="_blank" rel="noopener" class="btn btn-primary btn-3d" data-magnetic>
             <span>Get Notified on WhatsApp</span>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
           </a>
+        </div>
+
+        <div class="extra-section reveal">
+          <div class="section-head">
+            <span class="section-tag">What's Cooking</span>
+            <h2 class="section-title">UPCOMING <span class="gradient-text">RELEASES</span></h2>
+          </div>
+          <div class="feature-grid">
+            <div class="feature-card tilt-3d">
+              <div class="feature-num">Q1</div>
+              <h3>Debut Singles</h3>
+              <p>A collection of original productions showcasing signature sound and production style.</p>
+            </div>
+            <div class="feature-card tilt-3d">
+              <div class="feature-num">Q2</div>
+              <h3>Collaboration EP</h3>
+              <p>Featuring talented artists from across Africa and North America.</p>
+            </div>
+            <div class="feature-card tilt-3d">
+              <div class="feature-num">Q3</div>
+              <h3>Producer Showcase</h3>
+              <p>Behind-the-scenes look at the creative process and sonic craftsmanship.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -268,8 +557,32 @@
           <p class="coming-soon-desc">Studio sessions, music videos and behind-the-scenes content are on the way.</p>
           <a href="https://wa.me/13439873280" target="_blank" rel="noopener" class="btn btn-primary btn-3d" data-magnetic>
             <span>Get Notified on WhatsApp</span>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
           </a>
+        </div>
+
+        <div class="extra-section reveal">
+          <div class="section-head">
+            <span class="section-tag">In Production</span>
+            <h2 class="section-title">VIDEO <span class="gradient-text">PROJECTS</span></h2>
+          </div>
+          <div class="feature-grid">
+            <div class="feature-card tilt-3d">
+              <div class="feature-num">01</div>
+              <h3>Studio Sessions</h3>
+              <p>Cinematic behind-the-scenes footage of real recording sessions and creative moments.</p>
+            </div>
+            <div class="feature-card tilt-3d">
+              <div class="feature-num">02</div>
+              <h3>Music Videos</h3>
+              <p>Professional visual storytelling for original productions and collaborations.</p>
+            </div>
+            <div class="feature-card tilt-3d">
+              <div class="feature-num">03</div>
+              <h3>Tutorials</h3>
+              <p>Insights into the production process, mixing techniques and creative workflow.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -287,14 +600,39 @@
           <p class="coming-soon-desc">A full tour of the studio space, gear and creative environment is on its way.</p>
           <a href="https://wa.me/13439873280" target="_blank" rel="noopener" class="btn btn-primary btn-3d" data-magnetic>
             <span>Get Notified on WhatsApp</span>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
           </a>
+        </div>
+
+        <div class="extra-section reveal">
+          <div class="section-head">
+            <span class="section-tag">The Space</span>
+            <h2 class="section-title">CREATIVE <span class="gradient-text">ENVIRONMENT</span></h2>
+          </div>
+          <div class="feature-grid">
+            <div class="feature-card tilt-3d">
+              <div class="feature-num">01</div>
+              <h3>Control Room</h3>
+              <p>Acoustically treated mixing environment with premium monitoring for accurate decisions.</p>
+            </div>
+            <div class="feature-card tilt-3d">
+              <div class="feature-num">02</div>
+              <h3>Live Room</h3>
+              <p>Versatile recording space designed to capture pristine vocals and acoustic instruments.</p>
+            </div>
+            <div class="feature-card tilt-3d">
+              <div class="feature-num">03</div>
+              <h3>Creative Lounge</h3>
+              <p>Inspiring atmosphere where ideas flow freely and artists feel comfortable creating.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- ============ TESTIMONIALS PAGE ============ -->
     <section class="page" id="page-testimonials">
+      <div class="page-bg" style="background-image: url('https://i.ibb.co/1Gq8dy0j/IMG-9224.jpg')"></div>
       <div class="page-inner">
         <div class="section-head reveal">
           <span class="section-tag">08 · TESTIMONIALS</span>
@@ -305,6 +643,41 @@
           <button class="testi-btn" id="testiPrev" aria-label="Previous">←</button>
           <div class="testi-dots" id="testiDots"></div>
           <button class="testi-btn" id="testiNext" aria-label="Next">→</button>
+        </div>
+
+        <!-- Success Stories -->
+        <div class="extra-section reveal">
+          <div class="section-head">
+            <span class="section-tag">Success Stories</span>
+            <h2 class="section-title">REAL <span class="gradient-text">RESULTS</span></h2>
+          </div>
+          <div class="success-grid">
+            <div class="success-card tilt-3d">
+              <div class="success-stat">12M+</div>
+              <div class="success-label">Combined Streams</div>
+              <p>Productions have accumulated millions of streams across platforms worldwide.</p>
+            </div>
+            <div class="success-card tilt-3d">
+              <div class="success-stat">25+</div>
+              <div class="success-label">Chart Placements</div>
+              <p>Tracks have reached charts in Canada, USA, UK and across Africa.</p>
+            </div>
+            <div class="success-card tilt-3d">
+              <div class="success-stat">100%</div>
+              <div class="success-label">Artist Satisfaction</div>
+              <p>Every project delivered with complete artist approval and satisfaction.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Join Section -->
+        <div class="extra-section reveal cta-section">
+          <h2 class="section-title">YOUR STORY <span class="gradient-text">NEXT?</span></h2>
+          <p>Join the growing list of satisfied artists who trusted NOISEMAKERS with their sound.</p>
+          <a href="#" class="btn btn-primary btn-3d" data-page="book" data-magnetic>
+            <span>Start Your Project</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
         </div>
       </div>
     </section>
@@ -365,8 +738,8 @@
             <div class="form-group">
               <label>&nbsp;</label>
               <a href="https://wa.me/13439873280" target="_blank" rel="noopener" class="btn btn-outline btn-3d wa-direct" data-magnetic>
-                <span>Or Chat Directly on WhatsApp</span>
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                <span>Or Chat on WhatsApp</span>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
               </a>
             </div>
           </div>
@@ -376,14 +749,40 @@
           </div>
           <button type="submit" class="btn btn-primary btn-3d btn-submit" data-magnetic>
             <span>Send Request via WhatsApp</span>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
           </button>
         </form>
+
+        <!-- What Happens Next -->
+        <div class="extra-section reveal">
+          <div class="section-head">
+            <span class="section-tag">The Journey</span>
+            <h2 class="section-title">WHAT HAPPENS <span class="gradient-text">NEXT</span></h2>
+          </div>
+          <div class="feature-grid">
+            <div class="feature-card tilt-3d">
+              <div class="feature-num">01</div>
+              <h3>Receive Request</h3>
+              <p>Your booking arrives via WhatsApp within minutes. I review every detail personally.</p>
+            </div>
+            <div class="feature-card tilt-3d">
+              <div class="feature-num">02</div>
+              <h3>Quick Response</h3>
+              <p>You'll hear back within 24 hours to discuss your project and confirm details.</p>
+            </div>
+            <div class="feature-card tilt-3d">
+              <div class="feature-num">03</div>
+              <h3>Book Session</h3>
+              <p>Once aligned, we lock in your session date and begin pre-production planning.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- ============ CONTACT PAGE ============ -->
     <section class="page" id="page-contact">
+      <div class="page-bg" style="background-image: url('https://i.ibb.co/gFrMFscw/IMG-9212.jpg')"></div>
       <div class="page-inner">
         <div class="section-head reveal">
           <span class="section-tag">10 · CONTACT</span>
@@ -402,7 +801,7 @@
             </div>
             <div class="contact-item tilt-3d">
               <div class="contact-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
               </div>
               <div>
                 <h4>WhatsApp (VennyBeats)</h4>
@@ -411,7 +810,7 @@
             </div>
             <a href="https://wa.me/13439873280" target="_blank" rel="noopener" class="btn btn-primary btn-3d wa-big tilt-3d" data-magnetic>
               <span>Start a WhatsApp Conversation</span>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
             </a>
           </div>
           <div class="contact-map tilt-3d">
@@ -425,6 +824,56 @@
             </div>
           </div>
         </div>
+
+        <!-- Studio Hours -->
+        <div class="extra-section reveal">
+          <div class="section-head">
+            <span class="section-tag">Availability</span>
+            <h2 class="section-title">STUDIO <span class="gradient-text">HOURS</span></h2>
+          </div>
+          <div class="hours-grid">
+            <div class="hours-card tilt-3d">
+              <h3>Monday – Friday</h3>
+              <p>10:00 AM – 10:00 PM</p>
+              <span class="hours-badge">Available</span>
+            </div>
+            <div class="hours-card tilt-3d">
+              <h3>Saturday</h3>
+              <p>12:00 PM – 8:00 PM</p>
+              <span class="hours-badge">Available</span>
+            </div>
+            <div class="hours-card tilt-3d">
+              <h3>Sunday</h3>
+              <p>By Appointment</p>
+              <span class="hours-badge">Book Ahead</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Response Time -->
+        <div class="extra-section reveal">
+          <div class="section-head">
+            <span class="section-tag">Response</span>
+            <h2 class="section-title">QUICK <span class="gradient-text">REPLIES</span></h2>
+          </div>
+          <div class="feature-grid">
+            <div class="feature-card tilt-3d">
+              <div class="feature-num">⚡</div>
+              <h3>WhatsApp</h3>
+              <p>Usually within 1-2 hours during business hours. Never more than 24 hours.</p>
+            </div>
+            <div class="feature-card tilt-3d">
+              <div class="feature-num">📧</div>
+              <h3>Bookings</h3>
+              <p>Detailed responses to booking requests within 24 hours with availability.</p>
+            </div>
+            <div class="feature-card tilt-3d">
+              <div class="feature-num">🌍</div>
+              <h3>Global Clients</h3>
+              <p>Flexible with time zones for international artists and remote collaborations.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -433,35 +882,62 @@
   <!-- ============ TRADEMARK (FIXED FOOTER) ============ -->
   <footer class="trademark" id="trademark">
     <div class="trademark-inner">
-      <div class="trademark-brand">
-        <span class="logo-mark trademark-logo">N</span>
-        <div class="trademark-text">
+      <!-- Top row: Brand -->
+      <div class="trademark-brand-row">
+        <img src="https://i.ibb.co/3m2GsdSw/Chat-GPT-Image-Jul-22-2026-09-30-36-PM.png" alt="NOISEMAKERS" class="trademark-logo" />
+        <div class="trademark-info">
           <strong>NOISEMAKERS</strong>
-          <span>Where Sound Becomes Art</span>
+          <span>Liberian music producer based in Ottawa, Canada. Taking the sound to the world through creativity and excellence.</span>
         </div>
       </div>
-      <div class="trademark-socials">
-        <a href="#" aria-label="Instagram" data-magnetic><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-        <a href="#" aria-label="YouTube" data-magnetic><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
-        <a href="#" aria-label="Spotify" data-magnetic><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.06-.84-.18-.9-.6-.06-.42.18-.84.6-.9 4.56-1.02 8.52-.6 11.64 1.38.42.18.48.66.24 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.38-1.32 9.78-.66 13.5 1.62.36.18.54.78.24 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg></a>
-        <a href="#" aria-label="SoundCloud" data-magnetic><svg viewBox="0 0 24 24" fill="currentColor"><path d="M1.175 12.225c-.051 0-.094.046-.101.1l-.233 2.154.233 2.105c.007.058.05.098.101.098.05 0 .09-.04.099-.098l.255-2.105-.27-2.154c-.009-.06-.05-.1-.1-.1m-.899.828c-.06 0-.091.037-.104.094L0 14.479l.165 1.308c0 .055.045.094.099.094.055 0 .09-.038.104-.094l.21-1.319-.21-1.334c0-.061-.045-.094-.1-.094m1.83-1.229c-.061 0-.12.045-.12.104l-.21 2.563.225 2.458c0 .06.045.104.105.104.074 0 .12-.044.12-.104l.24-2.474-.24-2.547c0-.06-.06-.104-.12-.104m.944-.091c-.074 0-.135.06-.15.135l-.18 2.64.18 2.53c.015.075.076.135.15.135.09 0 .15-.06.15-.135l.21-2.53-.21-2.64c-.015-.075-.075-.135-.15-.135m1.005-.54c-.09 0-.165.075-.18.165l-.165 3.18.165 2.563c.015.09.09.165.18.165.105 0 .165-.075.18-.165l.18-2.563-.18-3.18c-.015-.09-.09-.165-.18-.165m1.035-.18c-.105 0-.195.09-.21.195l-.135 3.36.15 2.563c.015.105.105.195.21.195.12 0 .195-.09.21-.195l.165-2.563-.165-3.36c-.015-.105-.105-.195-.21-.195m1.035.18c-.12 0-.21.09-.225.21l-.12 3.18.12 2.563c.015.12.105.21.225.21.12 0 .21-.09.225-.21l.15-2.563-.15-3.18c-.015-.12-.105-.21-.225-.21m1.05-.36c-.135 0-.24.105-.255.24l-.105 3.54.105 2.563c.015.135.12.24.255.24.135 0 .24-.105.255-.24l.12-2.563-.12-3.54c-.015-.135-.12-.24-.255-.24m1.065.09c-.15 0-.27.12-.285.27l-.09 3.45.09 2.563c.015.15.135.27.285.27.15 0 .27-.12.285-.27l.105-2.563-.105-3.45c-.015-.15-.135-.27-.285-.27m1.065-.18c-.165 0-.3.135-.315.3l-.075 3.63.075 2.563c.015.165.15.3.315.3.165 0 .3-.135.315-.3l.09-2.563-.09-3.63c-.015-.165-.15-.3-.315-.3m1.08.18c-.18 0-.315.15-.33.33l-.06 3.45.06 2.563c.015.18.15.33.33.33.165 0 .315-.15.33-.33l.075-2.563-.075-3.45c-.015-.18-.165-.33-.33-.33m1.08-.36c-.195 0-.345.15-.36.345l-.045 3.81.045 2.563c.015.195.165.345.36.345.18 0 .345-.15.36-.345l.06-2.563-.06-3.81c-.015-.195-.18-.345-.36-.345m1.08.27c-.195 0-.36.165-.375.36l-.03 3.54.03 2.563c.015.195.18.36.375.36.195 0 .36-.165.375-.36l.045-2.563-.045-3.54c-.015-.195-.18-.36-.375-.36m1.08-.18c-.21 0-.375.165-.39.375l-.015 3.72.015 2.563c.015.21.18.375.39.375.21 0 .375-.165.39-.375l.03-2.563-.03-3.72c-.015-.21-.18-.375-.39-.375m1.08.09c-.225 0-.39.18-.405.39l-.015 3.63.015 2.563c.015.21.18.39.405.39.21 0 .39-.18.405-.39l.015-2.563-.015-3.63c-.015-.21-.195-.39-.405-.39m1.08-.18c-.225 0-.405.18-.42.405l-.015 3.81.015 2.563c.015.225.195.405.42.405.225 0 .405-.18.42-.405l.015-2.563-.015-3.81c-.015-.225-.195-.405-.42-.405m1.08.18c-.24 0-.42.195-.435.42l-.015 3.63.015 2.563c.015.24.195.42.435.42.225 0 .42-.195.435-.42l.015-2.563-.015-3.63c-.015-.225-.21-.42-.435-.42m1.095-.09c-.24 0-.435.195-.45.435l-.015 3.72.015 2.563c.015.24.21.435.45.435.24 0 .435-.195.45-.435l.015-2.563-.015-3.72c-.015-.24-.21-.435-.45-.435m1.095.09c-.255 0-.45.21-.465.45l-.015 3.63.015 2.563c.015.255.21.45.465.45.24 0 .45-.21.465-.45l.015-2.563-.015-3.63c-.015-.255-.225-.45-.465-.45m1.095-.18c-.255 0-.465.21-.48.465l-.015 3.81.015 2.563c.015.255.225.465.48.465.255 0 .465-.21.48-.465l.015-2.563-.015-3.81c-.015-.255-.225-.465-.48-.465m1.095.18c-.27 0-.48.225-.495.48l-.015 3.63.015 2.563c.015.27.225.48.495.48.255 0 .48-.225.495-.48l.015-2.563-.015-3.63c-.015-.27-.24-.48-.495-.48m1.095-.09c-.27 0-.495.225-.51.495l-.015 3.72.015 2.563c.015.27.24.495.51.495.27 0 .495-.225.51-.495l.015-2.563-.015-3.72c-.015-.27-.24-.495-.51-.495M12 5.5c-1.5 0-2.7 1.2-2.7 2.7v8.4c.15-.3.45-.5.75-.5.3 0 .6.2.75.5V8.2c0-.9.75-1.65 1.65-1.65.3 0 .6.1.85.25C13.5 5.95 12.8 5.5 12 5.5"/></svg></a>
-        <a href="#" aria-label="TikTok" data-magnetic><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.45a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.88z"/></svg></a>
+      
+      <!-- Columns -->
+      <div class="trademark-columns">
+        <div class="trademark-col">
+          <h5>Explore</h5>
+          <a href="#" data-page="home">Home</a>
+          <a href="#" data-page="about">About</a>
+          <a href="#" data-page="music">Music</a>
+          <a href="#" data-page="videos">Videos</a>
+        </div>
+        <div class="trademark-col">
+          <h5>Connect</h5>
+          <a href="#" data-page="studio">Studio</a>
+          <a href="#" data-page="book">Booking</a>
+          <a href="#" data-page="contact">Contact</a>
+          <a href="#" data-page="testimonials">Testimonials</a>
+        </div>
+        <div class="trademark-col">
+          <h5>Follow</h5>
+          <a href="#" aria-label="Instagram">Instagram</a>
+          <a href="#" aria-label="YouTube">YouTube</a>
+          <a href="#" aria-label="Spotify">Spotify</a>
+          <a href="#" aria-label="SoundCloud">SoundCloud</a>
+        </div>
+        <div class="trademark-col">
+          <h5>Legal</h5>
+          <span class="legal-text">All rights reserved</span>
+          <span class="legal-text">Fair use policy</span>
+          <span class="legal-text">Cookie notice</span>
+        </div>
       </div>
-      <div class="trademark-legal">
-        <span>© 2026 Noisemakers. All Rights Reserved.</span>
-        <span>Powered by <strong>KS1 Empire Global Foundation (KS1EGF)</strong></span>
+      
+      <!-- Bottom row -->
+      <div class="trademark-bottom">
+        <div class="trademark-socials">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
+          <a href="#" aria-label="Spotify"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.06-.84-.18-.9-.6-.06-.42.18-.84.6-.9 4.56-1.02 8.52-.6 11.64 1.38.42.18.48.66.24 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.38-1.32 9.78-.66 13.5 1.62.36.18.54.78.24 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg></a>
+          <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.45a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.88z"/></svg></a>
+          <a href="#" aria-label="SoundCloud"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M1.175 12.225c-.051 0-.094.046-.101.1l-.233 2.154.233 2.105c.007.058.05.098.101.098.05 0 .09-.04.099-.098l.255-2.105-.27-2.154c-.009-.06-.05-.1-.1-.1z"/></svg></a>
+        </div>
+        <div class="trademark-legal">
+          <span>© 2026 NOISEMAKERS. All Rights Reserved.</span>
+          <span>Powered by <strong>KS1 Empire Global Foundation (KS1EGF)</strong></span>
+        </div>
       </div>
     </div>
   </footer>
-
-  <!-- ============ LIGHTBOX ============ -->
-  <div class="lightbox" id="lightbox">
-    <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
-    <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous">‹</button>
-    <button class="lightbox-next" id="lightboxNext" aria-label="Next">›</button>
-    <img src="" alt="" id="lightboxImg" />
-    <div class="lightbox-caption" id="lightboxCaption"></div>
-  </div>
 
   <script src="script.js"></script>
 </body>
