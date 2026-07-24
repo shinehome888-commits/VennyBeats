@@ -78,7 +78,23 @@ ul { list-style: none; }
 #page-studio .page-bg { background-size: contain !important; background-position: center center !important; background-repeat: no-repeat !important; }
 #page-studio .page-bg::after { background: linear-gradient(180deg, rgba(5, 5, 5, 0.7) 0%, rgba(5, 5, 5, 0.85) 100%) !important; }
 
-.page-inner { height: 100%; min-height: 100dvh; padding: 5rem clamp(1rem, 4vw, 3rem) 2rem; display: flex; flex-direction: column; overflow-y: auto; overflow-x: hidden; position: relative; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; }
+/* CRITICAL FIX: Increased padding-bottom so trademark is never cut off on mobile */
+.page-inner { 
+  height: 100%; 
+  min-height: 100dvh; 
+  padding: 5rem clamp(1rem, 4vw, 3rem) 4rem; 
+  display: flex; 
+  flex-direction: column; 
+  overflow-y: auto; 
+  overflow-x: hidden; 
+  position: relative; 
+  scroll-behavior: smooth; 
+  -webkit-overflow-scrolling: touch; 
+}
+
+@media (min-width: 768px) {
+  .page-inner { padding-bottom: 6rem; }
+}
 
 /* Share Button */
 .share-btn { position: fixed; bottom: 2rem; right: 2rem; width: 52px; height: 52px; background: var(--grad-accent); color: var(--bg); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 30px var(--accent-glow), 0 10px 30px rgba(0,0,0,0.4); z-index: 998; transition: transform 0.3s var(--ease), box-shadow 0.3s; }
@@ -295,7 +311,7 @@ ul { list-style: none; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
 /* ============================================
-   TRADEMARK (COMPACT MOBILE VERSION)
+   TRADEMARK (REARRANGED & MOBILE OPTIMIZED)
    ============================================ */
 .trademark {
   position: relative;
@@ -304,7 +320,7 @@ ul { list-style: none; }
   backdrop-filter: blur(24px) saturate(180%);
   -webkit-backdrop-filter: blur(24px) saturate(180%);
   border-top: 2px solid rgba(0,200,255,0.3);
-  padding: 2rem 0 1.5rem;
+  padding: 2.5rem 0 3rem; /* Extra bottom padding ensures it's never cut off */
   box-shadow: 0 -5px 30px rgba(0,0,0,0.5);
   width: 100%;
   flex-shrink: 0;
@@ -316,14 +332,14 @@ ul { list-style: none; }
   padding: 0 clamp(1rem, 3vw, 2rem);
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1.5rem;
 }
 
 .trademark-brand-row {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
   border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
@@ -358,30 +374,32 @@ ul { list-style: none; }
 
 .trademark-columns {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.25rem;
+  grid-template-columns: repeat(3, 1fr); /* Changed to 3 columns */
+  gap: 1.5rem;
+  text-align: center;
 }
 
 .trademark-col {
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .trademark-col h5 {
   font-family: var(--font-display);
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   letter-spacing: 0.15em;
   color: var(--accent);
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.5rem;
   text-transform: uppercase;
 }
 
 .trademark-col a {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   color: var(--text-dim);
   transition: color 0.3s, transform 0.3s;
-  padding: 0.15rem 0;
+  padding: 0.2rem 0;
   display: inline-block;
 }
 
@@ -424,14 +442,8 @@ ul { list-style: none; }
   color: var(--bg);
 }
 
-.trademark-col .legal-text {
-  font-size: 0.7rem;
-  color: var(--text-dim);
-  padding: 0.15rem 0;
-}
-
 .trademark-bottom {
-  padding-top: 1rem;
+  padding-top: 1.5rem;
   border-top: 1px solid rgba(255,255,255,0.1);
 }
 
@@ -439,17 +451,17 @@ ul { list-style: none; }
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   letter-spacing: 0.05em;
   color: var(--text-dim);
   text-align: center;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .trademark-legal span:first-child {
   font-weight: 600;
   color: var(--text);
-  font-size: 0.8rem;
+  font-size: 0.85rem;
 }
 
 .trademark-legal strong {
@@ -460,32 +472,25 @@ ul { list-style: none; }
 
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
-  .page-inner { 
-    padding-top: 4.5rem; 
-    padding-bottom: 1.5rem; /* Ensures trademark is fully visible */
-  }
-  .hero-title { font-size: clamp(2.5rem, 12vw, 4rem); }
-  
   .trademark {
-    padding: 1.5rem 0 1.5rem; /* Increased bottom padding */
-    margin-top: 1.5rem;
+    padding: 2rem 0 2.5rem; /* Ensures it's fully visible at the bottom */
   }
   
   .trademark-inner {
     padding: 0 1rem;
-    gap: 0.75rem;
+    gap: 1rem;
   }
   
   .trademark-brand-row {
     flex-direction: column;
     text-align: center;
     gap: 0.5rem;
-    padding-bottom: 0.75rem;
+    padding-bottom: 1rem;
   }
   
   .trademark-logo {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
   }
   
   .trademark-info {
@@ -493,38 +498,38 @@ ul { list-style: none; }
   }
   
   .trademark-info strong {
-    font-size: 0.95rem;
+    font-size: 1rem;
     letter-spacing: 0.1em;
   }
   
   .trademark-info span {
-    font-size: 0.65rem;
+    font-size: 0.7rem;
     text-align: center;
   }
   
   .trademark-columns {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem;
+    grid-template-columns: 1fr; /* Stack perfectly on mobile for maximum readability */
+    gap: 1.25rem;
   }
   
   .trademark-col {
-    gap: 0.25rem;
+    align-items: center;
+    text-align: center;
   }
   
   .trademark-col h5 {
-    font-size: 0.65rem;
-    margin-bottom: 0.25rem;
+    font-size: 0.7rem;
+    margin-bottom: 0.4rem;
   }
   
   .trademark-col a {
-    font-size: 0.65rem;
-    padding: 0.1rem 0;
+    font-size: 0.75rem;
+    padding: 0.15rem 0;
   }
   
   .trademark-col .social-link {
-    width: 32px;
-    height: 32px;
-    border-width: 1.5px;
+    width: 34px;
+    height: 34px;
   }
   
   .trademark-col .social-link svg {
@@ -532,71 +537,44 @@ ul { list-style: none; }
     height: 16px;
   }
   
-  .trademark-col .legal-text {
-    font-size: 0.6rem;
-  }
-  
   .trademark-bottom {
-    padding-top: 0.75rem;
+    padding-top: 1.25rem;
   }
   
   .trademark-legal {
-    font-size: 0.7rem; /* Increased for better mobile readability */
+    font-size: 0.75rem; /* Increased for clear mobile readability */
     gap: 0.3rem;
   }
   
   .trademark-legal span:first-child {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
   }
-  
-  .about-image-frame { max-height: 45vh; }
-  .coming-soon-icon { width: 90px; height: 90px; }
-  .coming-soon-icon svg { width: 44px; height: 44px; }
-  .services-grid, .feature-grid { grid-template-columns: 1fr; }
-  .contact-grid { grid-template-columns: 1fr; }
-  .book-form { padding: 1.5rem; }
 }
 
 @media (max-width: 480px) {
   .trademark {
-    padding: 1.25rem 0 1.25rem;
+    padding: 1.5rem 0 2rem;
   }
   
   .trademark-inner {
     padding: 0 0.75rem;
-    gap: 0.6rem;
   }
   
   .trademark-logo {
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
   }
   
   .trademark-info strong {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
   }
   
   .trademark-info span {
-    font-size: 0.6rem;
-  }
-  
-  .trademark-columns {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.6rem;
-  }
-  
-  .trademark-col .social-link {
-    width: 30px;
-    height: 30px;
-  }
-  
-  .trademark-col .social-link svg {
-    width: 14px;
-    height: 14px;
+    font-size: 0.65rem;
   }
   
   .trademark-legal {
-    font-size: 0.7rem; /* Kept readable */
+    font-size: 0.7rem;
   }
   
   .trademark-legal span:first-child {
